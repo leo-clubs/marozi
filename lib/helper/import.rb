@@ -1,6 +1,8 @@
 module Import
 
-  module Mappings
+  module MemberFactory
+    extend self
+
     date_lambda = lambda {|v| Date.parse(v)}
     extract_locale = lambda do |v|
       base_lang = [:de]
@@ -23,17 +25,14 @@ module Import
      LIST_MEMBER_MAPPINGS = {
       'LANGUAGES' => [:languages, extract_locale]
      }
-  end
 
-  module MemberFactory
-    extend self
 
     def build_model node
       m = ::Member.new
 
       # load attributes
       node.attributes.each do |a|
-        according_value = Mappings::SIMPLE_MEMBER_MAPPINGS[a[0]]
+        according_value = SIMPLE_MEMBER_MAPPINGS[a[0]]
         if according_value
           m.send("#{according_value[0]}=", according_value[1].call(a[1].value))
         end
@@ -41,7 +40,7 @@ module Import
 
       # load simple elements
       node.element_children.select{|c| c.children.size == 1}.each do |n|
-        according_value = Mappings::SIMPLE_MEMBER_MAPPINGS[n.name]
+        according_value = SIMPLE_MEMBER_MAPPINGS[n.name]
         if according_value
           m.send("#{according_value[0]}=", according_value[1].call(n.text))
         end
@@ -49,7 +48,7 @@ module Import
 
       # load list elements
       node.element_children.select{|c| c.element_children.size > 1}.each do |n|
-        according_value = Mappings::LIST_MEMBER_MAPPINGS[n.name]
+        according_value = LIST_MEMBER_MAPPINGS[n.name]
         if according_value
           m.send("#{according_value[0]}=", according_value[1].call(n))
         end
