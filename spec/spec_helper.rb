@@ -19,7 +19,8 @@ RSpec::Matchers.define :have_same_attributes_as do |expected|
       actual = [actual]
       expected = [expected]
     end
-    ignored = [:_id]
+    raise "different size: expected: #{expected.size} actual: #{actual.size}" if expected.size != actual.size
+    ignored = ['_id']
     actual.each_with_index {|c, i| c.attributes.except(*ignored) == expected[i].attributes.except(*ignored) }
   end
 end
