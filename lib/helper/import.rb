@@ -1,10 +1,9 @@
 module Import
 
-  module MemberFactory
+  module MappingHelper
     extend self
 
-    date_lambda = lambda {|v| Date.parse(v)}
-    extract_locale = lambda do |v|
+    locale_lambda = lambda do |v|
       base_lang = [:de]
       begin
         additional_langs = v.xpath('//NAME/text()').map{|e| e.text.to_sym}
@@ -14,54 +13,128 @@ module Import
       (base_lang + additional_langs).sort
     end
 
-     SIMPLE_MEMBER_MAPPINGS = {
-       'membershipStart' => [:member_since,  date_lambda],
-       'FIRSTNAME' => [:first_name, lambda {|v| v} ],
-       'LASTNAME' => [:last_name, lambda {|v| v} ],
+    def date_lambda
+      lambda {|v| Date.parse(v)}
+    end
+
+    def text_value_lambda
+      lambda {|v| v.text}
+    end
+
+    def locale_lambda
+      lambda do |v|
+        base_lang = [:de]
+        begin
+          additional_langs = v.xpath('//NAME/text()').map{|e| e.text.to_sym}
+        rescue
+          additional_langs = []
+        end
+        (base_lang + additional_langs).sort
+      end
+    end
+
+    def country_lambda mapping
+      lambda {|v| mapping[v] || 'Germany'}
+    end
+
+    def gender_lambda
+      lambda {|v| v.text.strip == 'M' ? :male : :female }
+    end
+
+    def extract_from_attribute_list opts
+      opts[:list].each do |a|
+        according_value = opts[:mapping][a[0]]
+        if according_value
+          value = according_value[1].class == Proc ? according_value[1].call(a[1].value) : a[1].value
+          opts[:entity].send("#{according_value[0]}=", value)
+        end
+      end
+    end
+
+    def extract_from_element_list opts
+      opts[:list].each do |n|
+        according_value = opts[:mapping][n.name]
+        if according_value
+          value = according_value[1].class == Proc ? according_value[1].call(n) : n.text
+          opts[:entity].send("#{according_value[0]}=", value)
+        end
+      end
+    end
+  end
+
+
+  module MemberFactory
+    extend self
+    extend MappingHelper
+
+    def simple_attribute_mappings
+      {
+       'membershipStart' => [:member_since, date_lambda],
+       'id' => [:member_id, nil],
+      }
+    end
+
+    def simple_element_mappings
+      {
+       'FIRSTNAME' => [:first_name, text_value_lambda ],
+       'LASTNAME' => [:last_name, text_value_lambda ],
        'BIRTHDATE' => [:date_of_birth,  date_lambda],
-       'SEX' => [:gender, lambda {|v| v.strip == 'M' ? :male : :female } ]
-     }
+       'SEX' => [:gender, gender_lambda ]
+      }
+    end
 
-     LIST_MEMBER_MAPPINGS = {
-      'LANGUAGES' => [:languages, extract_locale]
-     }
-
+    def list_element_mappings
+      {
+      'LANGUAGES' => [:languages, locale_lambda]
+      }
+    end
 
     def build_model node
       m = ::Member.new
 
-      # load attributes
-      node.attributes.each do |a|
-        according_value = SIMPLE_MEMBER_MAPPINGS[a[0]]
-        if according_value
-          m.send("#{according_value[0]}=", according_value[1].call(a[1].value))
-        end
-      end
+      extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: m
+      extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: m
+      extract_from_element_list list: node.element_children.select{|c| c.element_children.size > 1}, mapping: list_element_mappings, entity: m
 
-      # load simple elements
-      node.element_children.select{|c| c.children.size == 1}.each do |n|
-        according_value = SIMPLE_MEMBER_MAPPINGS[n.name]
-        if according_value
-          m.send("#{according_value[0]}=", according_value[1].call(n.text))
-        end
-      end
-
-      # load list elements
-      node.element_children.select{|c| c.element_children.size > 1}.each do |n|
-        according_value = LIST_MEMBER_MAPPINGS[n.name]
-        if according_value
-          m.send("#{according_value[0]}=", according_value[1].call(n))
-        end
-      end
       m
     end
   end
 
   module AddressFactory
     extend self
+    extend MappingHelper
+
+    def country_mappings
+      {
+        'Deutschland' => 'Germany',
+        'Frankreich' => 'France',
+        'Republik Ungarn' => 'Hungary',
+        'Österreich' => 'Austria'
+      }
+    end
+
+    def simple_element_mappings
+      {
+       'STREET' => [:street,  nil],
+       'ZIP' => [:zip, nil ],
+       'CITY' => [:city, nil ],
+       'COUNTRY' => [:country,  country_lambda(country_mappings)]
+      }
+    end
+
+    def simple_attribute_mappings
+      {
+       'type' => [:type, nil],
+      }
+    end
 
     def build_model node
-      m = ::Address.new
+      a = ::Address.new
+
+      extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: a
+      extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: a
+
+      a
     end
   end
 end
