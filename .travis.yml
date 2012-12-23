@@ -2,3 +2,5 @@ language: ruby
 bundler_args: --without documentation
 rvm:
   - 2.0.0-preview2
+script:
+  - bundle exec rake --trace spec
