@@ -7,7 +7,7 @@ class Member
   field :email, type: String
   field :member_since, type: Date
   field :date_of_birth, type: Date
-  field :gender, type: String
+  field :gender, type: Symbol
   field :languages, type: Array
   field :profession, type: String
 
