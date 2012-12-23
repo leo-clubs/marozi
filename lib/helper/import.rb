@@ -34,11 +34,11 @@ module Import
       end
     end
 
-    def member_lambda
+    def member_lambda(save=false)
       lambda do |v|
         members = []
         v.xpath('//MEMBER').each do |m|
-          members << MemberFactory.build_model(m)
+          members << MemberFactory.build_model(m,save)
         end
         members
       end
@@ -83,9 +83,9 @@ module Import
       }
     end
 
-    def list_element_mappings
+    def list_element_mappings(save=false)
       {
-        'MEMBERS' => [:members, member_lambda],
+        'MEMBERS' => [:members, member_lambda(save)],
       }
     end
 
@@ -101,13 +101,14 @@ module Import
       }
     end
 
-    def build_model node
+    def build_model node, save=false
       c = ::Club.new
 
       extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: c
       extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: c
-      extract_from_element_list list: node.element_children.select{|c| c.element_children.size >= 1}, mapping: list_element_mappings, entity: c
+      extract_from_element_list list: node.element_children.select{|c| c.element_children.size >= 1}, mapping: list_element_mappings(save), entity: c
 
+      c.save! if save
       c
     end
 
@@ -141,13 +142,14 @@ module Import
       }
     end
 
-    def build_model node
+    def build_model node, save=false
       m = ::Member.new
 
       extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: m
       extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: m
       extract_from_element_list list: node.element_children.select{|c| c.element_children.size >= 1}, mapping: list_element_mappings, entity: m
 
+      m.save! if save
       m
     end
   end
