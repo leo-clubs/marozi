@@ -4,7 +4,6 @@ class Member
   field :member_id, type: String
   field :first_name, type: String
   field :last_name, type: String
-  field :email, type: String
   field :member_since, type: Date
   field :date_of_birth, type: Date
   field :gender, type: Symbol
@@ -12,8 +11,6 @@ class Member
   field :profession, type: String
 
   embeds_many :addresses
-  embeds_many :email_addresses
-  embeds_many :phone_numbers
 
   belongs_to :club
 end
