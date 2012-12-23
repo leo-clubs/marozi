@@ -34,4 +34,10 @@ gem 'nokogiri', :require => false
 
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
+
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'rb-inotify', :require => false
+  gem 'rb-fsevent', :require => false
+  gem 'rb-fchange', :require => false
 end
