@@ -9,3 +9,5 @@
 /log/*.log
 /tmp
 /vendor/local
+
+config/mongoid.yml
