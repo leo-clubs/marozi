@@ -25,6 +25,22 @@ RSpec::Matchers.define :have_same_attributes_as do |expected|
   end
 end
 
+RSpec.configure do |config|
+
+  config.before(:suite) do
+    DatabaseCleaner[:mongoid].strategy = :truncation
+    DatabaseCleaner[:mongoid].clean_with :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner[:mongoid].start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner[:mongoid].clean
+  end
+end
+
 def xml_fixture file_name
   f = File.open("#{Rails.root}/spec/fixtures/import/#{file_name}.xml")
   Nokogiri::XML(f)

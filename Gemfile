@@ -32,6 +32,7 @@ group :test, :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'factory_girl_rails'
+  gem 'database_cleaner'
   gem 'rb-inotify', :require => false
   gem 'rb-fsevent', :require => false
   gem 'rb-fchange', :require => false
