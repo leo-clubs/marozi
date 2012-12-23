@@ -33,6 +33,16 @@ module Import
       end
     end
 
+    def member_lambda
+      lambda do |v|
+        members = []
+        v.xpath('//MEMBER').each do |m|
+          members << MemberFactory.build_model(m)
+        end
+        members
+      end
+    end
+
     def country_lambda mapping
       lambda {|v| mapping[v] || 'Germany'}
     end
@@ -72,6 +82,12 @@ module Import
       }
     end
 
+    def list_element_mappings
+      {
+        'MEMBERS' => [:members, member_lambda],
+      }
+    end
+
     def simple_element_mappings
       {
         'NAME' => [:name],
@@ -89,6 +105,7 @@ module Import
 
       extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: c
       extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: c
+      extract_from_element_list list: node.element_children.select{|c| c.element_children.size >= 1}, mapping: list_element_mappings, entity: c
 
       c
     end
@@ -128,7 +145,7 @@ module Import
 
       extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: m
       extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: m
-      extract_from_element_list list: node.element_children.select{|c| c.element_children.size > 1}, mapping: list_element_mappings, entity: m
+      extract_from_element_list list: node.element_children.select{|c| c.element_children.size >= 1}, mapping: list_element_mappings, entity: m
 
       m
     end

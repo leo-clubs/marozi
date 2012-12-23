@@ -50,5 +50,11 @@ describe 'import'  do
       subject.bank.should eq 'Clubkonto: Inh.:Leo Club Emiliaburg Gloria, 0815 17/13 (KTO), 629 802 00 (BLZ)'
       subject.homepage.should eq 'www.leoclub-emiliaburg-gloria.de'
     end
+
+    it 'should load members data correctly' do
+      subject.should be_a(Club)
+      subject.members.should_not be_empty
+      subject.members.size.should be 22
+    end
   end
 end
