@@ -19,9 +19,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 
 gem 'mongoid', github: 'mongoid/mongoid', :branch => '4.0.0-dev'
-# gem 'origin',  github: 'mongoid/origin'
-# gem 'evolver',  github: 'mongoid/evolver'
-# gem 'moped',  github: 'mongoid/moped'
 
 gem 'bson_ext'
 gem 'nokogiri', :require => false
