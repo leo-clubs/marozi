@@ -3,16 +3,6 @@ module Import
   module MappingHelper
     extend self
 
-    locale_lambda = lambda do |v|
-      base_lang = [:de]
-      begin
-        additional_langs = v.xpath('//NAME/text()').map{|e| e.text.to_sym}
-      rescue
-        additional_langs = []
-      end
-      (base_lang + additional_langs).sort
-    end
-
     def date_lambda
       lambda {|v| Date.parse(v)}
     end
@@ -33,6 +23,16 @@ module Import
       end
     end
 
+    def address_lambda
+      lambda do |v|
+        addresses = []
+        v.xpath('//ADDRESS').each do |a|
+          addresses << AddressFactory.build_model(a)
+        end
+        addresses.sort{|a,b| a.type <=> b.type}
+      end
+    end
+
     def country_lambda mapping
       lambda {|v| mapping[v] || 'Germany'}
     end
@@ -42,10 +42,10 @@ module Import
     end
 
     def extract_from_attribute_list opts
-      opts[:list].each do |a|
-        according_value = opts[:mapping][a[0]]
+      opts[:list].each do |id, attribute|
+        according_value = opts[:mapping][id]
         if according_value
-          value = according_value[1].class == Proc ? according_value[1].call(a[1].value) : a[1].value
+          value = according_value[1].class == Proc ? according_value[1].call(attribute.value) : attribute.value
           opts[:entity].send("#{according_value[0]}=", value)
         end
       end
@@ -69,23 +69,24 @@ module Import
 
     def simple_attribute_mappings
       {
-       'membershipStart' => [:member_since, date_lambda],
-       'id' => [:member_id, nil],
+        'membershipStart' => [:member_since, date_lambda],
+        'id' => [:member_id],
       }
     end
 
     def simple_element_mappings
       {
-       'FIRSTNAME' => [:first_name, text_value_lambda ],
-       'LASTNAME' => [:last_name, text_value_lambda ],
-       'BIRTHDATE' => [:date_of_birth,  date_lambda],
-       'SEX' => [:gender, gender_lambda ]
+        'FIRSTNAME' => [:first_name, text_value_lambda ],
+        'LASTNAME' => [:last_name, text_value_lambda ],
+        'BIRTHDATE' => [:date_of_birth,  date_lambda],
+        'SEX' => [:gender, gender_lambda ]
       }
     end
 
     def list_element_mappings
       {
-      'LANGUAGES' => [:languages, locale_lambda]
+        'LANGUAGES' => [:languages, locale_lambda],
+        'ADDRESSES' => [:addresses, address_lambda]
       }
     end
 
@@ -115,16 +116,16 @@ module Import
 
     def simple_element_mappings
       {
-       'STREET' => [:street,  nil],
-       'ZIP' => [:zip, nil ],
-       'CITY' => [:city, nil ],
+       'STREET' => [:street],
+       'ZIP' => [:zip],
+       'CITY' => [:city],
        'COUNTRY' => [:country,  country_lambda(country_mappings)]
       }
     end
 
     def simple_attribute_mappings
       {
-       'type' => [:type, nil],
+       'type' => [:type],
       }
     end
 

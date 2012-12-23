@@ -2,30 +2,37 @@ require 'spec_helper'
 
 describe 'import'  do
   describe 'address' do
-    let(:address) {Import::AddressFactory.build_model(xml_fixture('address').element_children.first)}
+    subject {Import::AddressFactory.build_model(xml_fixture('address').element_children.first)}
 
     it 'should load all address data correctly' do
-      address.should be_a(Address)
-      address.type.should eq :home
-      address.street.should eq 'Karl-Jaspers-Str. 86'
-      address.zip.should eq '71182'
-      address.city.should eq 'Klemensland'
-      address.country.should eq 'Germany'
+      subject.should be_a(Address)
+      subject.type.should eq :home
+      subject.street.should eq 'Karl-Jaspers-Str. 86'
+      subject.zip.should eq '71182'
+      subject.city.should eq 'Klemensland'
+      subject.country.should eq 'Germany'
     end
   end
 
   describe 'member' do
-    let(:member) {Import::MemberFactory.build_model(xml_fixture('member').element_children.first)}
+    subject {Import::MemberFactory.build_model(xml_fixture('member').element_children.first)}
+    let(:home_address) { build(:xml_home_address) }
+    let(:business_address) { build(:xml_business_address) }
 
     it 'should load simple member data correctly' do
-      member.should be_a(Member)
-      member.member_id.should eq '027146'
-      member.first_name.should eq 'Angela'
-      member.last_name.should eq 'vom Mrugalla'
-      member.gender.should eq :female
-      member.date_of_birth.should eq Date.new(1988, 11, 12)
-      member.member_since.should eq Date.new(2008, 7, 1)
-      member.languages.sort.should eq [:de, :en, :fr, :it]
+      subject.should be_a(Member)
+      subject.member_id.should eq '027146'
+      subject.first_name.should eq 'Angela'
+      subject.last_name.should eq 'vom Mrugalla'
+      subject.gender.should eq :female
+      subject.date_of_birth.should eq Date.new(1988, 11, 12)
+      subject.member_since.should eq Date.new(2008, 7, 1)
+      subject.languages.sort.should eq [:de, :en, :fr, :it]
+    end
+
+    it 'should load embedded member data correctly' do
+      subject.addresses.should_not be_empty
+      subject.addresses.should have_same_attributes_as([business_address, home_address])
     end
   end
 end
