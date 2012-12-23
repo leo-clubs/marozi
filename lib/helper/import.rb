@@ -6,7 +6,6 @@ module Import
       base_lang = [:de]
       begin
         additional_langs = v.xpath('//NAME/text()').map{|e| e.text.to_sym}
-        puts "all names: #{additional_langs.inspect}"
       rescue
         additional_langs = []
       end
