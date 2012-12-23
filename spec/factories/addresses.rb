@@ -9,10 +9,4 @@ FactoryGirl.define do
     email_address         'andrea.gollnow@gilde.ch'
     phone_number          '04 55- 9 63 37 50'
   end
-
-  factory :xml_business_address, class: Address do
-    id                    -2
-    type                  :business
-    country               'Germany'
-  end
 end

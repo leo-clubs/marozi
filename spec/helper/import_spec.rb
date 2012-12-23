@@ -17,7 +17,6 @@ describe 'import'  do
   describe 'member' do
     subject {Import::MemberFactory.build_model(xml_fixture('member').element_children.first)}
     let(:home_address) { build(:xml_home_address) }
-    let(:business_address) { build(:xml_business_address) }
 
     it 'should load simple member data correctly' do
       subject.should be_a(Member)
@@ -32,7 +31,7 @@ describe 'import'  do
 
     it 'should load embedded member data correctly' do
       subject.addresses.should_not be_empty
-      subject.addresses.should have_same_attributes_as([business_address, home_address])
+      subject.addresses.should have_same_attributes_as([home_address])
     end
   end
 

@@ -27,7 +27,8 @@ module Import
       lambda do |v|
         addresses = []
         v.xpath('//ADDRESS').each do |a|
-          addresses << AddressFactory.build_model(a)
+          address = AddressFactory.build_model(a)
+          addresses << address if address
         end
         addresses.sort{|a,b| a.type <=> b.type}
       end
@@ -186,7 +187,8 @@ module Import
       extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: a
       extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: a
 
-      a
+      ignored = ['_id', 'country', 'type']
+      a.attributes.except(*ignored).empty? ? nil : a
     end
   end
 end
