@@ -62,6 +62,39 @@ module Import
     end
   end
 
+  module ClubFactory
+    extend self
+    extend MappingHelper
+
+    def simple_attribute_mappings
+      {
+        'id' => [:club_id],
+      }
+    end
+
+    def simple_element_mappings
+      {
+        'NAME' => [:name],
+        'FOUNDDATE' => [:founded_at, date_lambda ],
+        'CHARTERDATE' => [:chartered_at, date_lambda ],
+        'GODFATHER' => [:godfather],
+        'MEET' => [:meet_description],
+        'BANK' => [:bank],
+        'URL' => [:homepage]
+      }
+    end
+
+    def build_model node
+      c = ::Club.new
+
+      extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: c
+      extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: c
+
+      c
+    end
+
+  end
+
 
   module MemberFactory
     extend self
@@ -108,6 +141,7 @@ module Import
     def country_mappings
       {
         'Deutschland' => 'Germany',
+        'Adresse unbekannt' => 'Germany',
         'Frankreich' => 'France',
         'Republik Ungarn' => 'Hungary',
         'Österreich' => 'Austria'

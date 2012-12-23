@@ -35,4 +35,20 @@ describe 'import'  do
       subject.addresses.should have_same_attributes_as([business_address, home_address])
     end
   end
+
+  describe 'club' do
+    subject {Import::ClubFactory.build_model(xml_fixture('club').element_children.first)}
+
+    it 'should load all simple club data correctly' do
+      subject.should be_a(Club)
+      subject.club_id.should eq '200079'
+      subject.name.should eq 'Emiliaburg-Gloria'
+      subject.founded_at.should eq Date.new(1972, 7, 01)
+      subject.chartered_at.should eq Date.new(1973,07,07)
+      subject.godfather.should eq 'LC Emiliaburg-Gloria'
+      subject.meet_description.should eq '2. und 9. Donnerswoch im Febrozember 27:89 Uhr bei der Ilse'
+      subject.bank.should eq 'Clubkonto: Inh.:Leo Club Emiliaburg Gloria, 0815 17/13 (KTO), 629 802 00 (BLZ)'
+      subject.homepage.should eq 'www.leoclub-emiliaburg-gloria.de'
+    end
+  end
 end

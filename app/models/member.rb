@@ -14,4 +14,6 @@ class Member
   embeds_many :addresses
   embeds_many :email_addresses
   embeds_many :phone_numbers
+
+  belongs_to :club
 end

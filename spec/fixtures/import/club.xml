@@ -1,0 +1,1070 @@
+<CLUB id="200079" clubnumber="200079">
+  <NAME>Emiliaburg-Gloria</NAME>
+  <CLUBNUMMER>200079</CLUBNUMMER>
+  <FOUNDDATE>1972-07-01T12:00:00</FOUNDDATE>
+  <CHARTERDATE>1973-07-07T12:00:00</CHARTERDATE>
+  <FOUNDPRESIDENT>Dagostini</FOUNDPRESIDENT>
+  <GODFATHER>LC Emiliaburg-Gloria</GODFATHER>
+  <MEET>2. und 9. Donnerswoch im Febrozember 27:89 Uhr bei der Ilse</MEET>
+  <FAX />
+  <TEL />
+  <EMAIL>info@gloria.leo-district111kl.de</EMAIL>
+  <URL>www.leoclub-emiliaburg-gloria.de</URL>
+  <JUM />
+  <CONTACTCLUB />
+  <BANK>Clubkonto: Inh.:Leo Club Emiliaburg Gloria, 0815 17/13 (KTO), 629 802 00 (BLZ)</BANK>
+  <LEOGODFATHER />
+  <GENDER>G</GENDER>
+  <OFFICERS>
+    <OFFICER id="1780" group="Vorstand" groupid="179">
+      <NAME>P</NAME>
+      <PERSON id="241212">
+        <FIRSTNAME>Julian</FIRSTNAME>
+        <LASTNAME>Schönberg</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1783" group="Vorstand" groupid="179">
+      <NAME>S</NAME>
+      <PERSON id="243235">
+        <FIRSTNAME>Julina</FIRSTNAME>
+        <LASTNAME>Wiebe</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1784" group="Vorstand" groupid="179">
+      <NAME>Sch</NAME>
+      <PERSON id="238820">
+        <FIRSTNAME>Mirko</FIRSTNAME>
+        <LASTNAME>Scherz</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1786" group="Vorstand" groupid="179">
+      <NAME>1.VP</NAME>
+      <PERSON id="237417">
+        <FIRSTNAME>Ahmad</FIRSTNAME>
+        <LASTNAME>Rose</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1788" group="Beauftrage" groupid="180">
+      <NAME>IT</NAME>
+      <PERSON id="237417">
+        <FIRSTNAME>Ahmad</FIRSTNAME>
+        <LASTNAME>Rose</LASTNAME>
+      </PERSON>
+    </OFFICER>
+  </OFFICERS>
+  <MEMBERS>
+    <MEMBER id="237407" internationalNumber="0" status="E" foundmember="false" foundpresident="false" membershipStart="2005-07-01T12:00:00">
+      <FIRSTNAME>Carmen</FIRSTNAME>
+      <LASTNAME>Esenwein</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE>Dr. med.</TITLE>
+      <ROYAL />
+      <BIRTHDATE>1953-07-13T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Arzt f. Pharmakologie</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="931815" type="home">
+          <EMAIL>amar@schildhauerheidelmann.info</EMAIL>
+          <TEL>+49-7256-68076986</TEL>
+          <FAX />
+          <MOBILE>+49-1513-89656594</MOBILE>
+          <STREET>Obere Lindenstr. 19a</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Williburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931816" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="237417" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2009-07-01T12:00:00">
+      <FIRSTNAME>Ahmad</FIRSTNAME>
+      <LASTNAME>Rose</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE></TITLE>
+      <ROYAL />
+      <BIRTHDATE>1998-10-28T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Softwareentwickler</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES>
+        <LANGUAGE id="322">
+          <NAME>de</NAME>
+          <DESCRIPTION>deutsch</DESCRIPTION>
+        </LANGUAGE>
+        <LANGUAGE id="328">
+          <NAME>en</NAME>
+          <DESCRIPTION>englisch</DESCRIPTION>
+        </LANGUAGE>
+        <LANGUAGE id="263">
+          <NAME>fr</NAME>
+          <DESCRIPTION>französisch</DESCRIPTION>
+        </LANGUAGE>
+      </LANGUAGES>
+      <FUNCTIONS>
+        <FUNCTION id="1786">
+          <NAME>1.VP</NAME>
+          <YEAR>2007-2008</YEAR>
+          <FCLUB id="300092">
+            <NAME>Schlangenland</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1771">
+          <NAME>DSpr</NAME>
+          <YEAR>2007-2008</YEAR>
+          <FCLUB id="300092">
+            <NAME>Schlangenland</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1780">
+          <NAME>P</NAME>
+          <YEAR>2009-2010</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1786">
+          <NAME>1.VP</NAME>
+          <YEAR>2010-2011</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1777">
+          <NAME>C</NAME>
+          <YEAR>2010-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1788">
+          <NAME>IT</NAME>
+          <YEAR>2011-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1786">
+          <NAME>1.VP</NAME>
+          <YEAR>2012-2013</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1788">
+          <NAME>IT</NAME>
+          <YEAR>2012-2013</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="931835" type="home">
+          <EMAIL>darren.ranz@poeschl.net</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <STREET>Jakobistr. 37</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931836" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS>
+        <PREVCLUB id="300092">
+          <NAME>Schlangenland</NAME>
+          <YEAR>2006-2009</YEAR>
+        </PREVCLUB>
+      </PREVCLUBS>
+    </MEMBER>
+    <MEMBER id="237420" internationalNumber="0" status="P" foundmember="false" foundpresident="false" membershipStart="2009-07-01T12:00:00">
+      <FIRSTNAME>Alexa</FIRSTNAME>
+      <LASTNAME>Schilling</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1998-09-06T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Studentin</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="931841" type="home">
+          <EMAIL>madita_amus@klinger.com</EMAIL>
+          <TEL>(0258) 308010042</TEL>
+          <FAX />
+          <MOBILE />
+          <STREET>Geibelstr. 38</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931842" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="237424" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2009-07-01T12:00:00">
+      <FIRSTNAME>Maxine</FIRSTNAME>
+      <LASTNAME>Brand</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE>Kulturwissenschaftlerin, M.A.</TITLE>
+      <ROYAL />
+      <BIRTHDATE>1998-09-06T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Startup Coach</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="931849" type="home">
+          <EMAIL>amar@schildhauerheidelmann.info</EMAIL>
+          <TEL>+49-7256-68076986</TEL>
+          <FAX />
+          <MOBILE>+49-1513-89656594</MOBILE>
+          <STREET>Obere Lindenstr. 98</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931850" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="237427" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2005-07-01T12:00:00">
+      <FIRSTNAME>Elia</FIRSTNAME>
+      <LASTNAME>Maier</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1990-10-23T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Tierärztin</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="931855" type="home">
+          <EMAIL>freya_renk@riedelmorgenstern.ch</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE>+49-188-2430614</MOBILE>
+          <STREET>Karl-Wichmann-Str. 31c</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931856" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="237428" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2009-07-01T12:00:00">
+      <FIRSTNAME>Ella</FIRSTNAME>
+      <LASTNAME>Krug</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1981-03-29T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Betriebswirtin</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS>
+        <FUNCTION id="1784">
+          <NAME>Sch</NAME>
+          <YEAR>2010-2011</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="931857" type="home">
+          <EMAIL>sren@johnmnch.net</EMAIL>
+          <TEL>(0243) 347778997</TEL>
+          <FAX />
+          <MOBILE />
+          <STREET>Otto-Stange-Str. 76</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931858" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="237429" internationalNumber="0" status="P" foundmember="false" foundpresident="false" membershipStart="2008-07-01T12:00:00">
+      <FIRSTNAME>Niko</FIRSTNAME>
+      <LASTNAME>Schnieder</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1985-12-21T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Student</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="931859" type="home">
+          <EMAIL>lias@lufftmertens.info</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <STREET>Ilmstr. 9</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931860" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="237431" internationalNumber="0" status="P" foundmember="false" foundpresident="false" membershipStart="2006-07-01T12:00:00">
+      <FIRSTNAME>Levi</FIRSTNAME>
+      <LASTNAME>Günz</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1995-04-29T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Student Politikwissenschaft</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="931863" type="home">
+          <EMAIL>sabrina@weigeldragu.com</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <STREET>Ernst-Bloch-Str. 40</STREET>
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="931864" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET>Graebestr. 77c</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="239110" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2010-05-03T12:00:00">
+      <FIRSTNAME>Thorge</FIRSTNAME>
+      <LASTNAME>Plotzitzka</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1989-01-21T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Ingenieur</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES>
+        <LANGUAGE id="322">
+          <NAME>de</NAME>
+          <DESCRIPTION>deutsch</DESCRIPTION>
+        </LANGUAGE>
+        <LANGUAGE id="328">
+          <NAME>en</NAME>
+          <DESCRIPTION>englisch</DESCRIPTION>
+        </LANGUAGE>
+      </LANGUAGES>
+      <FUNCTIONS>
+        <FUNCTION id="1780">
+          <NAME>P</NAME>
+          <YEAR>2010-2011</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1761">
+          <NAME>ILO</NAME>
+          <YEAR>2011-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="935221" type="home">
+          <EMAIL>james.wujak@gotthardt.info</EMAIL>
+          <TEL>(0915) 158034035</TEL>
+          <FAX />
+          <MOBILE />
+          <STREET>Schillerstr. 28</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Lüneburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="935222" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME>NULLNULLNULL</NAME>
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="240230" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-04-04T12:00:00">
+      <FIRSTNAME>Estelle</FIRSTNAME>
+      <LASTNAME>Wassilew</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1990-08-05T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Studentin</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES>
+        <LANGUAGE id="322">
+          <NAME>de</NAME>
+          <DESCRIPTION>deutsch</DESCRIPTION>
+        </LANGUAGE>
+        <LANGUAGE id="328">
+          <NAME>en</NAME>
+          <DESCRIPTION>englisch</DESCRIPTION>
+        </LANGUAGE>
+        <LANGUAGE id="329">
+          <NAME>es</NAME>
+          <DESCRIPTION>spanisch</DESCRIPTION>
+        </LANGUAGE>
+      </LANGUAGES>
+      <FUNCTIONS>
+        <FUNCTION id="1786">
+          <NAME>1.VP</NAME>
+          <YEAR>2011-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1779">
+          <NAME>Lion</NAME>
+          <YEAR>2011-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="937759" type="home">
+          <EMAIL>marten@abt.net</EMAIL>
+          <TEL>+49-998-0469517</TEL>
+          <FAX />
+          <MOBILE>+49-1336-58309287</MOBILE>
+          <STREET>Auf der Donnen 7</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="240903" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-05-02T12:00:00">
+      <FIRSTNAME>Franka</FIRSTNAME>
+      <LASTNAME>Bos</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1995-03-12T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION />
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS>
+        <FUNCTION id="1780">
+          <NAME>P</NAME>
+          <YEAR>2011-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="939291" type="home">
+          <EMAIL>enno@liederburkhardt.ch</EMAIL>
+          <TEL>(05686) 3155792</TEL>
+          <FAX />
+          <MOBILE>+49-1910-53698729</MOBILE>
+          <STREET>Butterheider Str. 75a</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="236921" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-05-03T12:00:00">
+      <FIRSTNAME>Jolie</FIRSTNAME>
+      <LASTNAME>Schouren</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1998-04-28T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Student</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS>
+        <FUNCTION id="1783">
+          <NAME>S</NAME>
+          <YEAR>2009-2010</YEAR>
+          <FCLUB id="300066">
+            <NAME>'Tom Kyle' Kiel</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1784">
+          <NAME>Sch</NAME>
+          <YEAR>2011-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="930843" type="home">
+          <EMAIL>mareike.kawohl@rother.net</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE>+49-146-9052502</MOBILE>
+          <NAME />
+          <STREET>Vereinsstr. 988</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="930844" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS>
+        <PREVCLUB id="300066">
+          <NAME>'Tom Kyle' Kiel</NAME>
+          <YEAR>2009-2011</YEAR>
+        </PREVCLUB>
+      </PREVCLUBS>
+    </MEMBER>
+    <MEMBER id="240905" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-05-02T12:00:00">
+      <FIRSTNAME>Marit</FIRSTNAME>
+      <LASTNAME>Wallner</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1995-04-04T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Studentin</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="939295" type="home">
+          <EMAIL>marten@abt.net</EMAIL>
+          <TEL>+49-998-0469517</TEL>
+          <FAX />
+          <MOBILE>+49-1336-58309287</MOBILE>
+          <STREET>Auf der Donnen 7</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="240907" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-05-02T12:00:00">
+      <FIRSTNAME>Edgar</FIRSTNAME>
+      <LASTNAME>Stahl</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1990-04-30T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Medizinstudent</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="939299" type="home">
+          <EMAIL>lennart.kaufmann@lohse.name</EMAIL>
+          <TEL>+49-5369-73609944</TEL>
+          <FAX />
+          <MOBILE />
+          <STREET>Freudenthal 137</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="240908" internationalNumber="0" status="P" foundmember="false" foundpresident="false" membershipStart="2010-08-02T12:00:00">
+      <FIRSTNAME>Esma</FIRSTNAME>
+      <LASTNAME>von Moeller</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1985-01-16T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Studentin</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="939301" type="home">
+          <EMAIL>amar@sonn.com</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <STREET>Schenkendorfstr. 65c</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Köln</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="241212" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-06-06T12:00:00">
+      <FIRSTNAME>Julian</FIRSTNAME>
+      <LASTNAME>Schönberg</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1985-01-11T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Student</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS>
+        <FUNCTION id="1783">
+          <NAME>S</NAME>
+          <YEAR>2011-2012</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1780">
+          <NAME>P</NAME>
+          <YEAR>2012-2013</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+        <FUNCTION id="1769">
+          <NAME>DS</NAME>
+          <YEAR>2012-2013</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="939924" type="home">
+          <EMAIL>lucian.deja@teufel.info</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE>+49-1653-76533461</MOBILE>
+          <STREET>Wannseestr. 12c</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="243215" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-12-05T12:00:00">
+      <FIRSTNAME>Zehra</FIRSTNAME>
+      <LASTNAME>Lipske</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1995-11-25T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Studentin</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="943811" type="home">
+          <EMAIL>maxine@einert.de</EMAIL>
+          <TEL />
+          <FAX />
+          <MOBILE>+49-184-5301973</MOBILE>
+          <STREET>Grillenweg 568</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Adresse unbekannt</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="243235" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2011-12-05T12:00:00">
+      <FIRSTNAME>Julina</FIRSTNAME>
+      <LASTNAME>Wiebe</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1996-01-09T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION />
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS>
+        <FUNCTION id="1783">
+          <NAME>S</NAME>
+          <YEAR>2012-2013</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="943855" type="home">
+          <EMAIL>nick.dombrowski@schnelting.net</EMAIL>
+          <TEL>+49-4100-60402330</TEL>
+          <FAX />
+          <MOBILE />
+          <STREET>An der Lichtenburg 52</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="243810" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2012-03-19T12:00:00">
+      <FIRSTNAME>Jari</FIRSTNAME>
+      <LASTNAME>Matschke</LASTNAME>
+      <SEX>W</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1983-04-15T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION />
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="945181" type="home">
+          <EMAIL>marion-lisa123@hotmail.de</EMAIL>
+          <TEL>17622631323</TEL>
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET>Christoph Probst Str. 16</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Adresse unbekannt</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="238820" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2012-05-06T12:00:00">
+      <FIRSTNAME>Niclas</FIRSTNAME>
+      <LASTNAME>Mikitenko</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1985-08-13T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Student</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES>
+        <LANGUAGE id="322">
+          <NAME>de</NAME>
+          <DESCRIPTION>deutsch</DESCRIPTION>
+        </LANGUAGE>
+        <LANGUAGE id="328">
+          <NAME>en</NAME>
+          <DESCRIPTION>englisch</DESCRIPTION>
+        </LANGUAGE>
+        <LANGUAGE id="329">
+          <NAME>es</NAME>
+          <DESCRIPTION>spanisch</DESCRIPTION>
+        </LANGUAGE>
+      </LANGUAGES>
+      <FUNCTIONS>
+        <FUNCTION id="1784">
+          <NAME>Sch</NAME>
+          <YEAR>2012-2013</YEAR>
+          <FCLUB id="200079">
+            <NAME>Emiliaburg-Gloria</NAME>
+          </FCLUB>
+        </FUNCTION>
+      </FUNCTIONS>
+      <ADDRESSES>
+        <ADDRESS id="934641" type="home">
+          <EMAIL>nicolas@khnert.org</EMAIL>
+          <TEL>(03333) 1350978</TEL>
+          <FAX />
+          <MOBILE>+49-161-5232332</MOBILE>
+          <STREET>Ulmer Str. 30b</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+        <ADDRESS id="934642" type="business">
+          <EMAIL />
+          <TEL />
+          <FAX />
+          <MOBILE />
+          <NAME />
+          <STREET />
+          <ZIP />
+          <CITY />
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS>
+        <PREVCLUB id="400007">
+          <NAME>Stade Gottlieb Wilhelm Freudentheil</NAME>
+          <YEAR>2008-2012</YEAR>
+        </PREVCLUB>
+      </PREVCLUBS>
+    </MEMBER>
+    <MEMBER id="245614" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2012-08-31T12:00:00">
+      <FIRSTNAME>Elijah</FIRSTNAME>
+      <LASTNAME>Effler</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1985-08-13T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION>Duales Studium bei PricewaterhouseCoopers WPG AG</DESCRIPTION>
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="948795" type="home">
+          <EMAIL>joel.kampf@busch.org</EMAIL>
+          <TEL>+49-452-6900883</TEL>
+          <FAX />
+          <MOBILE />
+          <STREET>Düsseldorfer Str. 83</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Deutschland</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+    <MEMBER id="245634" internationalNumber="0" status="A" foundmember="false" foundpresident="false" membershipStart="2012-09-04T12:00:00">
+      <FIRSTNAME>Jan</FIRSTNAME>
+      <LASTNAME>Scheuring</LASTNAME>
+      <SEX>M</SEX>
+      <TITLE />
+      <ROYAL />
+      <BIRTHDATE>1994-07-31T12:00:00</BIRTHDATE>
+      <VITA />
+      <MELVINJONES>0</MELVINJONES>
+      <PROFESSION id="200079">
+        <NAME />
+        <DESCRIPTION />
+      </PROFESSION>
+      <LANGUAGES />
+      <FUNCTIONS />
+      <ADDRESSES>
+        <ADDRESS id="948835" type="home">
+          <EMAIL>tyron@doblermay.ch</EMAIL>
+          <TEL>(03356) 7157031</TEL>
+          <FAX />
+          <MOBILE />
+          <STREET>Warthestr. 3</STREET>
+          <ZIP>38447</ZIP>
+          <CITY>Emiliaburg</CITY>
+          <COUNTRY>Adresse unbekannt</COUNTRY>
+          <URL />
+        </ADDRESS>
+      </ADDRESSES>
+      <PREVCLUBS />
+    </MEMBER>
+  </MEMBERS>
+</CLUB>
