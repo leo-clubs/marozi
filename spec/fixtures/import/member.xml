@@ -1,0 +1,56 @@
+<MEMBER id="027146" internationalNumber="0" status="P" foundmember="false" foundpresident="false" membershipStart="2008-07-01T12:00:00">
+  <FIRSTNAME>Angela</FIRSTNAME>
+  <LASTNAME>vom Mrugalla</LASTNAME> 
+  <SEX>W</SEX>
+  <TITLE />
+  <ROYAL />
+  <BIRTHDATE>1988-11-12T12:00:00</BIRTHDATE>
+  <VITA />
+  <MELVINJONES>0</MELVINJONES>
+  <PROFESSION id="300042">
+    <NAME />
+    <DESCRIPTION>Stud. Jur.</DESCRIPTION>
+  </PROFESSION>
+  <LANGUAGES>
+    <LANGUAGE id="328">
+      <NAME>en</NAME>
+      <DESCRIPTION>englisch</DESCRIPTION>
+    </LANGUAGE>
+    <LANGUAGE id="263">
+      <NAME>fr</NAME>
+      <DESCRIPTION>französisch</DESCRIPTION>
+    </LANGUAGE>
+    <LANGUAGE id="343">
+      <NAME>it</NAME>
+      <DESCRIPTION>italienisch</DESCRIPTION>
+    </LANGUAGE>
+  </LANGUAGES>
+  <FUNCTIONS />
+  <ADDRESSES>
+    <ADDRESS id="929475" type="home">
+      <EMAIL>andrea.gollnow@gilde.ch</EMAIL>
+      <TEL>04 55- 9 63 37 50</TEL>
+      <FAX />
+      <MOBILE />
+      <NAME />
+      <STREET>Karl-Jaspers-Str. 86</STREET>
+      <ZIP>71182</ZIP>
+      <CITY>Klemensland</CITY>
+      <COUNTRY>Deutschland</COUNTRY>
+      <URL />
+    </ADDRESS>
+    <ADDRESS id="929476" type="business">
+      <EMAIL />
+      <TEL />
+      <FAX />
+      <MOBILE />
+      <NAME />
+      <STREET />
+      <ZIP />
+      <CITY />
+      <COUNTRY>Deutschland</COUNTRY>
+      <URL />
+    </ADDRESS>
+  </ADDRESSES>
+  <PREVCLUBS />
+</MEMBER>
