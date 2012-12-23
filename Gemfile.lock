@@ -203,6 +203,7 @@ DEPENDENCIES
   mongoid!
   nokogiri
   rails!
+  rake
   rb-fchange
   rb-fsevent
   rb-inotify
