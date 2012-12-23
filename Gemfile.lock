@@ -206,7 +206,7 @@ DEPENDENCIES
   rb-fchange
   rb-fsevent
   rb-inotify
-  rspec-rails (~> 2.0)
+  rspec-rails
   sass-rails!
   sprockets-rails!
   sqlite3

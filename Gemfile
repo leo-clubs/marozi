@@ -20,8 +20,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
 gem 'mongoid', github: 'mongoid/mongoid', :branch => '4.0.0-dev'
@@ -33,7 +31,7 @@ gem 'bson_ext'
 gem 'nokogiri', :require => false
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.0"
+  gem 'rspec-rails'
 
   gem 'guard'
   gem 'guard-rspec'
