@@ -20,7 +20,7 @@ describe 'import'  do
 
     it 'should load simple member data correctly' do
       subject.should be_a(Member)
-      subject.member_id.should eq '027146'
+      subject.leo_id.should eq '027146'
       subject.first_name.should eq 'Angela'
       subject.last_name.should eq 'vom Mrugalla'
       subject.gender.should eq :female
@@ -36,11 +36,11 @@ describe 'import'  do
   end
 
   describe 'club' do
-    subject {Import::ClubFactory.build_model(xml_fixture('club').element_children.first)}
+    subject       {Import::ClubFactory.build_model(xml_fixture('club').element_children.first)}
 
     it 'should load all simple club data correctly' do
       subject.should be_a(Club)
-      subject.club_id.should eq '200079'
+      subject.leo_id.should eq '200079'
       subject.name.should eq 'Emiliaburg-Gloria'
       subject.founded_at.should eq Date.new(1972, 7, 01)
       subject.chartered_at.should eq Date.new(1973,07,07)
@@ -51,9 +51,24 @@ describe 'import'  do
     end
 
     it 'should load members data correctly' do
-      subject.should be_a(Club)
-      subject.members.should_not be_empty
-      subject.members.size.should be 22
+       subject.should be_a(Club)
+       subject.members.should_not be_empty
+       subject.members.size.should be 22
+    end
+
+    it 'should not mix up members of multiple clubs' do
+      xml_fixture('clubs').xpath('//CLUB').each{|c| Import::ClubFactory.build_model(c,true)}
+      Club.count.should eq 2
+      Member.count.should eq 22
+
+      Club.each do |c|
+        c.members.should_not be_empty
+        arr = []
+        c.members.map{|m| m.leo_id}.each do |m|
+          arr.should_not include m
+          arr << m
+        end
+      end
     end
   end
 end

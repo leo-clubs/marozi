@@ -1,7 +1,7 @@
 class Club
   include Mongoid::Document
 
-  field :club_id, type: String
+  field :leo_id, type: String
   field :name, type: String
   field :founded_at, type: Date
   field :chartered_at, type: Date
@@ -13,5 +13,5 @@ class Club
   embeds_many :office_mappings
   embeds_one :address
 
-  has_many :members
+  has_many :members, autosave: true
 end

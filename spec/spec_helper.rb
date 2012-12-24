@@ -37,7 +37,7 @@ RSpec.configure do |config|
   end
 
   config.after(:each) do
-    DatabaseCleaner[:mongoid].clean
+    #DatabaseCleaner[:mongoid].clean
   end
 end
 
