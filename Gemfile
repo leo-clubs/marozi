@@ -17,6 +17,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'haml-rails'
 gem 'turbolinks'
 
 gem 'mongoid', github: 'mongoid/mongoid', :branch => '4.0.0-dev'
