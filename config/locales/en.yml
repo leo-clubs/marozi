@@ -1,2 +1,7 @@
 en:
-  hello: "Hello world"
+  navbar:
+    home: 'Home'
+    club: 'My Club'
+    mail: 'Send Mail'
+    profile: 'My Profile'
+    about: 'About'
