@@ -90,6 +90,18 @@ GIT
       activesupport (>= 3.0)
       sprockets (~> 2.8)
 
+GIT
+  remote: git://github.com/rspec/rspec-rails.git
+  revision: 1d15db02c540e3987d18f0c4b48193a4401ff724
+  specs:
+    rspec-rails (2.12.0)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      railties (>= 3.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -227,6 +239,7 @@ DEPENDENCIES
   rb-fsevent
   rb-inotify
   rspec
+  rspec-rails!
   sass-rails!
   sprockets-rails!
   turbolinks

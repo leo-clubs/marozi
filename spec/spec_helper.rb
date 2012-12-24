@@ -1,6 +1,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/autorun'
+require 'rspec/rails'
 require 'nokogiri'
 
 %w{spec/support lib}.each do |dir|
@@ -37,7 +38,7 @@ RSpec.configure do |config|
   end
 
   config.after(:each) do
-    #DatabaseCleaner[:mongoid].clean
+    DatabaseCleaner[:mongoid].clean
   end
 end
 

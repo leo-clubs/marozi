@@ -28,7 +28,7 @@ gem 'nokogiri', :require => false
 
 group :test, :development do
   gem 'rspec'
-
+  gem 'rspec-rails', github: 'rspec/rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
   gem 'factory_girl_rails'
