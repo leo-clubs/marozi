@@ -5,3 +5,11 @@ en:
     mail: 'Send Mail'
     profile: 'My Profile'
     about: 'About'
+  members:
+    caption:
+      name: '%{first_name} %{last_name}'
+      history: 'History'
+      profession: 'Profession'
+      contact: 'Contact'
+      contact_home: 'Home'
+      contact_work: 'Work' 
