@@ -94,6 +94,8 @@ GEM
   remote: https://rubygems.org/
   specs:
     atomic (1.0.1)
+    bootstrap-sass (2.2.2.0)
+      sass (~> 3.2)
     bson (1.8.0)
       activesupport
     bson_ext (1.8.0)
@@ -193,6 +195,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-deprecated_finders!
   arel!
+  bootstrap-sass
   bson_ext
   coffee-rails!
   database_cleaner
