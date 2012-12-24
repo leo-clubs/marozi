@@ -1,6 +1,3 @@
-- configure MongoDB for Travis
 - find good model for founding president
-- correct error output for missing dates
 - add year to club/member
-- (maybe) rename address to contact_info
 - add jumelage club to club document
