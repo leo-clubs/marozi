@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe MembersController do
-
   describe 'show' do
     it 'should assign variables correctly' do
       member = create(:simple_member)
