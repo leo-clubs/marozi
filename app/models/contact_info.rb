@@ -1,4 +1,4 @@
-class Address
+class ContactInfo
   include Mongoid::Document
 
   field :type, type: Symbol

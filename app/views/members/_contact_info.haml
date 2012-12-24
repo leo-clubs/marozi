@@ -1,0 +1,8 @@
+%address
+  %strong= t(:"members.caption.contact_#{contact_info.type}")
+  %br
+  = contact_info.street
+  %br
+  = "#{contact_info.zip} #{contact_info.city}"
+  %br
+  = contact_info.country

@@ -34,14 +34,14 @@ module Import
       end
     end
 
-    def address_lambda
+    def contact_info_lambda
       lambda do |v|
-        addresses = []
+        contact_infos = []
         v.xpath('.//ADDRESS').each do |a|
-          address = AddressFactory.build_model(a)
-          addresses << address if address
+          contact_info = ContactInfoFactory.build_model(a)
+          contact_infos << contact_info if contact_info
         end
-        addresses.sort{|a,b| a.type <=> b.type}
+        contact_infos.sort{|a,b| a.type <=> b.type}
       end
     end
 
@@ -150,7 +150,7 @@ module Import
     def list_element_mappings
       {
         'LANGUAGES' => [:languages, locale_lambda],
-        'ADDRESSES' => [:addresses, address_lambda]
+        'ADDRESSES' => [:contact_infos, contact_info_lambda]
       }
     end
 
@@ -165,7 +165,7 @@ module Import
     end
   end
 
-  module AddressFactory
+  module ContactInfoFactory
     extend self
     extend MappingHelper
 
@@ -195,7 +195,7 @@ module Import
     end
 
     def build_model node
-      a = ::Address.new
+      a = ::ContactInfo.new
 
       extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: a
       extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: a

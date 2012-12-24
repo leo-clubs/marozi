@@ -1,11 +1,11 @@
 require 'spec_helper'
 
 describe 'import'  do
-  describe 'address' do
-    subject {Import::AddressFactory.build_model(xml_fixture('address').element_children.first)}
+  describe 'contact_info' do
+    subject {Import::ContactInfoFactory.build_model(xml_fixture('address').element_children.first)}
 
-    it 'should load all address data correctly' do
-      subject.should be_a(Address)
+    it 'should load all contact_info data correctly' do
+      subject.should be_a(ContactInfo)
       subject.type.should eq :home
       subject.street.should eq 'Karl-Jaspers-Str. 86'
       subject.zip.should eq '71182'
@@ -16,7 +16,7 @@ describe 'import'  do
 
   describe 'member' do
     subject {Import::MemberFactory.build_model(xml_fixture('member').element_children.first)}
-    let(:home_address) { build(:xml_home_address) }
+    let(:home_contact_info) { build(:xml_home_contact_info) }
 
     it 'should load simple member data correctly' do
       subject.should be_a(Member)
@@ -31,8 +31,8 @@ describe 'import'  do
     end
 
     it 'should load embedded member data correctly' do
-      subject.addresses.should_not be_empty
-      subject.addresses.should have_same_attributes_as([home_address])
+      subject.contact_infos.should_not be_empty
+      subject.contact_infos.should have_same_attributes_as([home_contact_info])
     end
   end
 

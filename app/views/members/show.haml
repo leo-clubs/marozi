@@ -10,8 +10,8 @@
   %hr
 
   %h2= t(:'members.caption.contact')
-  - @member.addresses.each do |address|
-    = render 'address', :address => address
+  - @member.contact_infos.each do |contact_info|
+    = render 'contact_info', :contact_info => contact_info
 
   %hr
 

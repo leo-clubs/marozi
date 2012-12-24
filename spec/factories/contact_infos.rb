@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :xml_home_address, class: Address do
+  factory :xml_home_contact_info, class: ContactInfo do
     id                    -1
     type                  :home
     street                'Karl-Jaspers-Str. 86'

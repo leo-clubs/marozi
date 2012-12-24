@@ -11,7 +11,7 @@ class Club
   field :homepage, type: String
 
   embeds_many :office_mappings
-  embeds_one :address
+  embeds_one :contact_infos
 
   has_many :members, autosave: true
 end

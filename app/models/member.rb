@@ -10,7 +10,7 @@ class Member
   field :languages, type: Array
   field :profession, type: String
 
-  embeds_many :addresses
+  embeds_many :contact_infos
 
   belongs_to :club
 
