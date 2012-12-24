@@ -4,7 +4,14 @@ module Import
     extend self
 
     def date_lambda
-      lambda {|v| Date.parse(v)}
+      lambda do |v|
+        begin
+          Date.parse(v)
+        rescue
+          puts "Not a valid date: #{v.inspect}"
+          nil
+        end
+      end
     end
 
     def text_value_lambda
