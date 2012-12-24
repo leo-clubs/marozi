@@ -72,4 +72,14 @@ describe 'import'  do
       end
     end
   end
+
+  describe 'office' do
+    it 'should create mapping correctly' do
+      member = create(:simple_member, leo_id: '027146')
+      subject = Import::OfficeFactory.build_model(xml_fixture('office').element_children.first)
+      subject.should be_a(Office)
+      subject.name.should eq 'DSpr'
+      subject.member.should eq member
+    end
+  end
 end

@@ -14,6 +14,10 @@ module Import
       end
     end
 
+    def office_to_member_lambda
+      lambda {|v| Member.where(leo_id: v['id']).first}
+    end
+
     def text_value_lambda
       lambda {|v| v.text}
     end
@@ -202,6 +206,24 @@ module Import
 
       ignored = ['_id', 'country', 'type']
       a.attributes.except(*ignored).empty? ? nil : a
+    end
+  end
+
+  module OfficeFactory
+    extend self
+    extend MappingHelper
+
+    def simple_element_mappings
+      {
+       'PERSON' => [:member, office_to_member_lambda],
+       'NAME' => [:name]
+      }
+    end
+
+    def build_model node
+      o = ::Office.new
+      extract_from_element_list list: node.element_children, mapping: simple_element_mappings, entity: o
+      o
     end
   end
 end

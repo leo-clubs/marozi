@@ -10,7 +10,7 @@ class Club
   field :bank, type: String
   field :homepage, type: String
 
-  embeds_many :office_mappings
+  embeds_many :offices
   embeds_one :contact_infos
 
   has_many :members, autosave: true
