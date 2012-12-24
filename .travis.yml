@@ -3,5 +3,9 @@ before_install: gem install bundler --pre
 bundler_args: --without documentation
 rvm:
   - 2.0.0-preview2
+before_script:
+  - cp config/mongoid.yml.example config/mongoid.yml 
 script:
   - bundle exec rake --trace spec
+services: 
+  - mongodb
