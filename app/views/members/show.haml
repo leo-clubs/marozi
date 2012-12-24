@@ -7,6 +7,12 @@
   %h3= t(:'members.caption.profession')
   = @member.profession.presence
 
+  %hr
+
   %h2= t(:'members.caption.contact')
   - @member.addresses.each do |address|
     = render 'address', :address => address
+
+  %hr
+
+  %h2= t(:'members.caption.history')
