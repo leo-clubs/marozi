@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'mongoid', github: 'mongoid/mongoid', :branch => '4.0.0-dev'
 
 gem 'bson_ext'
+gem 'devise'
 gem 'nokogiri', :require => false
 
 group :test, :development do
