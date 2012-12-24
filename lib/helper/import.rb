@@ -18,6 +18,10 @@ module Import
       lambda {|v| v.text}
     end
 
+    def profession_lambda
+      lambda {|v| v.xpath('.//DESCRIPTION/text()').first.text rescue nil}
+    end
+
     def locale_lambda
       lambda do |v|
         base_lang = [:de]
@@ -138,7 +142,8 @@ module Import
         'FIRSTNAME' => [:first_name, text_value_lambda ],
         'LASTNAME' => [:last_name, text_value_lambda ],
         'BIRTHDATE' => [:date_of_birth,  date_lambda],
-        'SEX' => [:gender, gender_lambda ]
+        'SEX' => [:gender, gender_lambda ],
+        'PROFESSION' => [:profession, profession_lambda]
       }
     end
 
@@ -153,7 +158,7 @@ module Import
       m = ::Member.new
 
       extract_from_attribute_list list: node.attributes, mapping: simple_attribute_mappings, entity: m
-      extract_from_element_list list: node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: m
+      extract_from_element_list list: node.element_children.select{|c| c.children }, mapping: simple_element_mappings, entity: m
       extract_from_element_list list: node.element_children.select{|c| c.element_children.size >= 1}, mapping: list_element_mappings, entity: m
 
       m
