@@ -1,5 +1,7 @@
 - find good model for founding president
-- add year to club/member
+- find good model for history
 - add jumelage club to club document
 - add state to member
-- map addresses to club
+- map contact_infos to club/district
+- refacort factories (create md, d from bottom up)
+- add country to md
