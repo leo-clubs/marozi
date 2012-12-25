@@ -2,6 +2,7 @@ class Member
   include Mongoid::Document
 
   field :leo_id, type: String
+  field :year, type: String
   field :first_name, type: String
   field :last_name, type: String
   field :member_since, type: Date

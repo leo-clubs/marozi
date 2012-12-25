@@ -60,7 +60,7 @@ module Import
     end
 
     def office_lambda(year)
-      simple_list_lambda 'OFFICER', OfficeFactory, year
+      simple_list_lambda 'OFFICER', OfficeFactory
     end
 
     def mapping_lambda mapping, default
@@ -97,11 +97,12 @@ module Import
     end
 
     private
-    def simple_list_lambda identifier, klazz, year
+    def simple_list_lambda identifier, klazz, year = nil
       lambda do |v|
         members = []
         v.xpath(".//#{identifier}").each do |m|
-          members << klazz.new(m,year).build_model
+          args = [m,year].select{|a| a}
+          members << klazz.new(*args).build_model
         end
         members
       end

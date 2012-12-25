@@ -4,9 +4,8 @@ module Import
   class OfficeFactory
     include MappingHelper
 
-    def initialize node, year = nil
+    def initialize node
       @node = node
-      @year ||= 2012
     end
 
     def simple_element_mappings

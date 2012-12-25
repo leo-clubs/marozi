@@ -2,6 +2,7 @@ class Club
   include Mongoid::Document
 
   field :leo_id, type: String
+  field :year, type: String
   field :name, type: String
   field :founded_at, type: Date
   field :chartered_at, type: Date

@@ -2,6 +2,7 @@ class MultipleDistrict
   include Mongoid::Document
 
   field :leo_id, type: String
+  field :year, type: String
   field :name, type: String
 
   embeds_many :offices

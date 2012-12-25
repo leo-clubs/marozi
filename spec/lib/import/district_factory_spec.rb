@@ -2,11 +2,12 @@ require 'spec_helper'
 
 describe Import do
   describe Import::DistrictFactory do
-    subject {Import::DistrictFactory.new(xml_fixture('district'), 2012).build_model}
+    subject {Import::DistrictFactory.new(xml_fixture('district'), '2012-2013').build_model}
 
     it 'should load all simple district data correctly' do
       subject.should be_a(District)
       subject.leo_id.should eq '066'
+      subject.year.should eq '2012-2013'
       subject.name.should eq 'KL'
     end
 

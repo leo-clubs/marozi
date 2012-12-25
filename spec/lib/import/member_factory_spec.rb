@@ -2,12 +2,13 @@ require 'spec_helper'
 
 describe Import do
   describe Import::MemberFactory do
-    subject {Import::MemberFactory.new(xml_fixture('member')).build_model}
+    subject {Import::MemberFactory.new(xml_fixture('member'), '2012-2013').build_model}
     let(:home_contact_info) { build(:xml_home_contact_info) }
 
     it 'should load simple member data correctly' do
       subject.should be_a(Member)
       subject.leo_id.should eq '027146'
+      subject.year.should eq '2012-2013'
       subject.first_name.should eq 'Angela'
       subject.last_name.should eq 'vom Mrugalla'
       subject.gender.should eq :female
