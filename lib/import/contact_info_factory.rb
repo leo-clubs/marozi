@@ -23,7 +23,7 @@ module Import
        'STREET' => [:street],
        'ZIP' => [:zip],
        'CITY' => [:city],
-       'COUNTRY' => [:country, country_lambda(country_mappings)]
+       'COUNTRY' => [:country, mapping_lambda(country_mappings, 'Germany')]
       }
     end
 

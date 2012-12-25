@@ -1,12 +1,10 @@
-class District
+class MultipleDistrict
   include Mongoid::Document
 
   field :leo_id, type: String
   field :name, type: String
 
   embeds_many :offices
-  embeds_one :contact_infos
 
-  belongs_to :multiple_district
-  has_many :clubs, autosave: true
+  has_many :districts, autosave: true
 end

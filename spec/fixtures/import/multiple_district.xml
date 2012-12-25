@@ -1,0 +1,42 @@
+<MDISTRICT id="42" name="Leo Clubs Deutschland" year="2012/2013">
+  <OFFICERS>
+    <OFFICER id="1752" group="Beauftragte" groupid="177">
+      <NAME>MDB-IT</NAME>
+      <PERSON id="036835">
+        <FIRSTNAME>Bill</FIRSTNAME>
+        <LASTNAME>Gates</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1809" group="Beauftragte" groupid="177">
+      <NAME>HDLeo</NAME>
+      <PERSON id="037502">
+        <FIRSTNAME>Joseph</FIRSTNAME>
+        <LASTNAME>Ackermann</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1757" group="Vorstand" groupid="182">
+      <NAME>MDSpr</NAME>
+      <PERSON id="038288">
+        <FIRSTNAME>Angela</FIRSTNAME>
+        <LASTNAME>Merkel</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1764" group="Vorstand" groupid="182">
+      <NAME>VMDSpr</NAME>
+      <PERSON id="036847">
+        <FIRSTNAME>Joe</FIRSTNAME>
+        <LASTNAME>Biden</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1755" group="Vorstand" groupid="182">
+      <NAME>MDS</NAME>
+      <PERSON id="040226">
+        <FIRSTNAME>Jane</FIRSTNAME>
+        <LASTNAME>Moneypenny</LASTNAME>
+      </PERSON>
+    </OFFICER>
+  </OFFICERS>
+  <DISTRICTS>
+    <DISTRICT id="164" name="KL" />
+  </DISTRICTS>
+</MDISTRICT>

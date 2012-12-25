@@ -55,12 +55,16 @@ module Import
       simple_list_lambda 'CLUB', ClubFactory, year
     end
 
+    def district_lambda(year)
+      simple_list_lambda 'DISTRICT', DistrictFactory, year
+    end
+
     def office_lambda(year)
       simple_list_lambda 'OFFICER', OfficeFactory, year
     end
 
-    def country_lambda mapping
-      lambda {|v| mapping[v] || 'Germany'}
+    def mapping_lambda mapping, default
+      lambda {|v| mapping[v] || default}
     end
 
     def gender_lambda
