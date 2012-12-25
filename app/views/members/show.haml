@@ -1,6 +1,8 @@
 .container
   .page-header
-    %h1= t(:'members.caption.name', :first_name => @member.first_name, :last_name => @member.last_name)
+    %h1 
+      =t(:'members.caption.name', first_name: @member.first_name, last_name: @member.last_name)
+      %small= t(:'clubs.club_title', name: @club.name)
 
   %h2= t(:'members.caption.general')
 
@@ -11,7 +13,7 @@
 
   %h2= t(:'members.caption.contact')
   - @member.contact_infos.each do |contact_info|
-    = render 'contact_info', :contact_info => contact_info
+    = render 'contact_info', contact_info: contact_info
 
   %hr
 

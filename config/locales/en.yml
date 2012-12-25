@@ -12,4 +12,6 @@ en:
       profession: 'Profession'
       contact: 'Contact'
       contact_home: 'Home'
-      contact_work: 'Work' 
+      contact_work: 'Work'
+  clubs:
+    club_title: 'Leo-Club %{name}'

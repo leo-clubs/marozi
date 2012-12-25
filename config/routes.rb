@@ -5,7 +5,8 @@ Marozi::Application.routes.draw do
 
   root :to => "home#index"
 
-  resources :clubs do
-    resources :members
-  end
+  resources :members
+  resources :clubs
+  resources :districts
+  resources :multiple_districts
 end
