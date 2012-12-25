@@ -2,5 +2,5 @@ class Office
   include Mongoid::Document
 
   field :name, type: String
-  belongs_to :member
+  field :member_id, type: String
 end

@@ -14,16 +14,16 @@ module Import
       end
     end
 
-    def office_to_member_lambda
-      lambda {|v| Member.where(leo_id: v['id']).first}
-    end
-
     def text_value_lambda
       lambda {|v| v.text}
     end
 
     def profession_lambda
       lambda {|v| v.xpath('.//DESCRIPTION/text()').first.text rescue nil}
+    end
+
+    def office_to_member_lambda
+      lambda {|v| v['id']}
     end
 
     def locale_lambda
@@ -215,7 +215,7 @@ module Import
 
     def simple_element_mappings
       {
-       'PERSON' => [:member, office_to_member_lambda],
+       'PERSON' => [:member_id, office_to_member_lambda],
        'NAME' => [:name]
       }
     end
