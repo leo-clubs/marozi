@@ -1,0 +1,120 @@
+<DISTRICT id="066" name="KL">
+  <OFFICERS>
+    <OFFICER id="1766" group="Beauftragte" groupid="178">
+      <NAME>DB-IT</NAME>
+      <PERSON id="040115">
+        <FIRSTNAME>Carmen</FIRSTNAME>
+        <LASTNAME>Wiebe</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1767" group="Beauftragte" groupid="178">
+      <NAME>DB-MERLO</NAME>
+      <PERSON id="036514">
+        <FIRSTNAME>Helena</FIRSTNAME>
+        <LASTNAME>Rose</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1772" group="Beauftragte" groupid="178">
+      <NAME>IP-DSpr</NAME>
+      <PERSON id="036514">
+        <FIRSTNAME>Helena</FIRSTNAME>
+        <LASTNAME>Rose</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1771" group="Vorstand" groupid="181">
+      <NAME>DSpr</NAME>
+      <PERSON id="037920">
+        <FIRSTNAME>Konrad</FIRSTNAME>
+        <LASTNAME>Otto</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1773" group="Vorstand" groupid="181">
+      <NAME>VDSpr</NAME>
+      <PERSON id="042868">
+        <FIRSTNAME>Konstantine</FIRSTNAME>
+        <LASTNAME>Valentina</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1769" group="Vorstand" groupid="181">
+      <NAME>DS</NAME>
+      <PERSON id="037801">
+        <FIRSTNAME>Heather</FIRSTNAME>
+        <LASTNAME>Mertens</LASTNAME>
+      </PERSON>
+    </OFFICER>
+    <OFFICER id="1770" group="Vorstand" groupid="181">
+      <NAME>DSch</NAME>
+      <PERSON id="036647">
+        <FIRSTNAME>Tom</FIRSTNAME>
+        <LASTNAME>Baier</LASTNAME>
+      </PERSON>
+    </OFFICER>
+  </OFFICERS>
+  <REGIONS>
+    <REGION id="376" name="J">
+      <OFFICERS />
+      <ZONES>
+        <ZONE id="8077" name="1">
+          <OFFICERS />
+          <CLUBS>
+            <CLUB id="200006" clubnumber="200006" />
+            <CLUB id="200007" clubnumber="200007">
+              <OFFICERS>
+                <OFFICER id="1780" group="Vorstand" groupid="179">
+                  <NAME>P</NAME>
+                  <PERSON id="041212">
+                    <FIRSTNAME>Kajo</FIRSTNAME>
+                    <LASTNAME>Hansen</LASTNAME>
+                  </PERSON>
+                </OFFICER>
+              </OFFICERS>
+            </CLUB>
+            <CLUB id="200008" clubnumber="200008">
+              <OFFICERS>
+                <OFFICER id="1780" group="Vorstand" groupid="179">
+                  <NAME>P</NAME>
+                  <PERSON id="051212">
+                    <FIRSTNAME>Johannes</FIRSTNAME>
+                    <LASTNAME>Kaplan</LASTNAME>
+                  </PERSON>
+                </OFFICER>
+                <OFFICER id="1780" group="Vorstand" groupid="179">
+                  <NAME>S</NAME>
+                  <PERSON id="051213">
+                    <FIRSTNAME>Notburga</FIRSTNAME>
+                    <LASTNAME>Morkzapf</LASTNAME>
+                  </PERSON>
+                </OFFICER>
+              </OFFICERS>
+            </CLUB>
+            <CLUB id="200009" clubnumber="200009">
+              <OFFICERS>
+                <OFFICER id="1780" group="Vorstand" groupid="179">
+                  <NAME>P</NAME>
+                  <PERSON id="061212">
+                    <FIRSTNAME>Knut</FIRSTNAME>
+                    <LASTNAME>Gordon</LASTNAME>
+                  </PERSON>
+                </OFFICER>
+                <OFFICER id="1780" group="Vorstand" groupid="179">
+                  <NAME>S</NAME>
+                  <PERSON id="061213">
+                    <FIRSTNAME>Thilo</FIRSTNAME>
+                    <LASTNAME>Eisenhauer</LASTNAME>
+                  </PERSON>
+                </OFFICER>
+                <OFFICER id="1780" group="Vorstand" groupid="179">
+                  <NAME>Sch</NAME>
+                  <PERSON id="061214">
+                    <FIRSTNAME>Katharina</FIRSTNAME>
+                    <LASTNAME>Knallinger</LASTNAME>
+                  </PERSON>
+                </OFFICER>
+              </OFFICERS>
+            </CLUB>
+          </CLUBS>
+        </ZONE>
+      </ZONES>
+    </REGION>
+  </REGIONS>
+</DISTRICT>

@@ -48,23 +48,15 @@ module Import
     end
 
     def member_lambda(year)
-      lambda do |v|
-        members = []
-        v.xpath('.//MEMBER').each do |m|
-          members << MemberFactory.new(m,year).build_model
-        end
-        members
-      end
+      simple_list_lambda 'MEMBER', MemberFactory, year
+    end
+
+    def club_lambda(year)
+      simple_list_lambda 'CLUB', ClubFactory, year
     end
 
     def office_lambda(year)
-      lambda do |v|
-        members = []
-        v.xpath('.//OFFICER').each do |o|
-          members << OfficeFactory.new(o,year).build_model
-        end
-        members
-      end
+      simple_list_lambda 'OFFICER', OfficeFactory, year
     end
 
     def country_lambda mapping
@@ -85,13 +77,29 @@ module Import
       end
     end
 
-    def extract_from_element_list opts
+    def extract_from_element_list opts, already_found = []
       opts[:list].each do |n|
         according_value = opts[:mapping][n.name]
         if according_value
           value = according_value[1].class == Proc ? according_value[1].call(n) : n.text
-          opts[:entity].send("#{according_value[0]}=", value)
+          if !already_found.include?(n.name)
+            opts[:entity].send("#{according_value[0]}=", value) unless already_found.include?(value)
+            already_found << n.name
+          end
+        elsif n.element_children
+          extract_from_element_list(opts.merge({list: n.element_children}), already_found)
         end
+      end
+    end
+
+    private
+    def simple_list_lambda identifier, klazz, year
+      lambda do |v|
+        members = []
+        v.xpath(".//#{identifier}").each do |m|
+          members << klazz.new(m,year).build_model
+        end
+        members
       end
     end
   end

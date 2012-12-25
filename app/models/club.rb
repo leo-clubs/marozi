@@ -14,4 +14,5 @@ class Club
   embeds_one :contact_infos
 
   has_many :members, autosave: true
+  belongs_to :district
 end

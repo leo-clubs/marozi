@@ -16,6 +16,11 @@ describe Import do
       subject.homepage.should eq 'www.leoclub-emiliaburg-gloria.de'
     end
 
+    it 'should create empyt club' do
+      empty_club = Import::ClubFactory.new(xml_fixture('empty_club'), 2012).build_model
+      empty_club.should_not be_nil
+    end
+
     it 'should load members data correctly' do
        subject.members.should_not be_empty
        subject.members.size.should be 22
