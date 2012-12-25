@@ -1,0 +1,10 @@
+%section{id: district}
+  %h2= t(:'districts.district_title',multiple_district: '111', district: district)
+  %table.table.table-striped.table-bordered.table-hover
+    %tr
+      %th= t(:'clubs.attributes.id')
+      %th= t(:'clubs.attributes.name')
+    - clubs.each do |club|
+      %tr
+        %td= club.leo_id
+        %td= club.name

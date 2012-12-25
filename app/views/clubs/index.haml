@@ -1,1 +1,12 @@
-here i am
+.cotainer
+  .page-header
+    %h1= t(:'clubs.caption.clubs_in_md', md: '111 Germany')
+
+  .row
+    .span3.navbar
+      %ul.nav.nav-list.navbar.affix-top
+        %li bla
+
+    .span9
+      - @clubs.each do |district, clubs|
+        = render 'district_table', district: district, clubs: clubs

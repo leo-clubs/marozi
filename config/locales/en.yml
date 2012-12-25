@@ -15,3 +15,10 @@ en:
       contact_work: 'Work'
   clubs:
     club_title: 'Leo-Club %{name}'
+    attributes:
+      id: id
+      name: Name
+    caption:
+      clubs_in_md: 'All Leo-Clubs in MD-%{md}'
+  districts:
+    district_title: 'District %{multiple_district}-%{district}'
