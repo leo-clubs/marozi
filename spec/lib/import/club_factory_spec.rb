@@ -17,9 +17,13 @@ describe Import do
     end
 
     it 'should load members data correctly' do
-       subject.should be_a(Club)
        subject.members.should_not be_empty
        subject.members.size.should be 22
+    end
+
+    it 'should load office data correctly' do
+      subject.offices.should_not be_empty
+      subject.offices.size.should be 5
     end
 
     it 'should not mix up members of multiple clubs' do

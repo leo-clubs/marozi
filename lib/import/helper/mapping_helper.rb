@@ -57,6 +57,16 @@ module Import
       end
     end
 
+    def office_lambda(year)
+      lambda do |v|
+        members = []
+        v.xpath('.//OFFICER').each do |o|
+          members << OfficeFactory.new(o,year).build_model
+        end
+        members
+      end
+    end
+
     def country_lambda mapping
       lambda {|v| mapping[v] || 'Germany'}
     end
