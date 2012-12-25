@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Import  do
   describe Import::ContactInfoFactory do
-    subject {Import::ContactInfoFactory.new(xml_fixture('address').element_children.first).build_model}
+    subject {Import::ContactInfoFactory.new(xml_fixture('address')).build_model}
 
     it 'should load all contact_info data correctly' do
       subject.should be_a(ContactInfo)

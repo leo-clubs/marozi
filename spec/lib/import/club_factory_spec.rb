@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Import do
   describe Import::ClubFactory do
-    subject {Import::ClubFactory.new(xml_fixture('club').element_children.first, 2012).build_model}
+    subject {Import::ClubFactory.new(xml_fixture('club'), 2012).build_model}
 
     it 'should load all simple club data correctly' do
       subject.should be_a(Club)
