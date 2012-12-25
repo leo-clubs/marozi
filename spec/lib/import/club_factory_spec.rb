@@ -33,7 +33,7 @@ describe Import do
     end
 
     it 'should not mix up members of multiple clubs' do
-      xml_fixture('clubs').xpath('//CLUB').each{|c| Import::ClubFactory.new(c, '2012-2013').build_model(true)}
+      xml_fixture('clubs').xpath('//CLUB').each{|c| Import::ClubFactory.new(c, '2012-2013').build_model.save!}
       Club.count.should eq 2
       Member.count.should eq 22
 

@@ -12,17 +12,21 @@ namespace :db do
     doc = Nokogiri::XML(f)
     f.close
 
-    clubs = doc.xpath(".//CLUB")
-    size = clubs.size
+    multiple_districts = doc.xpath(".//MDISTRICT")
+    size = multiple_districts.size
 
     puts 'Starting Import'
-    clubs.each_with_index do |club, index|
+    multiple_districts.each_with_index do |md, index|
       begin
-        Import::ClubFactory.new(club).build_model(true)
-        puts "Imported #{index+1} of #{size} clubs"
+        year =  md['year'].gsub /\//, '-'
+        obj = Import::MultipleDistrictFactory.new(md, year).build_model
+        puts "file imported, now saving db entities"
+        obj.save!
+        puts "Imported #{index+1} of #{size} multiple districts"
       rescue Exception => e
-        puts "Error: on club: #{club.inspect} (message: #{e.message})"
-        puts "Backtrace: #{e.backtrace}"
+        puts "Error occured: (message: #{e.message})"
+        puts "Backtrace:"
+        puts e.backtrace.join '\n'
       end
     end
     puts 'Import finnished successfully'
