@@ -12,26 +12,7 @@
     /[if lt IE 9]
       %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
   %body
-    .navbar-wrapper
-      .container
-        .navbar.navbar-inverse
-          .navbar-inner
-            %a.btb.btn-navbar.collapsed{:'data-toggle' => 'collapse', :'data-target' => '.nav-collapse'}
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            %a.brand{href: '#'} Marozi
-            .nav-collapse.in.collapse{style: 'height:auto;'}
-              %ul.nav
-                %li.active
-                  %a{href: '#'}= t(:'navbar.home')
-                %li
-                  %a{href: '#'}= t(:'navbar.profile')
-                %li
-                  %a{href: '#'}= t(:'navbar.club')
-                %li
-                  %a{href: '#'}= t(:'navbar.mail')
-                %li
-                  %a{href: '#'}= t(:'navbar.about')
+    = render 'shared/menu'
+
     .container
       = yield

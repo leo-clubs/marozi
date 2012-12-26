@@ -1,0 +1,24 @@
+.navbar-wrapper
+  .container
+    .navbar.navbar-inverse
+      .navbar-inner
+        %a.btb.btn-navbar.collapsed{:'data-toggle' => 'collapse', :'data-target' => '.nav-collapse'}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.brand{href: '#'} Marozi
+        .nav-collapse.collapse{style: 'height:auto;'}
+          %ul.nav
+            %li.dropdown
+              %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                = t(:'navbar.profile.title')
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href: '#'}= t(:'navbar.profile.membership')
+                %li
+                  %a{href: '#'}= t(:'navbar.profile.my_club')
+                %li
+                  %a{href: '#'}= t(:'navbar.profile.my_district')
+                %li
+                  %a{href: '#'}= t(:'navbar.profile.my_multiple_district')

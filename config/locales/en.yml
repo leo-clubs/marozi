@@ -1,10 +1,11 @@
 en:
   navbar:
-    home: 'Home'
-    club: 'My Club'
-    mail: 'Send Mail'
-    profile: 'My Profile'
-    about: 'About'
+    profile:
+      title: 'Profile'
+      my_membership: 'My Membership'
+      my_club: 'My Club'
+      my_disctrict: 'My District'
+      my_multiple_disctrict: 'My Multiple District'
   members:
     caption:
       name: '%{first_name} %{last_name}'
