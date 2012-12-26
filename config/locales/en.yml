@@ -14,12 +14,19 @@ en:
       contact: 'Contact'
       contact_home: 'Home'
       contact_work: 'Work'
+    tablehead:
+      name: '%{last_name}, %{first_name}'
   clubs:
+    members_count:
+      zero: '(No Members)'
+      one: '(1 Member)'
+      other: '(%{count} Members)'
     club_title: 'Leo-Club %{name}'
     attributes:
       id: id
       name: Name
     caption:
       clubs_in_md: 'All Leo-Clubs in MD-%{md}'
+      member_list: 'Member List'
   districts:
     district_title: 'District %{multiple_district}-%{district}'

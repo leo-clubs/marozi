@@ -13,4 +13,16 @@ describe ClubsController do
       clubs.values.flatten.size.should eq Club.count
     end
   end
+
+  describe 'me' do
+    let(:existing_id) {'087294'}
+
+    it '/clubs/my_club redirects to club of logged in member' do
+      member = create(:simple_member, leo_id: existing_id)
+      controller.class.skip_before_filter :require_login
+      session[:current_user] = existing_id
+      get :my_club
+      assigns(:club).should eq member.club
+    end
+  end
 end

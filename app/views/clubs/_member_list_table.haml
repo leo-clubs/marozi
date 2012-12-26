@@ -1,0 +1,15 @@
+%h2= t(:'clubs.caption.member_list')
+%table.table.table-striped.table-bordered.table-hover
+  %tr
+    %th= t(:'members.attributes.id')
+    %th= t(:'members.attributes.name')
+    %th= t(:'members.attributes.birtday')
+    %th= t(:'members.attributes.contact_info')
+    %th= t(:'members.attributes.member_since')
+  - members.each do |member|
+    %tr
+      %td= member.leo_id
+      %td= t(:'members.tablehead.name', first_name: member.first_name, last_name: member.last_name)
+      %td= l(member.date_of_birth)
+      %td= render 'shared/contact_info', contact_info: member.contact_infos.first
+      %td= l(member.member_since)

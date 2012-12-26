@@ -21,4 +21,8 @@ class Club
     m = Member.find_by_member_id leo_id
     m.club if m
   end
+
+  def members_sorted
+    members.sort{|a, b| a.last_name <=> b.last_name}
+  end
 end
