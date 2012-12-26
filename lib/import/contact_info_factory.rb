@@ -20,10 +20,15 @@ module Import
 
     def simple_element_mappings
       {
+       'EMAIL' => [:email_address],
        'STREET' => [:street],
        'ZIP' => [:zip],
        'CITY' => [:city],
-       'COUNTRY' => [:country, mapping_lambda(country_mappings, 'Germany')]
+       'COUNTRY' => [:country, mapping_lambda(country_mappings, 'Germany')],
+       'TEL' => [:phone_number],
+       'MOBILE' => [:mobile_phone_number],
+       'FAX' => [:fax_number],
+       'URL' => [:homepage]
       }
     end
 
