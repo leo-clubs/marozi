@@ -23,6 +23,6 @@ class Club
   end
 
   def members_sorted
-    members.sort{|a, b| a.last_name <=> b.last_name}
+    members.sort{|a, b| a.last_name.downcase <=> b.last_name.downcase}
   end
 end
