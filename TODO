@@ -7,3 +7,5 @@
 - add country to md
 - convert tests to shared example groups where possible
 - add IdentityMap for querying
+- sort clubs in big hash accordingly
+- read about rails 4 caching
