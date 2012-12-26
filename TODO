@@ -3,7 +3,7 @@
 - add jumelage club to club document
 - add state to member
 - map contact_infos to club/district
-- refacort factories (create md, d from bottom up)
+- refactor factories (create md, d from bottom up)
 - add country to md
 - convert tests to shared example groups where possible
 - add IdentityMap for querying
