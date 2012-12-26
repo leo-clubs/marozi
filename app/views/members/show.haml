@@ -13,7 +13,7 @@
 
   %h2= t(:'members.caption.contact')
   - @member.contact_infos.each do |contact_info|
-    = render 'contact_info', contact_info: contact_info
+    = render 'shared/contact_info', contact_info: contact_info
 
   %hr
 
