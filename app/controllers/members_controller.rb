@@ -1,10 +1,17 @@
 class MembersController < ApplicationController
   def show
-    @member = Member.where(leo_id: params[:id]).first
-    @club = @member.club
+    @member, @club = member_and_club(params[:id])
   end
 
   def me
-    redirect_to member_path id: session[:current_user]
+    @member, @club = member_and_club(session[:current_user])
+    render action: 'show'
+  end
+
+  private
+
+  def member_and_club member_id
+    m = Member.where(leo_id: member_id).first
+    [m, m.club]
   end
 end

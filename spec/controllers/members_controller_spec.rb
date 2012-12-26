@@ -1,17 +1,6 @@
 require 'spec_helper'
 
 describe MembersController do
-  describe 'routing' do
-    let(:existing_id) {'087294'}
-
-    it '/members/me redirects to logged in member' do
-      controller.class.skip_before_filter :require_login
-      session[:current_user] = existing_id
-      get :me
-      response.should redirect_to member_path id: existing_id
-    end
-  end
-
   describe 'show' do
     it 'should assign variables correctly' do
       member = create(:simple_member)
@@ -20,4 +9,18 @@ describe MembersController do
       assigns(:club).should eq member.club
     end
   end
+
+  describe 'me' do
+    let(:existing_id) {'087294'}
+
+    it '/members/me redirects to logged in member' do
+      member = create(:simple_member, leo_id: existing_id)
+      controller.class.skip_before_filter :require_login
+      session[:current_user] = existing_id
+      get :me
+      assigns(:member).should eq member
+      assigns(:club).should eq member.club
+    end
+  end
+
 end
