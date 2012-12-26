@@ -10,4 +10,5 @@ class ContactInfo
   field :phone_number, type: String
   field :mobile_phone_number, type: String
   field :fax_number, type: String
+  field :homepage, type: String
 end
