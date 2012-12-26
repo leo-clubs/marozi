@@ -5,5 +5,5 @@
 - map contact_infos to club/district
 - refacort factories (create md, d from bottom up)
 - add country to md
-- read about rspec shared groups/examples
+- convert tests to shared example groups where possible
 - add IdentityMap for querying
