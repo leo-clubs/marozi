@@ -4,6 +4,7 @@ FactoryGirl.define do
   factory :district do
     sequence(:leo_id) {|n| "0287#{"%02d" % n}"}
     sequence(:name)   {|n| district_names[n] }
+    multiple_district
 
     district_names.each_with_index do |district_name, index|
       trait "district_#{index+1}".to_sym do

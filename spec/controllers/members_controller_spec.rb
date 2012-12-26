@@ -22,5 +22,4 @@ describe MembersController do
       assigns(:club).should eq member.club
     end
   end
-
 end

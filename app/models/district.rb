@@ -10,4 +10,9 @@ class District
 
   belongs_to :multiple_district
   has_many :clubs, autosave: true
+
+  def self.find_by_member_id leo_id
+    c = Club.find_by_member_id leo_id
+    c.district if c
+  end
 end

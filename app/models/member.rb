@@ -15,6 +15,10 @@ class Member
 
   belongs_to :club
 
+  def self.find_by_member_id leo_id
+    self.where(leo_id: leo_id).first
+  end
+
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
