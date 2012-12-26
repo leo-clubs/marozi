@@ -8,5 +8,5 @@
         %li bla
 
     .span9
-      - @clubs.each do |district, clubs|
-        = render 'district_table', district: district, clubs: clubs
+      - @clubs.each do |district_name, clubs|
+        = render 'shared/clubs_list_table', district_name: district_name, clubs: clubs
