@@ -1,5 +1,6 @@
 class Member
   include Mongoid::Document
+  include Mongoid::Timestamps
   include Versioning
 
   field :first_name, type: String

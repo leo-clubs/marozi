@@ -1,5 +1,6 @@
 class District
   include Mongoid::Document
+  include Mongoid::Timestamps
   include Versioning
 
   field :name, type: String
