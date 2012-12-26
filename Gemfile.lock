@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: f7734f15a2a0804395a6560f70ea5e721d5bbf7b
+  revision: 7c68241c58a43102a32dc5e3d8523d3f710ca452
   branch: 4.0.0-dev
   specs:
     mongoid (4.0.0)
@@ -11,7 +11,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
-  revision: 2125c7b4f959c1aa025f61bdfb5f95b5d6a52b51
+  revision: 2c4ebb2e79095efdd189c08861e3e7f694c52215
   specs:
     activerecord-deprecated_finders (0.0.1)
 
@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 95fa0e69de373e741d3797617950c0e2ed76f950
+  revision: 8fe1dfd2212cae114473da3a0074607ecf70e3ee
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
