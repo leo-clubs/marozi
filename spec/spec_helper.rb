@@ -34,6 +34,7 @@ RSpec.configure do |config|
   end
 
   config.before(:each) do
+    FactoryGirl.reload
     DatabaseCleaner[:mongoid].start
   end
 
