@@ -25,4 +25,8 @@ class Club
   def members_sorted
     members.sort{|a, b| a.last_name.downcase <=> b.last_name.downcase}
   end
+
+  def age
+    Time.zone.now.year - founded_at.year rescue 0
+  end
 end

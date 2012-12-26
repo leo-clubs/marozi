@@ -15,4 +15,8 @@ class District
     c = Club.find_by_member_id leo_id
     c.district if c
   end
+
+  def clubs_sorted
+    clubs.sort{|a,b| a.name <=> b.name}
+  end
 end

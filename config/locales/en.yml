@@ -7,6 +7,7 @@ en:
       my_disctrict: 'My District'
       my_multiple_disctrict: 'My Multiple District'
   members:
+    name: '%{last_name}, %{first_name}'
     caption:
       name: '%{first_name} %{last_name}'
       history: 'History'
@@ -14,19 +15,37 @@ en:
       contact: 'Contact'
       contact_home: 'Home'
       contact_work: 'Work'
-    tablehead:
-      name: '%{last_name}, %{first_name}'
   clubs:
-    members_count:
+    member_count:
       zero: '(No Members)'
       one: '(1 Member)'
       other: '(%{count} Members)'
     club_title: 'Leo-Club %{name}'
-    attributes:
+    age:
+      zero: '0 years'
+      one: '1 year'
+      other: '%{count} years'
+    tablehead:
       id: id
       name: Name
+      member_count: Members
+      age: Age
     caption:
       clubs_in_md: 'All Leo-Clubs in MD-%{md}'
       member_list: 'Member List'
   districts:
     district_title: 'District %{multiple_district}-%{district}'
+    tablehead:
+      id: id
+      name: Name
+      club_count: Clubs
+    club_count:
+      zero: '(No Clubs)'
+      one: '(1 Clubs)'
+      other: '(%{count} Clubs)'
+  multiple_districts:
+    multiple_district_title: 'MD-%{name}'
+    district_count:
+      zero: '(No Districts)'
+      one: '(1 District)'
+      other: '(%{count} Districts)'

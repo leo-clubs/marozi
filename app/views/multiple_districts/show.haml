@@ -1,0 +1,7 @@
+.container
+  .page-header
+    %h1
+      =t(:'multiple_districts.multiple_district_title', name: @multiple_district.name)
+      %small= t(:'multiple_districts.district_count', count: @multiple_district.districts.size)
+
+  = render 'district_list_table', districts: @multiple_district.districts_sorted, multiple_district_name: @multiple_district.name

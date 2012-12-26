@@ -9,6 +9,10 @@ class ClubsController < ApplicationController
     @clubs = Hash[h.sort]
   end
 
+  def show
+    @club = Club.where(leo_id: params['id']).first
+  end
+
   def my_club
     @club = Club.find_by_member_id session[:current_user]
     render action: 'show'

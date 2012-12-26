@@ -9,4 +9,6 @@
 
     .span9
       - @clubs.each do |district_name, clubs|
-        = render 'shared/clubs_list_table', district_name: district_name, clubs: clubs
+        %section{id: district_name}
+          %h2= t(:'districts.district_title',multiple_district: '111', district: district_name)
+          = render 'shared/clubs_list_table', clubs: clubs

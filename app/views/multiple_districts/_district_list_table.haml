@@ -1,0 +1,10 @@
+%table.table.table-striped.table-bordered.table-hover
+  %tr
+    %th= t(:'districtstablehead.id')
+    %th= t(:'districtstablehead.name')
+    %th= t(:'districtstablehead.club_count')
+  - districts.each do |district|
+    %tr
+      %td= link_to(district.leo_id, district_path(id: district.leo_id))
+      %td= link_to(district.name, district_path(id: district.leo_id))
+      %td= district.clubs.size

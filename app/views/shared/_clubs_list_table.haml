@@ -1,10 +1,12 @@
-%section{id: district}
-  %h2= t(:'districts.district_title',multiple_district: '111', district: district)
-  %table.table.table-striped.table-bordered.table-hover
+%table.table.table-striped.table-bordered.table-hover
+  %tr
+    %th= t(:'clubstablehead.id')
+    %th= t(:'clubstablehead.name')
+    %th= t(:'clubstablehead.age')
+    %th= t(:'clubstablehead.member_count')
+  - clubs.each do |club|
     %tr
-      %th= t(:'clubs.attributes.id')
-      %th= t(:'clubs.attributes.name')
-    - clubs.each do |club|
-      %tr
-        %td= club.leo_id
-        %td= club.name
+      %td= link_to(club.leo_id, club_path(id: club.leo_id))
+      %td= link_to(club.name, club_path(id: club.leo_id))
+      %td= t(:'clubs.age', count: club.age)
+      %td= club.members.size

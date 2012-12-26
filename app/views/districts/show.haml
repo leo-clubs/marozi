@@ -1,0 +1,7 @@
+.container
+  .page-header
+    %h1
+      =t(:'districts.district_title', multiple_district: '111', district: @district.name)
+      %small= t(:'districts.club_count', count: @district.clubs.size)
+
+  = render 'shared/clubs_list_table', clubs: @district.clubs_sorted

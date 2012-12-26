@@ -13,4 +13,8 @@ class MultipleDistrict
     d = District.find_by_member_id leo_id
     d.multiple_district if d
   end
+
+  def districts_sorted
+    districts.sort{|a,b| a.name <=> b.name}
+  end
 end
