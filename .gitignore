@@ -11,3 +11,4 @@
 /vendor/local
 
 config/mongoid.yml
+.DS_Store
