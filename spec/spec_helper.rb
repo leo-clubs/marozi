@@ -51,4 +51,4 @@ def xml_fixture file_name
   Nokogiri::XML(f).element_children.first
 end
 
-Coveralls.wear!
+Coveralls.wear!('rails')
