@@ -31,7 +31,6 @@ RSpec::Matchers.define :have_same_attributes_as do |expected|
 end
 
 RSpec.configure do |config|
-
   config.before(:suite) do
     DatabaseCleaner[:mongoid].strategy = :truncation
     DatabaseCleaner[:mongoid].clean_with :truncation
