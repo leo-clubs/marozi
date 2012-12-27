@@ -5,6 +5,7 @@ FactoryGirl.define do
     sequence(:leo_id) {|n| "0587#{"%02d" % n}"}
     sequence(:name) {|n| club_names[n]}
     sequence(:godfather) {|n| godfather "LC #{club_names[n]}"}
+    year '2012-2013'
 
     founded_at Date.new(1983, 3, 19)
     chartered_at Date.new(1984, 2, 29)
