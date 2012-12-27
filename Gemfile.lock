@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 8fe1dfd2212cae114473da3a0074607ecf70e3ee
+  revision: 2283a1d62e36bc7787a01e87a5d2a018e83da22c
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -141,7 +141,7 @@ GEM
       factory_girl (~> 4.1.0)
       railties (>= 3.0.0)
     ffi (1.2.0)
-    guard (1.6.0)
+    guard (1.6.1)
       listen (>= 0.6.0)
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
