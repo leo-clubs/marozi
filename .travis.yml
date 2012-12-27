@@ -6,6 +6,6 @@ rvm:
 before_script:
   - cp config/mongoid.yml.example config/mongoid.yml
 script:
-  - RAILS_ENV=test bundle exec rspec
+  - RAILS_ENV=test bundle exec rake spec
 services: 
   - mongodb
