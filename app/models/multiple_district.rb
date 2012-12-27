@@ -9,6 +9,8 @@ class MultipleDistrict
 
   has_many :districts, autosave: true
 
+  alias_method :children, :districts
+
   def self.find_by_member_id leo_id
     d = District.find_by_member_id leo_id
     d.multiple_district if d

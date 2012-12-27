@@ -1,4 +1,4 @@
-shared_examples_for 'a hierarchy' do | child_path |
+shared_examples_for 'a hierarchy' do | depth_from_member_to_class |
   let(:existing_id) {'087294'}
   let(:non_existing_id) {'987294'}
 
@@ -8,7 +8,7 @@ shared_examples_for 'a hierarchy' do | child_path |
 
   it 'should find subject for existing id' do
     child = @member
-    child_path.each{|method| child = child.send(method)}
+    depth_from_member_to_class.times{|method| child = child.parent}
 
     actual = described_class.find_by_member_id existing_id
     actual.should eq child

@@ -17,6 +17,9 @@ class Club
   has_many :members, autosave: true
   belongs_to :district
 
+  alias_method :parent, :district
+  alias_method :children, :members
+
   def self.find_by_member_id leo_id
     m = Member.find_by_member_id leo_id
     m.club if m

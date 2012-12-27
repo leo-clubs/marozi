@@ -15,6 +15,8 @@ class Member
 
   belongs_to :club
 
+  alias_method :parent, :club
+
   def self.find_by_member_id leo_id
     self.where(leo_id: leo_id).first
   end

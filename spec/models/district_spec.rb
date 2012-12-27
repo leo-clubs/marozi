@@ -1,5 +1,5 @@
 require 'spec_helper'
 
 describe District do
-  it_behaves_like 'a hierarchy', [:club, :district]
+  it_behaves_like 'a hierarchy', 2
 end
