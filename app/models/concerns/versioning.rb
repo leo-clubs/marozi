@@ -4,5 +4,7 @@ module Versioning
   included do
     field :leo_id, type: String
     field :year, type: String
+
+    default_scope where(year: '2012-2013')
   end
 end
