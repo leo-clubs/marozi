@@ -4,8 +4,6 @@
 - add state to member
 - map contact_infos to club/district
 - refactor factories (create md, d from bottom up)
-- add country to md
-- convert tests to shared example groups where possible
+- add country to md (using Carmen)
 - add IdentityMap for querying
 - sort clubs in big hash accordingly
-- read about rails 4 caching
