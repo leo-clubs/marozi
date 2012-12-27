@@ -1,9 +1,10 @@
 ENV["RAILS_ENV"] ||= 'test'
+require 'coveralls'
+Coveralls.wear!('rails')
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/autorun'
 require 'rspec/rails'
 require 'nokogiri'
-require 'coveralls'
 
 %w{spec/support lib}.each do |dir|
   Dir[Rails.root.join("#{dir}/**/*.rb")].each {|f| require f}
@@ -50,5 +51,3 @@ def xml_fixture file_name
   f = File.open("#{Rails.root}/spec/fixtures/import/#{file_name}.xml")
   Nokogiri::XML(f).element_children.first
 end
-
-Coveralls.wear!('rails')
