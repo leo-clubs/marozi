@@ -20,11 +20,11 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'turbolinks'
 
-gem 'mongoid', github: 'mongoid/mongoid', :branch => '4.0.0-dev'
+gem 'mongoid', github: 'mongoid/mongoid', branch: '4.0.0-dev'
 
 gem 'bson_ext'
 gem 'devise'
-gem 'nokogiri', :require => false
+gem 'nokogiri', require: false
 
 group :test, :development do
   gem 'rspec'
@@ -33,8 +33,8 @@ group :test, :development do
   gem 'guard-rspec'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
-  gem 'coveralls', :require => false
-  gem 'rb-inotify', :require => false
-  gem 'rb-fsevent', :require => false
-  gem 'rb-fchange', :require => false
+  gem 'coveralls', require: false
+  gem 'rb-inotify', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
 end
