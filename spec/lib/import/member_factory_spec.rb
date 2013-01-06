@@ -7,7 +7,7 @@ describe Import do
 
     it 'should load simple member data correctly' do
       subject.should be_a(Member)
-      subject.leo_id.should eq '027146'
+      subject.leo_id.should eq 27146
       subject.year.should eq '2012-2013'
       subject.first_name.should eq 'Angela'
       subject.last_name.should eq 'vom Mrugalla'

@@ -2,7 +2,7 @@ district_names  = %w{VW KL UV}
 
 FactoryGirl.define do
   factory :district do
-    sequence(:leo_id) {|n| "0287#{"%02d" % n}"}
+    sequence(:leo_id) {|n| 28700 + n }
     sequence(:name)   {|n| district_names[n] }
     year '2012-2013'
     multiple_district

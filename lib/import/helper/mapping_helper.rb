@@ -16,6 +16,10 @@ module Import
       lambda {|v| v.text}
     end
 
+    def integer_lambda
+      lambda {|v| v.to_i}
+    end
+
     def profession_lambda
       lambda {|v| v.xpath('.//DESCRIPTION/text()').first.text rescue nil}
     end

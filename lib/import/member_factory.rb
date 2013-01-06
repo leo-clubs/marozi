@@ -12,7 +12,7 @@ module Import
     def simple_attribute_mappings
       {
         'membershipStart' => [:member_since, date_lambda],
-        'id' => [:leo_id],
+        'id' => [:leo_id, integer_lambda],
       }
     end
 

@@ -6,7 +6,7 @@ describe Import do
 
     it 'should load all simple club data correctly' do
       subject.should be_a(Club)
-      subject.leo_id.should eq '200079'
+      subject.leo_id.should eq 200079
       subject.year.should eq '2012-2013'
       subject.name.should eq 'Emiliaburg-Gloria'
       subject.founded_at.should eq Date.new(1972, 7, 01)

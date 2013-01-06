@@ -6,7 +6,7 @@ describe Import do
 
     it 'should load all simple district data correctly' do
       subject.should be_a(District)
-      subject.leo_id.should eq '066'
+      subject.leo_id.should eq 66
       subject.year.should eq '2012-2013'
       subject.name.should eq 'KL'
     end

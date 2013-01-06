@@ -2,7 +2,7 @@ club_names = %w{Raunenhausen Biberach Buxtehude Linsengericht Fucking Busenbach 
 
 FactoryGirl.define do
   factory :club do
-    sequence(:leo_id) {|n| "0587#{"%02d" % n}"}
+    sequence(:leo_id) {|n| 58700 + n}
     sequence(:name) {|n| club_names[n]}
     sequence(:godfather) {|n| godfather "LC #{club_names[n]}"}
     year '2012-2013'

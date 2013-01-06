@@ -15,7 +15,7 @@ describe ClubsController do
   end
 
   describe 'me' do
-    let(:existing_id) {'087294'}
+    let(:existing_id) {87294}
 
     it '/clubs/my_club redirects to club of logged in member' do
       member = create(:simple_member, leo_id: existing_id)

@@ -11,7 +11,7 @@ module Import
 
     def simple_attribute_mappings
       {
-        'id' => [:leo_id],
+        'id' => [:leo_id, integer_lambda],
       }
     end
 
