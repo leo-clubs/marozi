@@ -5,3 +5,6 @@
 - add country to md (using Carmen)
 - add IdentityMap for querying
 - sort clubs in big hash accordingly
+- add output for import (via blocks)
+- require code coverage in separate files (and exclude from local run)
+- set edit button to the right of profile
