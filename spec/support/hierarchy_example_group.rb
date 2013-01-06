@@ -1,6 +1,6 @@
 shared_examples_for 'a hierarchy' do | depth_from_member_to_class |
-  let(:existing_id) {'087294'}
-  let(:non_existing_id) {'987294'}
+  let(:existing_id) { 87294 }
+  let(:non_existing_id) { 987294 }
 
   before(:each) do
     @member = create(:simple_member, leo_id: existing_id)

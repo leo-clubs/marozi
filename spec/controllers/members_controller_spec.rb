@@ -11,7 +11,7 @@ describe MembersController do
   end
 
   describe 'me' do
-    let(:existing_id) {'087294'}
+    let(:existing_id) {87294}
 
     it '/members/me redirects to logged in member' do
       member = create(:simple_member, leo_id: existing_id)
