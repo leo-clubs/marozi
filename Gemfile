@@ -38,3 +38,7 @@ group :test, :development do
   gem 'rb-fsevent', require: false
   gem 'rb-fchange', require: false
 end
+
+group :production do
+  gem 'therubyracer'
+end
