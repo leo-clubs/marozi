@@ -3,6 +3,8 @@
     %h1 
       =t(:'members.caption.name', first_name: @member.first_name, last_name: @member.last_name)
       %small= t(:'clubs.club_title', name: @club.name)
+      %a{href: edit_member_path(id: @member.leo_id)}
+        %button.btn.btn-inverse.btn-small.btn-member-edit= t(:'members.button.edit')
 
   %h2= t(:'members.caption.general')
 

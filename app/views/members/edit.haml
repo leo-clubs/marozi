@@ -1,0 +1,25 @@
+.container
+  .page-header
+    %h1 
+      =t(:'members.caption.edit', id: @member.leo_id)
+
+  = form_for @member do |f|
+    %h2= t(:'members.caption.general')
+    
+    = f.label :first_name
+    = f.text_field :first_name
+    = f.label :last_name
+    = f.text_field :last_name
+    = f.label :date_of_birth
+    = f.text_field :date_of_birth
+    = f.label :gender
+    - [:female, :male].map do |g|
+      = f.radio_button :gender, g, checked: g == @member.gender
+      = f.label :gender, g
+
+    %h3= t(:'members.caption.profession')
+    = f.label :profession
+    = f.text_field :profession
+
+    %hr
+    %h2= t(:'members.caption.contact')

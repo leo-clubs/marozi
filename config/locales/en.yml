@@ -8,6 +8,8 @@ en:
       my_multiple_disctrict: 'My Multiple District'
   members:
     name: '%{last_name}, %{first_name}'
+    button:
+      edit: Edit
     caption:
       name: '%{first_name} %{last_name}'
       history: 'History'
@@ -15,6 +17,7 @@ en:
       contact: 'Contact'
       contact_home: 'Home'
       contact_work: 'Work'
+      edit: 'Edit member %{id}'
   clubs:
     member_count:
       zero: '(No Members)'
@@ -49,3 +52,13 @@ en:
       zero: '(No Districts)'
       one: '(1 District)'
       other: '(%{count} Districts)'
+  helpers:
+    label:
+      member:
+        first_name: First Name
+        last_name: Last Name
+        date_of_birth: Date of Birth
+        profession: Profession
+        gender: Gender
+        female: Female
+        male: Male

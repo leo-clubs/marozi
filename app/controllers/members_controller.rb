@@ -8,6 +8,10 @@ class MembersController < ApplicationController
     render action: 'show'
   end
 
+  def edit
+    @member, @club = member_and_club(params[:id])
+  end
+
   private
 
   def member_and_club member_id
