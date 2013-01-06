@@ -12,6 +12,7 @@ describe Import do
       subject.first_name.should eq 'Angela'
       subject.last_name.should eq 'vom Mrugalla'
       subject.gender.should eq :female
+      subject.type.should eq :active
       subject.profession.should eq 'Stud. Jur.'
       subject.date_of_birth.should eq Date.new(1988, 11, 12)
       subject.member_since.should eq Date.new(2008, 7, 1)

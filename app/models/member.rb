@@ -10,6 +10,7 @@ class Member
   field :gender, type: Symbol
   field :languages, type: Array
   field :profession, type: String
+  field :type, type: Symbol
 
   embeds_many :contact_infos
 

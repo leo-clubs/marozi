@@ -9,10 +9,19 @@ module Import
       @year = year
     end
 
+    def type_mapping
+      {
+        'A' => :active,
+        'P' => :passive,
+        'E' => :honorary,
+      }
+    end
+
     def simple_attribute_mappings
       {
         'membershipStart' => [:member_since, date_lambda],
         'id' => [:leo_id, integer_lambda],
+        'status' => [:type, mapping_lambda(type_mapping, :active)]
       }
     end
 
