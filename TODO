@@ -1,9 +1,7 @@
 - find good model for founding president
 - find good model for history
 - add jumelage club to club document
-- add state to member
 - map contact_infos to club/district
-- refactor factories (create md, d from bottom up)
 - add country to md (using Carmen)
 - add IdentityMap for querying
 - sort clubs in big hash accordingly
