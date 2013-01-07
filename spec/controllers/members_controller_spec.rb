@@ -1,17 +1,12 @@
 require 'spec_helper'
 
 describe MembersController do
-  describe 'show' do
-    it 'should assign variables correctly' do
-      member = create(:simple_member)
-      get :show, id: member.leo_id
-      assigns(:member).should eq member
-      assigns(:club).should eq member.club
-    end
-  end
+
+  include_examples 'variable assignment for members controller', :show
+  include_examples 'variable assignment for members controller', :edit
 
   describe 'me' do
-    let(:existing_id) {87294}
+    let(:existing_id) { 87294 }
 
     it '/members/me redirects to logged in member' do
       member = create(:simple_member, leo_id: existing_id)
