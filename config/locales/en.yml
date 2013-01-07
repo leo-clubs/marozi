@@ -60,5 +60,5 @@ en:
         date_of_birth: Date of Birth
         profession: Profession
         gender: Gender
-        female: Female
-        male: Male
+        gender_female: Female
+        gender_male: Male
