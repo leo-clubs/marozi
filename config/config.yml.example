@@ -1,2 +1,3 @@
-prototype:
-  logged_in_user: 
+development:
+  prototype:
+    logged_in_user:
