@@ -40,5 +40,6 @@ group :test, :development do
 end
 
 group :production do
+  gem 'libv8', '3.11.8.0'
   gem 'therubyracer'
 end
