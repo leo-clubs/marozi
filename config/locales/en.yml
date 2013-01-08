@@ -2,15 +2,16 @@ en:
   navbar:
     profile:
       title: 'Profile'
-      my_membership: 'My Membership'
+      membership: 'My Membership'
       my_club: 'My Club'
-      my_disctrict: 'My District'
-      my_multiple_disctrict: 'My Multiple District'
+      my_district: 'My District'
+      my_multiple_district: 'My Multiple District'
   members:
     name: '%{last_name}, %{first_name}'
     button:
       edit: Edit
     caption:
+      general: General
       name: '%{first_name} %{last_name}'
       history: 'History'
       profession: 'Profession'
