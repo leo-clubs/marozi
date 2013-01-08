@@ -3,20 +3,35 @@
     %h1 
       =t(:'members.caption.edit', id: @member.leo_id)
 
-  = form_for @member do |f|
+  = nested_form_for(@member, :html => { class: 'form-horizontal' }) do |f|
     %h2= t(:'members.caption.general')
-    
-    = f.label :first_name
-    = f.text_field :first_name
-    = f.label :last_name
-    = f.text_field :last_name
-    = f.label :date_of_birth
-    = f.text_field :date_of_birth
-    = f.label :gender
-    = raw gender_radio_buttons f, @member
+
+    .control-group
+      = f.label :first_name, class: 'control-label'
+      = f.text_field :first_name, class: 'controls'
+
+    .control-group
+      = f.label :last_name, class: 'control-label'
+      = f.text_field :last_name, class: 'controls'
+
+    .control-group
+      = f.label :date_of_birth, class: 'control-label'
+      = f.text_field :date_of_birth, class: 'controls'
+
+    .control-group
+      = f.label :gender, class: 'control-label'
+      .controls
+        - [:female, :male].each do |gender|
+          = f.label :gender, value: gender, class: 'controls' do
+            = f.radio_button :gender, gender, checked: @member.gender == gender
+            = t(:"helpers.label.member.gender_#{gender}")
+
     %h3= t(:'members.caption.profession')
-    = f.label :profession
-    = f.text_field :profession
+    = f.label :profession, class: 'control-label'
+    = f.text_field :profession, class: 'controls'
 
     %hr
     %h2= t(:'members.caption.contact')
+
+    = f.fields_for :contact_infos
+    = f.link_to_add '+', :contact_infos, class: ['btn', 'btn-inverse']

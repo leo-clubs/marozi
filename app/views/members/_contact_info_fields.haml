@@ -1,0 +1,21 @@
+%address
+  .control-group
+    = f.label :type, class: 'control-label'
+    = f.text_field :type, class: 'controls'
+  .control-group
+    = f.label :street, class: 'control-label'
+    = f.text_field :street, class: 'controls'
+  .control-group
+    = f.label :zip, class: 'control-label'
+    = f.text_field :zip, class: 'controls'
+  .control-group
+    = f.label :city, class: 'control-label'
+    = f.text_field :city, class: 'controls'
+  .control-group
+    = f.label :country, class: 'control-label'
+    = f.text_field :country, class: 'controls'
+
+.control-group
+  = f.link_to_remove '-', class: ['btn', 'btn-inverse']
+
+%hr
