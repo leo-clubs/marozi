@@ -22,3 +22,18 @@
                   %a{href: my_district_path}= t(:'navbar.profile.my_district')
                 %li
                   %a{href: my_multiple_district_path}= t(:'navbar.profile.my_multiple_district')
+            %li.dropdown
+              %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                = t(:'navbar.club.title')
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href: my_club_path}= t(:'navbar.club.overview')
+                %li
+                  %a{href: '#'}= t(:'navbar.club.edit_club')
+                %li
+                  %a{href: '#'}= t(:'navbar.club.add_member')
+                %li
+                  %a{href: '#'}= t(:'navbar.club.add_guest')
+                %li
+                  %a{href: '#'}= t(:'navbar.club.accept_to_club')

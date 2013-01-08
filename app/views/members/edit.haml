@@ -35,3 +35,7 @@
 
     = f.fields_for :contact_infos
     = f.link_to_add '+', :contact_infos, class: ['btn', 'btn-inverse']
+
+    %hr
+
+    = f.submit t(:'helpers.label.member.submit'), class: ['btn', 'btn-inverse']

@@ -13,7 +13,7 @@ class Member
   field :type, type: Symbol
 
   embeds_many :contact_infos
-  accepts_nested_attributes_for :contact_infos
+  accepts_nested_attributes_for :contact_infos, allow_destroy: true
 
   belongs_to :club
 

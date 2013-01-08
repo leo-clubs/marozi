@@ -6,6 +6,13 @@ en:
       my_club: 'My Club'
       my_district: 'My District'
       my_multiple_district: 'My Multiple District'
+    club:
+      title: Club
+      overview: Overview
+      edit_club: Edit
+      add_member: Add Member
+      accept_to_club: Accept Guest into Club
+      add_guest: Add Guest
   members:
     name: '%{last_name}, %{first_name}'
     button:
@@ -63,6 +70,7 @@ en:
         gender: Gender
         gender_female: Female
         gender_male: Male
+        submit: Update
       contact_info:
         type: Type
         street: Street
