@@ -13,10 +13,7 @@
     = f.label :date_of_birth
     = f.text_field :date_of_birth
     = f.label :gender
-    - [:female, :male].each do |gender|
-      = f.label :gender, t(:"helpers.label.member.gender_#{gender}"), value: gender
-      = f.radio_button :gender, gender, checked: @member.gender == gender
-
+    = raw gender_radio_buttons f, @member
     %h3= t(:'members.caption.profession')
     = f.label :profession
     = f.text_field :profession
