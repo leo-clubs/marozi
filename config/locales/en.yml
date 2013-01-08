@@ -63,3 +63,9 @@ en:
         gender: Gender
         gender_female: Female
         gender_male: Male
+      contact_info:
+        type: Type
+        street: Street
+        zip: ZIP
+        city: City
+        country: Country
