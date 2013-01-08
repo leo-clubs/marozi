@@ -1,5 +1,6 @@
 language: ruby
 before_install: 
+  - rvm install ruby-2.0.0-rc1
   - gem install bundler --pre
   - gem update --system
 bundler_args: --without documentation production
