@@ -6,7 +6,7 @@ bundler_args: --without documentation production
 rvm:
   - 2.0.0-preview2
 before_script:
-  - cp config/mongoid.yml.example config/mongoid.yml
+  - ./config/setup_config.sh
 script:
   - RAILS_ENV=test bundle exec rake spec
 services: 
