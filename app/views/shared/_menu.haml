@@ -37,3 +37,27 @@
                   %a{href: '#'}= t(:'navbar.club.add_guest')
                 %li
                   %a{href: '#'}= t(:'navbar.club.accept_to_club')
+            %li.dropdown
+              %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                = t(:'navbar.district.title')
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href: '#'}= t(:'navbar.district.overview')
+                %li
+                  %a{href: '#'}= t(:'navbar.district.edit_district')
+                %li
+                  %a{href: '#'}= t(:'navbar.district.add_club')
+                %li
+                  %a{href: '#'}= t(:'navbar.district.close_club')
+            %li.dropdown
+              %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                = t(:'navbar.multiple_district.title')
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href: '#'}= t(:'navbar.multiple_district.overview')
+                %li
+                  %a{href: '#'}= t(:'navbar.multiple_district.edit_multiple_district')
+                %li
+                  %a{href: '#'}= t(:'navbar.multiple_district.split_district')
