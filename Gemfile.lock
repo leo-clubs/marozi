@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: c67005f221f102fe2caca231027d9b11cf630484
+  revision: 66c8740b98a988fe8959782ca1158a9dcce6b4c6
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -40,7 +40,7 @@ GIT
       activesupport (= 4.0.0.beta)
       builder (~> 3.1.0)
       erubis (~> 2.7.0)
-      rack (~> 1.4.1)
+      rack (~> 1.4.3)
       rack-test (~> 0.6.1)
     activemodel (4.0.0.beta)
       activesupport (= 4.0.0.beta)
