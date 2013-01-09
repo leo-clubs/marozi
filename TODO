@@ -9,3 +9,4 @@
 - require code coverage in separate files (and exclude from local run)
 - set edit button to the right of profile
 - think of good way to represent spoken languages in profile
+- add correct skip syntax to rspec
