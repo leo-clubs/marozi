@@ -27,7 +27,7 @@ describe Import do
        subject.members.size.should be 22
     end
 
-    it 'should load office data correctly', temp: true do
+    it 'should load office data correctly' do
       subject.offices.should_not be_empty
       subject.offices.size.should be 5
     end
