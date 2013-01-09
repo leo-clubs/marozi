@@ -8,6 +8,7 @@ FactoryGirl.define do
       last_name             'von Orliwitzki'
       gender                :female
       profession            'Jurastudentin'
+      contact_infos         { [build(:contact_info)] }
       club
     end
 

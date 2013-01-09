@@ -27,6 +27,13 @@ describe MembersController do
       Member.find(simple_member.id).first_name.should eq changed_name
     end
 
+    it 'updates nested attribute correctly (controller)', if: false  do
+      contact_info = simple_member.contact_infos.first
+      changed_street = "#{contact_info.street} changed"
+      patch :update, id: simple_member.id, member: { contact_infos_attributes: {'0' => { id: contact_info.id, street: changed_street }}}
+      Member.find(simple_member.id).contact_infos.first.street.should eq changed_street
+    end
+
     it 'disallows changing of leo_id' do
       unchanged_id = simple_member.leo_id
       patch :update, id: simple_member.id, member: { leo_id: unchanged_id + 1 }
