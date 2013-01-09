@@ -16,6 +16,10 @@ module Import
       lambda {|v| v.text}
     end
 
+    def office_name_lambda
+      lambda {|v| v.text.downcase rescue nil}
+    end
+
     def integer_lambda
       lambda {|v| v.to_i}
     end

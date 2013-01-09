@@ -11,7 +11,7 @@ module Import
     def simple_element_mappings
       {
        'PERSON' => [:member_id, office_to_member_lambda],
-       'NAME' => [:name]
+       'NAME' => [:name, office_name_lambda]
       }
     end
 

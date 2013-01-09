@@ -1,6 +1,6 @@
 class Office
   include Mongoid::Document
 
-  field :name, type: String
+  field :name, type: Symbol
   field :member_id, type: Integer
 end
