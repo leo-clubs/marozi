@@ -1,14 +1,19 @@
 .cotainer
-  .page-header
-    %h1= t(:'clubs.caption.clubs_in_md', md: '111 Germany')
 
   .row
-    .span3.navbar
-      %ul.nav.nav-list.navbar.affix-top
-        %li bla
+    .span3.d-sidebar
+      %ul.nav.nav-list.d-sidebar.affix-top{id: 'affix'}
+        - @districts.each do |district_name|
+          %li
+            %a{href: "##{district_name}"}= t(:'districts.district_title',multiple_district: '111', district: district_name)
 
-    .span9
+    .span9{:'data-spy' => 'scroll', }
+      .page-header
+        %h1= t(:'clubs.caption.clubs_in_md', md: '111 Germany')
       - @clubs.each do |district_name, clubs|
         %section{id: district_name}
           %h2= t(:'districts.district_title',multiple_district: '111', district: district_name)
           = render 'shared/clubs_list_table', clubs: clubs
+
+    :javascript
+      $('#affix').affix();

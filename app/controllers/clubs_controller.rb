@@ -2,10 +2,10 @@ class ClubsController < ApplicationController
 
   def index
     h = Club.order_by(name: :asc).inject({}) do |hash, club|
-      key = club.district.name
-      hash.merge({key => [club]}){|key, oldval, newval| oldval + newval}
+      hash.merge({club.district.name => [club]}){|key, oldval, newval| oldval + newval}
     end
     @clubs = Hash[h.sort]
+    @districts = @clubs.keys
   end
 
   def show
