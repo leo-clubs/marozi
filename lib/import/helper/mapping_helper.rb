@@ -68,7 +68,7 @@ module Import
     end
 
     def office_lambda(year)
-      simple_list_lambda 'OFFICER', OfficeFactory
+      simple_list_lambda 'OFFICER', OfficeFactory, year
     end
 
     def mapping_lambda mapping, default

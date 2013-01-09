@@ -1,7 +1,7 @@
 class Club
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Versioning
+  include ProvidesOffices
 
   field :name, type: String
   field :founded_at, type: Date
@@ -11,7 +11,6 @@ class Club
   field :bank, type: String
   field :homepage, type: String
 
-  embeds_many :offices
   embeds_one :contact_infos
 
   has_many :members, autosave: true

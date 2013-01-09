@@ -1,11 +1,10 @@
 class District
   include Mongoid::Document
   include Mongoid::Timestamps
-  include Versioning
+  include ProvidesOffices
 
   field :name, type: String
 
-  embeds_many :offices
   embeds_one :contact_infos
 
   belongs_to :multiple_district
