@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    #TODO replace with login
-    session[:current_user] = app_config['prototype']['logged_in_user'] rescue nil
+    puts "here I am with session: #{session[:current_user]}"
+    redirect_to login_path unless session[:current_user]
   end
 end
