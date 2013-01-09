@@ -14,6 +14,12 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.order = "random"
   config.include FactoryGirl::Syntax::Methods
+  config.filter_run_excluding skip: true
+
+  config.before(:each) do
+    FactoryGirl.reload
+    Mongoid.purge!
+  end
 end
 
 RSpec::Matchers.define :have_same_attributes_as do |expected|
@@ -27,22 +33,6 @@ RSpec::Matchers.define :have_same_attributes_as do |expected|
 
     [actual, expected].each{|a| a.map!{|c| c.attributes.except(*ignored)}}
     actual == expected
-  end
-end
-
-RSpec.configure do |config|
-  config.before(:suite) do
-    DatabaseCleaner[:mongoid].strategy = :truncation
-    DatabaseCleaner[:mongoid].clean_with :truncation
-  end
-
-  config.before(:each) do
-    FactoryGirl.reload
-    DatabaseCleaner[:mongoid].start
-  end
-
-  config.after(:each) do
-    DatabaseCleaner[:mongoid].clean
   end
 end
 

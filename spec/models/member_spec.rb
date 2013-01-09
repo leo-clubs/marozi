@@ -23,13 +23,11 @@ describe Member do
   context 'updates' do
     let(:simple_member) { create(:simple_member) }
 
-    it 'should update nested attributes correctly (model)', if: false do
+    it 'should update nested attributes correctly (model)', skip: true do
       contact_info = simple_member.contact_infos.first
       changed_street = "#{contact_info.street} changed"
-      #simple_member.update_attributes id: simple_member.id, member: { contact_infos_attributes: {'0' => { id: contact_info.id, street: changed_street }}}
-      simple_member.contact_infos_attributes = {'0' => { id: contact_info.id, street: changed_street }}
-      simple_member.save!
-      Member.unscoped.find(simple_member.id).contact_infos.first.street.should eq changed_street
+      simple_member.update_attributes contact_infos_attributes: {'0' => { id: contact_info.id, street: changed_street }}
+      simple_member.reload.contact_infos.first.street.should eq changed_street
     end
   end
 end
