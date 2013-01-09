@@ -28,7 +28,9 @@ describe MembersController do
     end
 
     it 'disallows changing of leo_id' do
-      expect { patch :update, id: simple_member.id, member: { leo_id: 666 } }.to raise_error(ActionController::UnpermittedParameters)
+      unchanged_id = simple_member.leo_id
+      patch :update, id: simple_member.id, member: { leo_id: unchanged_id + 1 }
+      Member.find(simple_member.id).leo_id.should eq unchanged_id
     end
   end
 end
