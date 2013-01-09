@@ -6,7 +6,7 @@ describe Import do
       subject = Import::OfficeFactory.new(xml_fixture('office')).build_model
       subject.should be_a(Office)
       subject.name.should eq 'DSpr'
-      subject.member_id.should eq '027146'
+      subject.member_id.should eq 27146
     end
   end
 end
