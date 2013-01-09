@@ -28,6 +28,12 @@ en:
     name: '%{last_name}, %{first_name}'
     button:
       edit: Edit
+    tablehead:
+      id: ID
+      name: Name
+      date_of_birth: Birthday
+      contact_info: Contact Info
+      member_since: Member since
     caption:
       general: General
       name: '%{first_name} %{last_name}'
