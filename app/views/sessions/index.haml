@@ -1,0 +1,9 @@
+= form_tag(login_path, method: 'post', class: 'form-signin') do
+  %h2.form-signin-heading= t(:'sign_in.welcome')
+  %input.input-block-level{name: :email_or_id, type: 'text', placeholder: t(:'sign_in.label.email_or_id')}
+  %input.input-block-level{name: :password, type: 'password', placeholder: t(:'sign_in.label.password')}
+  %label.checkbox
+    %input{name: :remember_me, type: 'checkbox', value: t(:'sign_in.label.remember_me')}
+    = t(:'sign_in.label.remember_me')
+  %button.btn.btn-large.btn-inverse{type: 'submit'}
+    = t(:'sign_in.label.submit')

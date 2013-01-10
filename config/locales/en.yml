@@ -77,6 +77,13 @@ en:
       zero: '(No Districts)'
       one: '(1 District)'
       other: '(%{count} Districts)'
+  sign_in:
+    welcome: 'Please log in'
+    label:
+      email_or_id: Email or ID
+      password: Password
+      remember_me: Remember Me
+      submit: Login
   helpers:
     label:
       member:
