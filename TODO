@@ -1,5 +1,4 @@
 - find good model for founding president
-- find good model for history
 - add jumelage club to club document
 - map contact_infos to club/district
 - add country to md (using Carmen)
@@ -10,4 +9,3 @@
 - set edit button to the right of profile
 - think of good way to represent spoken languages in profile
 - Make forms editable like in http://vitalets.github.com/x-editable/demo.html?f=bootstrap&c=inline#
-- Add Offices to an own collection
