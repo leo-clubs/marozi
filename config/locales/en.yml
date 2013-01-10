@@ -88,9 +88,12 @@ en:
     label:
       member:
         first_name: First Name
+        first_name_caption: Please enter your first name
         last_name: Last Name
+        last_name_caption: Please enter your last name
         date_of_birth: Date of Birth
         profession: Profession
+        profession_caption: Please enter your Profession
         gender: Gender
         gender_female: Female
         gender_male: Male

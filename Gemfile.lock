@@ -114,6 +114,9 @@ GEM
       bson (~> 1.8.1)
     builder (3.1.4)
     coderay (1.0.8)
+    coffee-filter (0.1.1)
+      coffee-script (>= 2.2.0)
+      haml (>= 3.0.18)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -173,7 +176,6 @@ GEM
     minitest (4.4.0)
     moped (1.3.2)
     multi_json (1.5.0)
-    nested_form (0.3.1)
     nokogiri (1.5.6)
     origin (1.0.11)
     orm_adapter (0.0.7)
@@ -244,6 +246,7 @@ DEPENDENCIES
   arel!
   bootstrap-sass
   bson_ext
+  coffee-filter
   coffee-rails!
   coveralls
   devise
@@ -254,7 +257,6 @@ DEPENDENCIES
   jquery-rails
   libv8 (= 3.3.10.4)
   mongoid!
-  nested_form
   nokogiri
   rails!
   rake

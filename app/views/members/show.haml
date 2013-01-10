@@ -8,15 +8,15 @@
 
   %h2= t(:'members.caption.general')
 
-  %h3= t(:'members.caption.profession')
-  = @member.profession.presence
+  %table.table.table-bordered.table-striped{id: 'member', :'data-leo-id' => @member.leo_id, :'data-member-update-url' => member_path(id: @member.leo_id)}
+    %tbody
+      - [:first_name, :last_name, :profession].each do |field|
+        %tr
+          %td{width: '15%'}
+            = t(:"helpers.label.member.#{field}")
+          %td
+            %a{href: '#', id: field}= @member.send(:"#{field}")
 
-  %hr
-
-  %h2= t(:'members.caption.contact')
-  - @member.contact_infos.each do |contact_info|
-    = render 'shared/contact_info', contact_info: contact_info
-
-  %hr
-
-  %h2= t(:'members.caption.history')
+  :coffeescript
+    $(document).ready(init_editable)
+    $(window).bind('page:change', init_editable)

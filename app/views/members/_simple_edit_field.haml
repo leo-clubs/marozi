@@ -1,0 +1,13 @@
+.editable-container.editable-inline.hide
+  .editableform-loading
+    = form_tag('#', class: ['form-inline', 'editableform']) do
+      .control-group
+        %div
+          .editable-input
+            %input.input-medium{type: 'text'}
+          .editable-buttons
+            %button.btn.btn-inverse.editable-submit
+              %i.icon-ok.icon-white
+            %button.btn.editable-cancel
+              %i.icon-remove
+        %div.editable-error-block.help-block.hide

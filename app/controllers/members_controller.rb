@@ -1,3 +1,5 @@
+using XEditableConverter
+
 class MembersController < ApplicationController
   def show
     @member, @club = member_and_club(params[:id])
@@ -8,12 +10,8 @@ class MembersController < ApplicationController
     render action: 'show'
   end
 
-  def edit
-    @member, @club = member_and_club(params[:id])
-  end
-
   def update
-    member = Member.unscoped.find params[:id]
+    member = Member.where(leo_id: params[:id]).first
     member.update_attributes member_params
     redirect_to action: :show, id: member.leo_id
   end
@@ -54,7 +52,6 @@ class MembersController < ApplicationController
           :homepage
         ]
       }
-
-      params.require(:member).permit(*permitted, contact_infos).to_hash
+      params.to_rails_params.permit(*permitted, contact_infos).to_hash
     end
 end
