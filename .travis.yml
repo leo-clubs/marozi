@@ -4,7 +4,7 @@ before_install:
   - gem update --system
 bundler_args: --without documentation production
 rvm:
-  - 2.0.0-rc1
+  - 2.0.0-preview2
 before_script:
   - ./config/setup_config.sh
 script:
