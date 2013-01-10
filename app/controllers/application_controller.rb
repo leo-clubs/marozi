@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    puts "here I am with session: #{session[:current_user]}"
     redirect_to login_screen_path unless session[:current_user]
   end
 end
