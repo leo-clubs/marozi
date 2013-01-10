@@ -1,2 +1,18 @@
+$padding-navbar: 40px
+$padding-body: 60px
+
 .btn-member-edit
   position: relative
+
+.navbar-row
+  position: fixed
+  background-color: #fff
+  z-index: 1000
+  width: 100%
+  top: 0
+
+.top-offset
+  padding-top: $padding-navbar
+
+body.with-navbar
+  padding-top: $padding-navbar + $padding-body
