@@ -33,6 +33,7 @@ group :test, :development do
   gem 'guard'
   gem 'guard-rspec'
   gem 'factory_girl_rails'
+  gem 'thin'
   gem 'coveralls', require: false
   gem 'rb-inotify', require: false
   gem 'rb-fsevent', require: false
