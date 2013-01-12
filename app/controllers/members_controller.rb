@@ -1,3 +1,5 @@
+require "#{Rails.root}/lib/refinements/xeditbable_converter"
+
 using XEditableConverter
 
 class MembersController < ApplicationController
