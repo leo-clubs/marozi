@@ -2,7 +2,6 @@ class MemberEditableInitializer
   constructor: (@member_id, @member_update_url, @auth_token) ->
 
   init: ->
-    console.log("inside: Member ID: #{@member_id} member_upadte_url: #{@member_update_url} auth_token: #{@auth_token}")
     for field in ['first_name', 'last_name']
       $("##{field}").editable
         type: "text"
