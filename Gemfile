@@ -43,5 +43,6 @@ group :test, :development do
 end
 
 group :production do
-  gem 'therubyracer', :require => 'v8', :platforms => :ruby
+  gem 'libv8', '3.3.10.4'
+  gem 'therubyracer', '0.10.2'
 end
