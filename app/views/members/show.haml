@@ -10,8 +10,9 @@
 
   %table.table.table-bordered.table-striped{id: 'member', :'data-leo-id' => @member.leo_id, :'data-member-update-url' => member_path(id: @member.leo_id)}
     %tbody
-      = member_simple_attribute_tablerow(:first_name, t(:"helpers.label.member.first_name"), 'text', t(:"helpers.label.member.first_name_caption"))
-      = member_simple_attribute_tablerow(:last_name, t(:"helpers.label.member.last_name"), 'text', t(:"helpers.label.member.last_name_caption"))
+      = member_simple_attribute_tablerow(:first_name, t(:"helpers.label.member.first_name"), t(:"helpers.label.member.first_name_caption"))
+      = member_simple_attribute_tablerow(:last_name, t(:"helpers.label.member.last_name"), t(:"helpers.label.member.last_name_caption"))
+      = member_select_attribute_tablerow(:gender, t(:'helpers.label.member.gender'), [[:female, t(:'helpers.label.member.gender_female')],[:male, t(:'helpers.label.member.gender_male')]],t(:"helpers.label.member.last_name_caption"))
 
   :coffeescript
     $(document).ready(init_editable)

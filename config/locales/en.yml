@@ -97,6 +97,7 @@ en:
         gender: Gender
         gender_female: Female
         gender_male: Male
+        gender_caption: Please enter gender
         submit: Update
       contact_info:
         type: Type

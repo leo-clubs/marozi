@@ -15,7 +15,7 @@ class MembersController < ApplicationController
   def update
     member = Member.where(leo_id: params[:id]).first
     member.update_attributes member_params
-    redirect_to action: :show, id: member.leo_id
+    render json: nil
   end
 
   private
