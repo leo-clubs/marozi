@@ -32,7 +32,9 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-coffeescript'
   gem 'factory_girl_rails'
+  gem 'jasmine-rails'
   gem 'thin'
   gem 'coveralls', require: false
   gem 'rb-inotify', require: false
