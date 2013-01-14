@@ -2,16 +2,26 @@ class MemberEditableInitializer
   constructor: (@member_id, @member_update_url, @auth_token) ->
 
   init: ->
-    for field in ['first_name', 'last_name']
-      $("##{field}").editable
-        type: "text"
-        pk: @member_id
-        url: @member_update_url
-        title: "Enter username"
-        params:
-          authenticity_token: @auth_token
-        ajaxOptions:
-          type: 'patch'
+    for field in $('.editable')
+      params = new EditableRenderer($(field).data()).toHash()
+      params['pk'] = @member_id
+      params['url'] = @member_update_url
+      params['params'] = { authenticity_token: @auth_token }
+      params['ajaxOptions'] = { type: 'patch' }
+
+      $(field).editable params
+
+class EditableRenderer
+  @json_fields = ['data-field-source']
+
+  constructor: (@data) ->
+
+  toHash: ->
+    hash = {}
+    for key,value of @data
+      if /^field/.test key
+        hash[key.replace(/^field/,'').toLowerCase()] = value
+    hash
 
 @init_editable = ->
   member_id = $('#member').attr('data-leo-id')
