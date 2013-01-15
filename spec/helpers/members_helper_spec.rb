@@ -9,6 +9,22 @@ describe MembersHelper do
     end
   end
 
+  describe '#value_cell' do
+    it 'should print table cell for text field without options' do
+      allow_message_expectations_on_nil
+      @member.should_receive('field').and_return('value')
+      html = helper.value_cell('field', 'text', 'An awesome Field')
+      html.should eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field">value</a></td>'
+    end
+
+    it 'should print table cell for text field with options' do
+      allow_message_expectations_on_nil
+      @member.should_receive('field').and_return('value')
+      html = helper.value_cell('field', 'text', 'An awesome Field', {my_awesome_key: 'my_awesome_value'})
+      html.should eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value">value</a></td>'
+    end
+  end
+
   describe '#member_simple_attribute_tablerow' do
     include_context 'members helper', :first_name, 'Susanne', 'First Name', 'Enter First Name', 'text'
 
