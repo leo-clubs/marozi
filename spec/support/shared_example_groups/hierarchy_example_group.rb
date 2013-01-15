@@ -14,7 +14,7 @@ shared_examples_for 'a hierarchy' do | depth_from_member_to_class |
     actual.should eq child
   end
 
-  it 'should find subject for non-existing id' do
+  it 'should not find subject for non-existing id' do
     d = described_class.find_by_member_id non_existing_id
     d.should be_nil
   end
