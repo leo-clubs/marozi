@@ -1,11 +1,13 @@
-shared_context 'members helper' do |field_inner, value_inner, title_inner, caption_inner |
+shared_context 'members helper' do |field_inner, value, name_inner, title_inner, type, opts |
   let(:field) { field_inner }
-  let(:value) { value_inner }
+  let(:name) { name_inner }
   let(:title) { title_inner }
-  let(:caption) { caption_inner }
 
   before(:each) do
     @member = build(:simple_member, field => value)
-    helper.should_receive(:name_cell).with(title).and_return(content_tag(:td))
+    args = [field, type, title]
+    args << opts if opts
+    helper.should_receive(:name_cell).with(name).and_return(content_tag(:td))
+    helper.should_receive(:value_cell).with(*args).and_return(content_tag(:td))
   end
 end
