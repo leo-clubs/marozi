@@ -14,6 +14,13 @@
       = member_simple_attribute_tablerow(:last_name, t(:"helpers.label.member.last_name"), t(:"helpers.label.member.last_name_caption"))
       = member_select_attribute_tablerow(:gender, t(:'helpers.label.member.gender'), [[:female, t(:'helpers.label.member.gender_female')],[:male, t(:'helpers.label.member.gender_male')]],t(:"helpers.label.member.last_name_caption"))
 
+  - # TODO profession
+  - # TODO birth date
+  - # TODO member since
+  - # TODO addresses
+  - # TODO state
+  - # TODO awards
+
   :coffeescript
     $(document).ready(init_editable)
     $(window).bind('page:change', init_editable)
