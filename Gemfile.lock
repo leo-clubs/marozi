@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: b85e0a1220b9b8e01c3874814845efaaf9bdf54f
+  revision: 85e7f0f3bdaa5abde299ec46972a8a2fd714b79e
   branch: 4.0.0-dev
   specs:
     mongoid (4.0.0)
@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: bf095770e561c51cebeb5a556afc03a21d9e603c
+  revision: 390ad458b46c0df105a0dd3381f5912b96ba8ea3
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
