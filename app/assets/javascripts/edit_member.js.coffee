@@ -12,8 +12,6 @@ class MemberEditableInitializer
       $(field).editable params
 
 class EditableRenderer
-  @json_fields = ['data-field-source']
-
   constructor: (@data) ->
 
   toHash: ->

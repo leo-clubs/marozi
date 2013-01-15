@@ -92,14 +92,14 @@ en:
         first_name_caption: Please enter your first name
         last_name: Last Name
         last_name_caption: Please enter your last name
-        date_of_birth: Date of Birth
+        date_of_birth: Birthday
+        date_of_birth_caption: Select your birthday
         profession: Profession
         profession_caption: Please enter your Profession
         gender: Gender
         gender_female: Female
         gender_male: Male
         gender_caption: Please enter gender
-        submit: Update
       contact_info:
         type: Type
         street: Street

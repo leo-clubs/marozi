@@ -13,8 +13,10 @@
       = member_simple_attribute_tablerow(:first_name, t(:"helpers.label.member.first_name"), t(:"helpers.label.member.first_name_caption"))
       = member_simple_attribute_tablerow(:last_name, t(:"helpers.label.member.last_name"), t(:"helpers.label.member.last_name_caption"))
       = member_select_attribute_tablerow(:gender, t(:'helpers.label.member.gender'), [[:female, t(:'helpers.label.member.gender_female')],[:male, t(:'helpers.label.member.gender_male')]],t(:"helpers.label.member.last_name_caption"))
+      = member_simple_attribute_tablerow(:profession, t(:"helpers.label.member.profession"), t(:"helpers.label.member.profession_caption"))
+      = member_date_attribute_tablerow(:date_of_birth, t(:"helpers.label.member.date_of_birth"), t(:"helpers.label.member.date_of_birth_caption"))
 
-  - # TODO profession
+
   - # TODO birth date
   - # TODO member since
   - # TODO addresses

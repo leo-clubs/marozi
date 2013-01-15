@@ -11,16 +11,12 @@ describe MembersHelper do
 
   describe '#value_cell' do
     it 'should print table cell for text field without options' do
-      allow_message_expectations_on_nil
-      @member.should_receive('field').and_return('value')
-      html = helper.value_cell('field', 'text', 'An awesome Field')
+      html = helper.value_cell('field', 'value','text', 'An awesome Field')
       html.should eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field">value</a></td>'
     end
 
     it 'should print table cell for text field with options' do
-      allow_message_expectations_on_nil
-      @member.should_receive('field').and_return('value')
-      html = helper.value_cell('field', 'text', 'An awesome Field', {my_awesome_key: 'my_awesome_value'})
+      html = helper.value_cell('field', 'value', 'text', 'An awesome Field', {my_awesome_key: 'my_awesome_value'})
       html.should eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value">value</a></td>'
     end
   end
@@ -34,8 +30,8 @@ describe MembersHelper do
     end
   end
 
-  describe '#member_date_attribute_tablerow', skip: true do
-    include_context 'members helper', :date_of_birth, Date.new(1992, 11, 12), 'Birthday', 'Please enter your Birthday'
+  describe '#member_date_attribute_tablerow' do
+    include_context 'members helper', :date_of_birth, Date.new(1992, 11, 12), 'Birthday', 'Please enter your Birthday', 'date'
 
     it 'should print table row correct for birth date' do
       html = helper.member_date_attribute_tablerow(field, name, title)
@@ -45,7 +41,7 @@ describe MembersHelper do
 
   describe '#member_select_attribute_tablerow' do
     gender_array = [{value: 'female', text: 'Female'}, {value: 'male', text: 'Male'}]
-    include_context 'members helper', :gender, 'female', 'Gender', 'Select Gender', 'select', :'data-field-source' => gender_array.to_json
+    include_context 'members helper', :gender, :female, 'Gender', 'Select Gender', 'select', :'data-field-source' => gender_array.to_json
 
     it 'should print table row correct for gender select' do
       html = helper.member_select_attribute_tablerow(field, name, [[:female, 'Female'],[:male, 'Male']], title)
