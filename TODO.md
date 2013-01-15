@@ -10,6 +10,7 @@
 - [ ] Make forms editable like in http://vitalets.github.com/x-editable/demo.html?f=bootstrap&c=inline#
 - [ ] Make sure user cannot edit other users in controller
 - [ ] Think of good way to read gender (localized)
+- [ ] Add attributes to member [title, academic title, vita, languages]
 
 **For Demo Party:**
 
