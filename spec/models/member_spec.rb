@@ -30,4 +30,14 @@ describe Member do
       simple_member.reload.contact_infos.first.street.should eq changed_street
     end
   end
+
+  describe 'date functions' do
+    it 'should return correct string for date_of_birth_formatted' do
+      build(:simple_member, date_of_birth: Date.new(1988, 2, 17)).date_of_birth_formatted.should eq '1988-02-17'
+    end
+
+    it 'should return correct string for member_since_formatted' do
+      build(:simple_member, member_since: Date.new(2010, 7, 1)).member_since_formatted.should eq '2010-07-01'
+    end
+  end
 end
