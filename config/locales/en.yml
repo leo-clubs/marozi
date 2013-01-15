@@ -24,6 +24,7 @@ en:
       overview: Overview
       edit_multiple_district: Edit Multiple District
       split_district: Split District
+    logout: Logout
   members:
     name: '%{last_name}, %{first_name}'
     button:
