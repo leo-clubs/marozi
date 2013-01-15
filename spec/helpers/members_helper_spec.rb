@@ -10,26 +10,43 @@ describe MembersHelper do
   end
 
   describe '#member_simple_attribute_tablerow' do
-    before(:each) do
-      @member = build(:simple_member, first_name: 'Susanne')
-    end
+    include_context 'members helper', :first_name, 'Susanne', 'First Name', 'Enter First Name'
 
     it 'should print table row correct for default values' do
-      helper.should_receive(:name_cell).with('First Name').and_return(content_tag(:td))
-      html = helper.member_simple_attribute_tablerow(:first_name, 'First Name', 'Enter First Name')
-      html.should eq '<tr><td></td><td><a class="editable" data-field-title="Enter First Name" data-field-type="text" href="#" id="first_name">Susanne</a></td></tr>'
+      html = helper.member_simple_attribute_tablerow(field, title, caption)
+      html.should eq %Q{
+        <tr>
+          <td></td>
+          <td>
+            <a class="editable" data-field-title="#{caption}" data-field-type="text" href="#" id="#{field}">#{value}</a>
+          </td>
+        </tr>}.strip.gsub(/\>\s+</, '><')
+    end
+  end
+
+  describe '#member_date_attribute_tablerow', skip: true do
+    include_context 'members helper', :date_of_birth, Date.new(1992, 11, 12), 'Birthday', 'Please enter your Birthday'
+
+    it 'should print table row correct for birth date' do
+      html = helper.member_date_attribute_tablerow(field, title, caption)
+      html.should eq %Q{
+        <tr>
+          <td></td>
+          <td><a class="editable" data-field-title="#{caption}" data-field-type="date" href="#" id="#{field}">#{value}</a></td>
+        </tr>}.strip.gsub(/\>\s+</, '><')
     end
   end
 
   describe '#member_select_attribute_tablerow' do
-    before(:each) do
-      @member = build(:simple_member, gender: 'female')
-    end
+    include_context 'members helper', :gender, 'female', 'Gender', 'Select Gender'
 
     it 'should print table row correct for gender select' do
-      helper.should_receive(:name_cell).with('Gender').and_return(content_tag(:td))
-      html = helper.member_select_attribute_tablerow(:gender, 'Gender', [[:female, 'Female'],[:male, 'Male']], 'Select gender')
-      html.should eq '<tr><td></td><td><a class="editable" data-field-source="[{&quot;value&quot;:&quot;female&quot;,&quot;text&quot;:&quot;Female&quot;},{&quot;value&quot;:&quot;male&quot;,&quot;text&quot;:&quot;Male&quot;}]" data-field-title="Select gender" data-field-type="select" href="#" id="gender">female</a></td></tr>'
+      html = helper.member_select_attribute_tablerow(:gender, 'Gender', [[:female, 'Female'],[:male, 'Male']], caption)
+      html.should eq %Q{
+        <tr>
+          <td></td>
+          <td><a class="editable" data-field-source="[{&quot;value&quot;:&quot;female&quot;,&quot;text&quot;:&quot;Female&quot;},{&quot;value&quot;:&quot;male&quot;,&quot;text&quot;:&quot;Male&quot;}]" data-field-title="#{caption}" data-field-type="select" href="#" id="#{field}">#{value}</a></td>
+        </tr>}.strip.gsub(/\>\s+</, '><')
     end
   end
 end
