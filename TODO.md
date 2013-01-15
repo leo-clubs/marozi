@@ -9,10 +9,10 @@
 - [ ] think of good way to represent spoken languages in profile
 - [ ] Make forms editable like in http://vitalets.github.com/x-editable/demo.html?f=bootstrap&c=inline#
 - [ ] Make sure user cannot edit other users in controller
-- [ ] Think of good way to 
+- [ ] Think of good way to read gender (localized)
 
 **For Demo Party:**
 
 - [ ] Add correct member edit screen
-- [ ] Add Leo Logo
 - [ ] Add Guest Workflow
+- [ ] Add Leo Logo
