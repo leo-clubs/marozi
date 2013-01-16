@@ -8,7 +8,6 @@ class MemberEditableInitializer
       params['url'] = @member_update_url
       params['params'] = { authenticity_token: @auth_token }
       params['ajaxOptions'] = { type: 'patch' }
-
       $(field).editable params
 
 class EditableRenderer

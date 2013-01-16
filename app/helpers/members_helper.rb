@@ -14,7 +14,7 @@ module MembersHelper
 
   def member_date_attribute_tablerow field, name, caption
     content_tag :tr do
-      name_cell(name).concat(value_cell(field, @member.send(field).strftime('%Y-%m-%d'), 'date', caption))
+      name_cell(name).concat(value_cell(field, @member.send(field).strftime('%Y-%m-%d'), 'date', caption, {:'data-field-datepicker' => {language: I18n.locale}.to_json}))
     end
   end
 

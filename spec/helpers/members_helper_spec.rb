@@ -31,7 +31,7 @@ describe MembersHelper do
   end
 
   describe '#member_date_attribute_tablerow' do
-    include_context 'members helper', :date_of_birth, Date.new(1992, 11, 12), 'Birthday', 'Please enter your Birthday', 'date'
+    include_context 'members helper', :date_of_birth, Date.new(1992, 11, 12), 'Birthday', 'Please enter your Birthday', 'date', {:'data-field-datepicker' => {language: I18n.locale}.to_json}
 
     it 'should print table row correct for birth date' do
       html = helper.member_date_attribute_tablerow(field, name, title)
