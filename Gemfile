@@ -36,7 +36,6 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'thin'
   gem 'coveralls', require: false
-  gem 'jasmine-rails', require: false
   gem 'rb-inotify', require: false
   gem 'rb-fsevent', require: false
   gem 'rb-fchange', require: false
