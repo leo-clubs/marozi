@@ -3,8 +3,6 @@
     %h1 
       =t(:'members.caption.name', first_name: @member.first_name, last_name: @member.last_name)
       %small= t(:'clubs.club_title', name: @club.name)
-      %a{href: edit_member_path(id: @member.leo_id)}
-        %button.btn.btn-inverse.btn-small.btn-member-edit= t(:'members.button.edit')
 
   %h2= t(:'members.caption.general')
 
@@ -12,13 +10,13 @@
     %tbody
       = member_simple_attribute_tablerow(:first_name, t(:"helpers.label.member.first_name"), t(:"helpers.label.member.first_name_caption"))
       = member_simple_attribute_tablerow(:last_name, t(:"helpers.label.member.last_name"), t(:"helpers.label.member.last_name_caption"))
-      = member_select_attribute_tablerow(:gender, t(:'helpers.label.member.gender'), [[:female, t(:'helpers.label.member.gender_female')],[:male, t(:'helpers.label.member.gender_male')]],t(:"helpers.label.member.last_name_caption"))
+      = member_select_attribute_tablerow(:gender, t(:'helpers.label.member.gender'), [:female, :male].map{|gender| [gender, t(:"helpers.label.member.gender_#{gender}")]},t(:"helpers.label.member.gender_caption"))
       = member_simple_attribute_tablerow(:profession, t(:"helpers.label.member.profession"), t(:"helpers.label.member.profession_caption"))
       = member_date_attribute_tablerow(:date_of_birth, t(:"helpers.label.member.date_of_birth"), t(:"helpers.label.member.date_of_birth_caption"))
+      = member_date_attribute_tablerow(:member_since, t(:"helpers.label.member.member_since"), t(:"helpers.label.member.member_since_caption"))      
+      = member_select_attribute_tablerow(:type, t(:"helpers.label.member.type"), [:active, :passive, :honorary].map{|type| [type, t(:"helpers.label.member.type_#{type}")]}, t(:"helpers.label.member.type_caption"))
 
 
-  - # TODO birth date
-  - # TODO member since
   - # TODO addresses
   - # TODO state
   - # TODO awards

@@ -27,8 +27,6 @@ en:
     logout: Logout
   members:
     name: '%{last_name}, %{first_name}'
-    button:
-      edit: Edit
     tablehead:
       id: ID
       name: Name
@@ -94,12 +92,20 @@ en:
         last_name_caption: Please enter your last name
         date_of_birth: Birthday
         date_of_birth_caption: Select your birthday
+        member_since: Member Since
+        member_since_caption: Select since when you are a member
         profession: Profession
         profession_caption: Please enter your Profession
         gender: Gender
         gender_female: Female
         gender_male: Male
-        gender_caption: Please enter gender
+        gender_caption: Please select gender
+        type: State
+        type_caption: Type
+        type_active: Active
+        type_passive: Passive
+        type_honorary: Honorary
+        type_caption: Select type
       contact_info:
         type: Type
         street: Street
