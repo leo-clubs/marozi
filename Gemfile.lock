@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 555cb0afb5a8a8e98fc982edb9e09dfaafd46380
+  revision: 038574a5385e07f1091e355b78558821e123a48c
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -140,7 +140,7 @@ GEM
     guard-coffeescript (1.2.1)
       coffee-script (>= 2.2.0)
       guard (>= 1.1.0)
-    guard-rspec (2.3.3)
+    guard-rspec (2.4.0)
       guard (>= 1.1)
       rspec (~> 2.11)
     haml (3.1.7)
@@ -171,7 +171,7 @@ GEM
     origin (1.0.11)
     orm_adapter (0.0.7)
     polyglot (0.3.3)
-    pry (0.9.11.1)
+    pry (0.9.11.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
@@ -215,7 +215,7 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    therubyracer (0.11.2)
+    therubyracer (0.11.3)
       libv8 (~> 3.11.8.12)
       ref
     thin (1.5.0)
