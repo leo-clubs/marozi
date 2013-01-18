@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 038574a5385e07f1091e355b78558821e123a48c
+  revision: 9da9763e0a848906725f8805f44d2ce0c0b9ab9e
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -97,9 +97,9 @@ GEM
     bcrypt-ruby (3.0.1)
     bootstrap-sass (2.2.2.0)
       sass (~> 3.2)
-    bson (1.8.1)
-    bson_ext (1.8.1)
-      bson (~> 1.8.1)
+    bson (1.8.2)
+    bson_ext (1.8.2)
+      bson (~> 1.8.2)
     builder (3.1.4)
     coderay (1.0.8)
     coffee-filter (0.1.1)
@@ -171,7 +171,7 @@ GEM
     origin (1.0.11)
     orm_adapter (0.0.7)
     polyglot (0.3.3)
-    pry (0.9.11.2)
+    pry (0.9.11.3)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
