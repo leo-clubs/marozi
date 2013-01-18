@@ -11,9 +11,9 @@ GIT
 
 GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
-  revision: 2c4ebb2e79095efdd189c08861e3e7f694c52215
+  revision: 2e7b35d7948cefb2bba96438873d7f7bb1961a03
   specs:
-    activerecord-deprecated_finders (0.0.1)
+    activerecord-deprecated_finders (0.0.2)
 
 GIT
   remote: git://github.com/rails/arel.git
@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 9da9763e0a848906725f8805f44d2ce0c0b9ab9e
+  revision: e636f555310d679c26dcac7b28c8caa6f62263e6
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -47,7 +47,7 @@ GIT
       builder (~> 3.1.0)
     activerecord (4.0.0.beta)
       activemodel (= 4.0.0.beta)
-      activerecord-deprecated_finders (= 0.0.1)
+      activerecord-deprecated_finders (= 0.0.2)
       activesupport (= 4.0.0.beta)
       arel (~> 3.0.2)
     activesupport (4.0.0.beta)
