@@ -28,6 +28,9 @@ gem 'devise'
 gem 'nokogiri', require: false
 
 group :test, :development do
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-doc'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'guard'
