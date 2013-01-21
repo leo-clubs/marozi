@@ -18,11 +18,13 @@ namespace :db do
     puts 'Starting Import'
     multiple_districts.each_with_index do |md, index|
       begin
-        year =  md['year'].gsub /\//, '-'
+        year = md['year'].gsub(/\//, '-')
         obj = Import::MultipleDistrictFactory.new(md, year).build_model
         puts "file imported, now saving db entities"
         obj.save!
         puts "Imported #{index+1} of #{size} multiple districts"
+        Setting.new(key: :max_ids).save!
+        [MultipleDistrict, District, Club, Member].each{|e| e.set_max_id}
       rescue Exception => e
         puts "Error occured: (message: #{e.message})"
         puts "Backtrace:"
