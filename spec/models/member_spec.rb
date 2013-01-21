@@ -1,6 +1,9 @@
 require 'spec_helper'
 
 describe Member do
+
+  include_examples 'max_ids', Member, 10
+
   context 'finders' do
     let(:existing_id) {87294}
     let(:non_existing_id) {987294}
