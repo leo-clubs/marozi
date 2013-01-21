@@ -12,8 +12,8 @@ describe ClubsController do
       it 'should build the club hash correctly' do
         get :index
         clubs = assigns(:clubs)
-        clubs.keys.should eq %w{KL UV}
-        clubs.values.flatten.size.should eq Club.count
+        expect(clubs.keys).to eq %w{KL UV}
+        expect(clubs.values.flatten.size).to eq Club.count
       end
     end
 
@@ -24,7 +24,7 @@ describe ClubsController do
         member = create(:simple_member, leo_id: existing_id)
         session[:current_user] = existing_id
         get :my_club
-        assigns(:club).should eq member.club
+        expect(assigns(:club)).to eq member.club
       end
     end
   end

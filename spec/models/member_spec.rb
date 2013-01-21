@@ -11,12 +11,12 @@ describe Member do
 
     it 'should find member for id' do
       m = Member.find_by_member_id existing_id
-      m.should_not be_nil
+      expect(m).to_not be_nil
     end
 
     it 'should not find member non-existing id' do
       m = Member.find_by_member_id non_existing_id
-      m.should be_nil
+      expect(m).to be_nil
     end
   end
 
@@ -27,7 +27,7 @@ describe Member do
       contact_info = simple_member.contact_infos.first
       changed_street = "#{contact_info.street} changed"
       simple_member.update_attributes contact_infos_attributes: {'0' => { id: contact_info.id, street: changed_street }}
-      simple_member.reload.contact_infos.first.street.should eq changed_street
+      expect(simple_member.reload.contact_infos.first.street).to eq changed_street
     end
   end
 end
