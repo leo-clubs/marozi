@@ -1,6 +1,6 @@
 %h2= t(:'members.caption.general')
 
-%table.table.table-bordered.table-striped{id: 'member', :'data-leo-id' => @member.leo_id, :'data-member-update-url' => member_path(id: @member.leo_id)}
+%table.table.table-bordered.table-striped{table_head_attributes}
   %tbody
     = member_simple_attribute_tablerow(field: :first_name, name: t(:'helpers.label.member.first_name'), caption: t(:'helpers.label.member.first_name_caption'), editable_class: editable_class)
     = member_simple_attribute_tablerow(field: :last_name,  name: t(:'helpers.label.member.last_name'), caption: t(:'helpers.label.member.last_name_caption'), editable_class: editable_class)
