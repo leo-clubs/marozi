@@ -4,7 +4,7 @@ module MembersHelper
       name_cell(name: name).concat(
         value_cell(
           field: field,
-          value: @member.send(field),
+          value: value_from_member(field),
           type: 'text',
           editable_class: editable_class,
           caption: caption))
@@ -17,7 +17,7 @@ module MembersHelper
       name_cell(name: name).concat(
         value_cell(
           field: field,
-          value: @member.send(field),
+          value: value_from_member(field),
           type: 'select',
           caption: caption,
           editable_class: editable_class,
@@ -30,7 +30,7 @@ module MembersHelper
       name_cell(name: name).concat(
         value_cell(
           field: field,
-          value: @member.send(field).strftime('%Y-%m-%d'),
+          value: date_value_from_member(field),
           type: 'date',
           caption: caption,
           editable_class: editable_class,
@@ -44,5 +44,14 @@ module MembersHelper
 
   def name_cell(name: nil)
     content_tag(:td, {width: '15%'}) { name }
+  end
+
+  private
+  def value_from_member(field)
+    @member ? @member.send(field) : nil
+  end
+
+  def date_value_from_member(field)
+    @member ? @member.send(field).strftime('%Y-%m-%d') : nil
   end
 end
