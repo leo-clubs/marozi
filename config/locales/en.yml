@@ -35,6 +35,7 @@ en:
       member_since: Member since
     caption:
       general: General
+      new_member: Add Member To Club
       name: '%{first_name} %{last_name}'
       history: 'History'
       profession: 'Profession'
@@ -42,6 +43,8 @@ en:
       contact_home: 'Home'
       contact_work: 'Work'
       edit: 'Edit member %{id}'
+    button:
+      add_member: Add Member
   clubs:
     member_count:
       zero: '(No Members)'

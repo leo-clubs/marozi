@@ -39,6 +39,7 @@ module MembersHelper
   end
 
   def value_cell(field: nil, value: nil, type: nil, caption: nil, editable_class: nil, **opts)
+    value ||= ''
     content_tag(:td) { link_to(value, '#', {id: field, :'data-field-type' => type, :'data-field-title' => caption, class: editable_class}.merge(opts))}
   end
 

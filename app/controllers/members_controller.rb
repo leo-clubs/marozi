@@ -18,6 +18,11 @@ class MembersController < ApplicationController
     render json: nil
   end
 
+  def create
+    m = Member.create(member_params(true))
+    render json: m
+  end
+
   private
 
   def member_and_club member_id
@@ -26,11 +31,11 @@ class MembersController < ApplicationController
   end
 
   private
-    def member_params
+    def member_params create = false
       permitted = [
         :first_name,
         :last_name,
-        :member_sinc,
+        :member_since,
         :date_of_birth,
         :gender,
         :languages,
@@ -54,6 +59,7 @@ class MembersController < ApplicationController
           :homepage
         ]
       }
-      params.to_rails_params.permit(*permitted, contact_infos).to_hash
+      params_to_process = create ? params : params.to_rails_params
+      params_to_process.permit(*permitted, contact_infos).to_hash
     end
 end

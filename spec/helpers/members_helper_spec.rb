@@ -19,6 +19,16 @@ describe MembersHelper do
       html = helper.value_cell(field: 'field', value: 'value', type: 'text', caption: 'An awesome Field', editable_class: 'editable', my_awesome_key: 'my_awesome_value')
       expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value">value</a></td>'
     end
+
+    it 'should print empty link for nil value' do
+      html = helper.value_cell(field: 'field', value: nil, type: 'text', caption: 'An awesome Field', editable_class: 'editable', my_awesome_key: 'my_awesome_value')
+      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value"></a></td>'
+    end
+
+    it 'should print empty link for no value' do
+      html = helper.value_cell(field: 'field', type: 'text', caption: 'An awesome Field', editable_class: 'editable', my_awesome_key: 'my_awesome_value')
+      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value"></a></td>'
+    end
   end
 
   describe '#member_simple_attribute_tablerow' do

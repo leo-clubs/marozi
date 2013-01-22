@@ -8,7 +8,7 @@
     = member_simple_attribute_tablerow(field: :profession, name: t(:'helpers.label.member.profession'), caption: t(:'helpers.label.member.profession_caption'), editable_class: editable_class)
     = member_date_attribute_tablerow(field: :date_of_birth, name: t(:'helpers.label.member.date_of_birth'), caption: t(:'helpers.label.member.date_of_birth_caption'), editable_class: editable_class)
     = member_date_attribute_tablerow(field: :member_since, name: t(:'helpers.label.member.member_since'), caption: t(:'helpers.label.member.member_since_caption'), editable_class: editable_class)
-    = member_select_attribute_tablerow(field: :type, name: t(:'helpers.label.member.type'), select_options: [:active, :passive, :honorary].map{|type| [type, t(:"helpers.label.member.type_#{type}")]}, caption: t(:'helpers.label.member.type_caption'), editable_class: editable_class) if @member
+    = member_select_attribute_tablerow(field: :type, name: t(:'helpers.label.member.type'), select_options: [:active, :passive, :honorary].map{|type| [type, t(:"helpers.label.member.type_#{type}")]}, caption: t(:'helpers.label.member.type_caption'), editable_class: editable_class)
 
 - # TODO contact_infos
 - # TODO awards
