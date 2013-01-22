@@ -4,7 +4,7 @@
       =t(:'members.caption.name', first_name: @member.first_name, last_name: @member.last_name)
       %small= t(:'clubs.club_title', name: @club.name)
 
-  = render 'attributes'
+  = render 'attributes', editable_class: 'edit-member'
 
 :coffeescript
   $(document).ready(init_editable)

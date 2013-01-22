@@ -2,7 +2,7 @@ class MemberEditableInitializer
   constructor: (@member_id, @member_update_url, @auth_token) ->
 
   init: ->
-    for field in $('.editable')
+    for field in $('.edit-member')
       params = new EditableRenderer($(field).data()).toHash()
       params['pk'] = @member_id
       params['url'] = @member_update_url
