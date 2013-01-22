@@ -5,20 +5,20 @@ describe Import do
     subject {Import::DistrictFactory.new(xml_fixture('district'), '2012-2013').build_model}
 
     it 'should load all simple district data correctly' do
-      subject.should be_a(District)
-      subject.leo_id.should eq 66
-      subject.year.should eq '2012-2013'
-      subject.name.should eq 'KL'
+      expect(subject).to be_a(District)
+      expect(subject.leo_id).to eq 66
+      expect(subject.year).to eq '2012-2013'
+      expect(subject.name).to eq 'KL'
     end
 
     it 'should load club data correctly' do
-       subject.clubs.should_not be_empty
-       subject.clubs.size.should be 4
+       expect(subject.clubs).to_not be_empty
+       expect(subject.clubs.size).to be 4
     end
 
     it 'should load office data correctly' do
-      subject.offices.should_not be_empty
-      subject.offices.size.should be 7
+      expect(subject.offices).to_not be_empty
+      expect(subject.offices.size).to be 7
     end
   end
 end

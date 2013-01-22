@@ -5,19 +5,19 @@ describe MembersHelper do
   describe '#name_cell' do
     it 'should print table cell correct for default values' do
       html = helper.name_cell('Column')
-      html.should eq '<td width="15%">Column</td>'
+      expect(html).to eq '<td width="15%">Column</td>'
     end
   end
 
   describe '#value_cell' do
     it 'should print table cell for text field without options' do
       html = helper.value_cell('field', 'value','text', 'An awesome Field')
-      html.should eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field">value</a></td>'
+      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field">value</a></td>'
     end
 
     it 'should print table cell for text field with options' do
       html = helper.value_cell('field', 'value', 'text', 'An awesome Field', {my_awesome_key: 'my_awesome_value'})
-      html.should eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value">value</a></td>'
+      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value">value</a></td>'
     end
   end
 
@@ -26,7 +26,7 @@ describe MembersHelper do
 
     it 'should print table row correct for default values' do
       html = helper.member_simple_attribute_tablerow(field, name, title)
-      html.should eq '<tr><td></td><td></td></tr>'
+      expect(html).to eq '<tr><td></td><td></td></tr>'
     end
   end
 
@@ -35,7 +35,7 @@ describe MembersHelper do
 
     it 'should print table row correct for birth date' do
       html = helper.member_date_attribute_tablerow(field, name, title)
-      html.should eq '<tr><td></td><td></td></tr>'
+      expect(html).to eq '<tr><td></td><td></td></tr>'
     end
   end
 
@@ -45,7 +45,7 @@ describe MembersHelper do
 
     it 'should print table row correct for gender select' do
       html = helper.member_select_attribute_tablerow(field, name, [[:female, 'Female'],[:male, 'Male']], title)
-      html.should eq '<tr><td></td><td></td></tr>'
+      expect(html).to eq '<tr><td></td><td></td></tr>'
     end
   end
 end

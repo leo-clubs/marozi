@@ -6,22 +6,22 @@ describe Import do
     let(:home_contact_info) { build(:xml_home_contact_info) }
 
     it 'should load simple member data correctly' do
-      subject.should be_a(Member)
-      subject.leo_id.should eq 27146
-      subject.year.should eq '2012-2013'
-      subject.first_name.should eq 'Angela'
-      subject.last_name.should eq 'vom Mrugalla'
-      subject.gender.should eq :female
-      subject.type.should eq :active
-      subject.profession.should eq 'Stud. Jur.'
-      subject.date_of_birth.should eq Date.new(1988, 11, 12)
-      subject.member_since.should eq Date.new(2008, 7, 1)
-      subject.languages.sort.should eq [:de, :en, :fr, :it]
+      expect(subject).to be_a(Member)
+      expect(subject.leo_id).to eq 27146
+      expect(subject.year).to eq '2012-2013'
+      expect(subject.first_name).to eq 'Angela'
+      expect(subject.last_name).to eq 'vom Mrugalla'
+      expect(subject.gender).to eq :female
+      expect(subject.type).to eq :active
+      expect(subject.profession).to eq 'Stud. Jur.'
+      expect(subject.date_of_birth).to eq Date.new(1988, 11, 12)
+      expect(subject.member_since).to eq Date.new(2008, 7, 1)
+      expect(subject.languages.sort).to eq [:de, :en, :fr, :it]
     end
 
     it 'should load embedded member data correctly' do
-      subject.contact_infos.should_not be_empty
-      subject.contact_infos.should have_same_attributes_as([home_contact_info])
+      expect(subject.contact_infos).to_not be_empty
+      expect(subject.contact_infos).to have_same_attributes_as([home_contact_info])
     end
   end
 end
