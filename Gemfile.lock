@@ -178,6 +178,8 @@ GEM
     pry-doc (0.4.4)
       pry (>= 0.9.9.6)
       yard (~> 0.8.1)
+    pry-nav (0.2.3)
+      pry (~> 0.9.10)
     pry-rails (0.2.2)
       pry (>= 0.9.10)
     rack (1.4.4)
@@ -266,6 +268,7 @@ DEPENDENCIES
   nokogiri
   pry
   pry-doc
+  pry-nav
   pry-rails
   rails!
   rake
