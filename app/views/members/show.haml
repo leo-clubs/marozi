@@ -5,3 +5,7 @@
       %small= t(:'clubs.club_title', name: @club.name)
 
   = render 'attributes'
+
+:coffeescript
+  $(document).ready(init_editable)
+  $(window).bind('page:change', init_editable)
