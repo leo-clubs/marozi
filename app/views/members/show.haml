@@ -4,23 +4,4 @@
       =t(:'members.caption.name', first_name: @member.first_name, last_name: @member.last_name)
       %small= t(:'clubs.club_title', name: @club.name)
 
-  %h2= t(:'members.caption.general')
-
-  %table.table.table-bordered.table-striped{id: 'member', :'data-leo-id' => @member.leo_id, :'data-member-update-url' => member_path(id: @member.leo_id)}
-    %tbody
-      = member_simple_attribute_tablerow(:first_name, t(:"helpers.label.member.first_name"), t(:"helpers.label.member.first_name_caption"))
-      = member_simple_attribute_tablerow(:last_name, t(:"helpers.label.member.last_name"), t(:"helpers.label.member.last_name_caption"))
-      = member_select_attribute_tablerow(:gender, t(:'helpers.label.member.gender'), [:female, :male].map{|gender| [gender, t(:"helpers.label.member.gender_#{gender}")]},t(:"helpers.label.member.gender_caption"))
-      = member_simple_attribute_tablerow(:profession, t(:"helpers.label.member.profession"), t(:"helpers.label.member.profession_caption"))
-      = member_date_attribute_tablerow(:date_of_birth, t(:"helpers.label.member.date_of_birth"), t(:"helpers.label.member.date_of_birth_caption"))
-      = member_date_attribute_tablerow(:member_since, t(:"helpers.label.member.member_since"), t(:"helpers.label.member.member_since_caption"))      
-      = member_select_attribute_tablerow(:type, t(:"helpers.label.member.type"), [:active, :passive, :honorary].map{|type| [type, t(:"helpers.label.member.type_#{type}")]}, t(:"helpers.label.member.type_caption"))
-
-
-  - # TODO addresses
-  - # TODO state
-  - # TODO awards
-
-  :coffeescript
-    $(document).ready(init_editable)
-    $(window).bind('page:change', init_editable)
+  = render 'attributes'
