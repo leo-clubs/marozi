@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :club do
     sequence(:leo_id) {|n| 58700 + n}
     sequence(:name) {|n| club_names[n]}
-    sequence(:godfather) {|n| godfather "LC #{club_names[n]}"}
+    sequence(:godfather) {|n| "LC #{club_names[n]}"}
     year '2012-2013'
 
     founded_at Date.new(1983, 3, 19)
