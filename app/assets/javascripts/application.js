@@ -17,3 +17,5 @@
 //= require_tree .
 
 $.fn.editable.defaults.mode = 'inline';
+
+var MyApp = {};
