@@ -66,3 +66,6 @@
               %ul.nav.pull-right
                 %li
                   %a{href: logout_path}= t(:'navbar.logout')
+
+:javascript
+  MyApp.initFunction(MyApp.disable_menu_item);

@@ -2,7 +2,7 @@ initNewMember = function(){
 
   //init editables
   $('.new-member').editable({
-      url:  $('#member').data('memberUpdateUrl'),
+      url:  $('#member').data('memberUpdateUrl')
   });
 
   $('.new-member').on('save.newuser', function(){
@@ -23,7 +23,7 @@ initNewMember = function(){
         $(this).removeClass('editable-unsaved');
         $('#new-member-btn').hide();
       }
-    })
+    });
   };
 
   $('#new-member-btn').on('click.default', clickHandler);

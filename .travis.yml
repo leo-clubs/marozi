@@ -8,6 +8,6 @@ rvm:
 before_script:
   - ./config/setup_config.sh
 script:
-  - RAILS_ENV=test bundle exec rake spec
+  - 'RAILS_ENV=test rake spec && bundle exec guard-jasmine'
 services: 
   - mongodb

@@ -12,10 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require global
 //= require 'bootstrap'
 //= require turbolinks
 //= require_tree .
 
 $.fn.editable.defaults.mode = 'inline';
-
-var MyApp = {};
+$.fn.editable.defaults.ajaxOptions = {type: "patch"};

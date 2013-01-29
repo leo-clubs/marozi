@@ -6,6 +6,7 @@
 
   = render 'attributes', editable_class: 'edit-member', table_head_attributes: {id: 'member', :'data-leo-id' => @member.leo_id, :'data-member-update-url' => member_path(id: @member.leo_id)}
 
-:coffeescript
-  $(document).ready(initEditMember)
-  $(window).bind('page:change', initEditMember)
+:javascript
+  MyApp.initFunction(function(){
+    MyApp.initEditable($('#member').data('leoId'), $('.edit-member'), $('#member').data('memberUpdateUrl'), $('meta[name="csrf-token"]').attr('content'));
+  });

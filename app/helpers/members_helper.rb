@@ -38,13 +38,19 @@ module MembersHelper
     end
   end
 
-  def value_cell(field: nil, value: nil, type: nil, caption: nil, editable_class: nil, **opts)
-    value ||= ''
-    content_tag(:td) { link_to(value, '#', {id: field, :'data-field-type' => type, :'data-field-title' => caption, class: editable_class}.merge(opts))}
+  def value_cell(opts)
+    opts[:value] ||= ''
+    puts "here are the opts: #{opts.inspect}"
+    content_tag(:td) { edit_link(opts) }
   end
 
   def name_cell(name: nil)
     content_tag(:td, {width: '15%'}) { name }
+  end
+
+  def edit_link(opts)
+    safe_opts = opts.dup
+    link_to(safe_opts.delete(:value), '#', {id: safe_opts.delete(:field), :'data-field-type' => safe_opts.delete(:type), :'data-field-title' => safe_opts.delete(:caption), class: safe_opts.delete(:editable_class)}.merge(safe_opts))
   end
 
   private
