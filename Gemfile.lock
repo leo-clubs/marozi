@@ -31,7 +31,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 5f5a43e2f7f1075852fcf173e81c6f4b5ca8c6fa
+  revision: 610958a0c0f4d6b092608067f1ab93aefcc77945
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -102,7 +102,7 @@ GEM
       bson (~> 1.8.2)
     builder (3.1.4)
     coderay (1.0.8)
-    coffee-filter (0.1.1)
+    coffee-filter (0.1.2)
       coffee-script (>= 2.2.0)
       haml (>= 3.0.18)
     coffee-script (2.2.0)
@@ -183,7 +183,7 @@ GEM
       pry (~> 0.9.10)
     pry-rails (0.2.2)
       pry (>= 0.9.10)
-    rack (1.5.0)
+    rack (1.5.1)
     rack-test (0.6.2)
       rack (>= 1.0)
     rake (10.0.3)
