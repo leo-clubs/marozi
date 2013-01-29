@@ -19,7 +19,7 @@ class MembersController < ApplicationController
   end
 
   def create
-    m = Member.create(member_params(true))
+    m = Member.create(member_params(true).merge(year: '2012-2013'))
     render json: m
   end
 

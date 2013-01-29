@@ -3,10 +3,9 @@
     %h1
       =t(:'members.caption.new_member')
 
-  = render 'attributes', editable_class: 'new-member', table_head_attributes: {id: 'member', :'data-member-create-url' => members_path, :'data-member-update-url' => member_path(id: '%s')}
+  = render 'attributes', editable_class: 'new-member', table_head_attributes: {id: 'member', :'data-member-create-url' => members_path, :'data-member-update-url' => member_path(id: '%{id}')}
 
   %button.btn.btn-inverse#new-member-btn= t(:'members.button.add_member')
 
-:coffeescript
-  $(document).ready(initNewMember)
-  $(window).bind('page:change', initNewMember)
+:javascript
+  MyApp.initFunction(MyApp.initNewMember);

@@ -7,6 +7,4 @@
   = render 'attributes', editable_class: 'edit-member', table_head_attributes: {id: 'member', :'data-leo-id' => @member.leo_id, :'data-member-update-url' => member_path(id: @member.leo_id)}
 
 :javascript
-  MyApp.initFunction(function(){
-    MyApp.initEditable($('#member').data('leoId'), $('.edit-member'), $('#member').data('memberUpdateUrl'), $('meta[name="csrf-token"]').attr('content'));
-  });
+  MyApp.initFunction(MyApp.initEditMember);

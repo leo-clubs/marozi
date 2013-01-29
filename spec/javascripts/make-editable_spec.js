@@ -34,10 +34,10 @@ describe('make-editable', function(){
     });
   });
 
-  describe('initEditable', function(){
+  describe('makeEditable', function(){
     it('inits text attribute field correctly', function(){
       loadFixtures('memberEditable');
-      MyApp.initEditable(123, [$('#first_name')], '/new', 'superSecret');
+      MyApp.makeEditable(123, [$('#first_name')], '/new', 'superSecret');
       var editableOptions = $('#first_name').data('editable').options;
       expect(editableOptions.pk).toEqual(123);
       expect(editableOptions.type).toEqual('text');
@@ -48,7 +48,7 @@ describe('make-editable', function(){
 
     it('inits select attribute field correctly', function(){
       loadFixtures('memberEditable');
-      MyApp.initEditable(123, [$('#gender')], '/new', 'superSecret');
+      MyApp.makeEditable(123, [$('#gender')], '/new', 'superSecret');
       var editableOptions = $('#gender').data('editable').options;
       expect(editableOptions.pk).toEqual(123);
       expect(editableOptions.type).toEqual('select');
@@ -60,7 +60,7 @@ describe('make-editable', function(){
 
     it('inits date attribute field correctly', function(){
       loadFixtures('memberEditable');
-      MyApp.initEditable(123, [$('#member_since')], '/new', 'superSecret');
+      MyApp.makeEditable(123, [$('#member_since')], '/new', 'superSecret');
       var editableOptions = $('#member_since').data('editable').options;
       expect(editableOptions.pk).toEqual(123);
       expect(editableOptions.type).toEqual('date');
@@ -72,9 +72,50 @@ describe('make-editable', function(){
 
     it('inits multiple selector correctly', function(){
       loadFixtures('memberEditable');
-      MyApp.initEditable(123, $('.edit-member'), '/new', 'superSecret');
+      MyApp.makeEditable(123, $('.edit-member'), '/new', 'superSecret');
       $.each([$('#first_name'), $('#gender'), $('#member_since')], function(){
         expect($(this).data('editable').options).toBeDefined();
+      });
+    });
+  });
+
+  describe('initNewMember', function(){
+    it('inits for new member correctly', function(){
+      loadFixtures('newMember');
+      MyApp.initNewMember();
+      $.each([$('#first_name'), $('#gender'), $('#member_since')], function(){
+        expect($(this).data('editable').options).toBeDefined();
+      });
+      expect($('#new-member-btn')).toHandle('click');
+    });
+
+    it('handles clickhandler correctly', function(){
+      loadFixtures('newMember');
+      $.mockjax({
+        url: '/members',
+        type: 'POST',
+        contentType: 'text/json',
+        status: 200,
+        responseText:  {
+            leo_id: 234726
+          }
+      });
+      MyApp.initNewMember();
+      $('#new-member-btn').click();
+
+      waitsFor(function(){
+        return $('#new-member-btn').is(':hidden');
+      }, 'creating Member', 1000);
+
+      runs(function(){
+        expect($('#member').data('memberUpdateUrl')).toEqual('/members/234726');
+        console.log($('#member').data());
+        expect($('#member').data('memberCreateUrl')).toBeUndefined();
+        expect($('#member').data('leoId')).toEqual(234726);
+        $.each([$('#first_name'), $('#gender'), $('#member_since')], function(){
+          expect($(this)).toHaveClass('edit-member');
+          expect($(this)).not.toHaveClass('new-member');
+        });
       });
     });
   });
