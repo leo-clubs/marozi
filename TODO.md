@@ -12,6 +12,7 @@
 - [ ] Think of good way to read gender (localized)
 - [ ] Add attributes to member [title, academic title, vita, languages]
 - [ ] Set value of selcect via int (see http://jsfiddle.net/xBB5x/39/)
+- [ ] Extend init function to only accept string, that is then called via method on MyApp
 
 **For Demo Party:**
 
