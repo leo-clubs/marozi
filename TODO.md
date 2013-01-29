@@ -11,6 +11,7 @@
 - [ ] Make sure user cannot edit other users in controller
 - [ ] Think of good way to read gender (localized)
 - [ ] Add attributes to member [title, academic title, vita, languages]
+- [ ] Set value of selcect via int (see http://jsfiddle.net/xBB5x/39/)
 
 **For Demo Party:**
 
