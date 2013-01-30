@@ -14,6 +14,14 @@ module Versioning
     self.leo_id ||= self.class.settings.first.inc(self.class.field_name, 1)
   end
 
+  def current_multiple_district_id
+    if self.class == MultipleDistrict
+      self.leo_id
+    else
+      parent.current_multiple_district_id
+    end
+  end
+
   module ClassMethods
     def set_max_id
       settings.set(field_name, self.max(:leo_id).to_i)

@@ -1,21 +1,28 @@
-shared_examples_for 'a hierarchy' do | depth_from_member_to_class |
+shared_examples_for 'a hierarchy' do
   let(:existing_id) { 87294 }
   let(:non_existing_id) { 987294 }
+  let(:md_id) {@member.club.district.multiple_district.leo_id}
+  let(:subject) {(rec = lambda{|m| m.class == described_class ? m : rec.call(m.parent)}).call(@member)}
 
   before(:each) do
     @member = create(:simple_member, leo_id: existing_id)
   end
 
-  it 'should find subject for existing id' do
-    child = @member
-    depth_from_member_to_class.times{|method| child = child.parent}
+  describe '#find_by_member_id' do
+    it 'should find subject for existing id' do
+      actual = described_class.find_by_member_id existing_id
+      expect(actual).to eq subject
+    end
 
-    actual = described_class.find_by_member_id existing_id
-    actual.should eq child
+    it 'should not find subject for non-existing id' do
+      d = described_class.find_by_member_id non_existing_id
+      expect(d).to be_nil
+    end
   end
 
-  it 'should not find subject for non-existing id' do
-    d = described_class.find_by_member_id non_existing_id
-    d.should be_nil
+  describe '#current_multiple_district_id' do
+    it 'should find subject for existing id' do
+      expect(subject.current_multiple_district_id).to eq(md_id)
+    end
   end
 end
