@@ -11,5 +11,8 @@
       %td= link_to(member.leo_id, member_path(id: member.leo_id))
       %td= link_to(t(:'members.name', first_name: member.first_name, last_name: member.last_name), member_path(id: member.leo_id))
       %td= l(member.date_of_birth)
-      %td= render 'shared/contact_info', contact_info: member.contact_infos.first
+      - if member.contact_infos.first
+        %td= render 'shared/contact_info', contact_info: member.contact_infos.first
+      - else
+        %td
       %td= l(member.member_since)
