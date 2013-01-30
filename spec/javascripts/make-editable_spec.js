@@ -88,35 +88,5 @@ describe('make-editable', function(){
       });
       expect($('#new-member-btn')).toHandle('click');
     });
-
-    it('handles clickhandler correctly', function(){
-      loadFixtures('newMember');
-      $.mockjax({
-        url: '/members',
-        type: 'POST',
-        contentType: 'text/json',
-        status: 200,
-        responseText:  {
-            leo_id: 234726
-          }
-      });
-      MyApp.initNewMember();
-      $('#new-member-btn').click();
-
-      waitsFor(function(){
-        return $('#new-member-btn').is(':hidden');
-      }, 'creating Member', 1000);
-
-      runs(function(){
-        expect($('#member').data('memberUpdateUrl')).toEqual('/members/234726');
-        console.log($('#member').data());
-        expect($('#member').data('memberCreateUrl')).toBeUndefined();
-        expect($('#member').data('leoId')).toEqual(234726);
-        $.each([$('#first_name'), $('#gender'), $('#member_since')], function(){
-          expect($(this)).toHaveClass('edit-member');
-          expect($(this)).not.toHaveClass('new-member');
-        });
-      });
-    });
   });
 });

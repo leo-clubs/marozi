@@ -59,6 +59,6 @@ module MembersHelper
   end
 
   def date_value_from_member(field)
-    @member ? @member.send(field).strftime('%Y-%m-%d') : nil
+    @member && @member.send(field) ? @member.send(field).strftime('%Y-%m-%d') : nil
   end
 end

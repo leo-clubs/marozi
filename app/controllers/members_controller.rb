@@ -19,7 +19,8 @@ class MembersController < ApplicationController
   end
 
   def create
-    m = Member.create(member_params(true).merge(year: '2012-2013'))
+    c = Club.where(leo_id: session[:current_user_club]).first
+    m = Member.create(member_params(true).merge(year: '2012-2013', club: c))
     render json: m
   end
 

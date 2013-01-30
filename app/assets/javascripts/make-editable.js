@@ -16,9 +16,6 @@ MyApp.makeEditable = function(id, elements, updateUrl, authToken) {
     params['pk'] = id;
     params['url'] = updateUrl;
     params['params'] = { authenticity_token: authToken };
-    if($(this).data('editable')){
-      $(this).editable('destroy');
-    }
     $(this).editable(params);
   });
 };
@@ -47,15 +44,8 @@ MyApp.initNewMember = function(){
         type: 'post'
       },
       success: function(data, config) {
-        $(this).removeClass('editable-unsaved');
         var updateUrl = unescape($('#member').data('memberUpdateUrl')).interpolate({id: data.leo_id});
-        $('#member').data('memberUpdateUrl', updateUrl);
-        $('#member').data('leoId', data.leo_id);
-        $('#member').removeAttr('data-member-create-url');
-        $('#member').removeData('memberCreateUrl');
-        $('.new-member').removeClass('new-member').addClass('edit-member');
-        MyApp.initEditMember();
-        $('#new-member-btn').hide();
+        Turbolinks.visit(updateUrl);
       }
     });
   };
