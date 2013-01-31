@@ -1,3 +1,9 @@
 @import "bootstrap";
 body { padding-top: 30px; }
 @import "bootstrap-responsive";
+
+.brand
+{
+  background: url(image-path("leo_logo_small.png")) no-repeat center;
+  height: 20px;
+}
