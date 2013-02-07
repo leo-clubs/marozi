@@ -24,7 +24,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: d8005bcb892b0a41901da2cc4baf5e15706cb583
+  revision: 80f11e342d00a2177dd8e5684914855b87771c5b
   specs:
     arel (3.0.2.20120819075748)
 
@@ -38,7 +38,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: c16391681043a396b00741382311e5d1a24ee38c
+  revision: dca0b57d03deffc933763482e615c3cf0b9a1d97
   specs:
     actionmailer (4.0.0.beta)
       actionpack (= 4.0.0.beta)
@@ -80,7 +80,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: ae8138a89cac397c0df903dd533e2862902ce8f5
+  revision: f6431cf032e1beaff243b95151fdb13cae60562e
   specs:
     sass-rails (4.0.0.beta)
       railties (>= 4.0.0.beta, < 5.0)
@@ -177,7 +177,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.20.1)
     minitest (4.5.0)
-    moped (1.3.2)
+    moped (1.4.0)
     multi_json (1.5.0)
     nokogiri (1.5.6)
     origin (1.0.11)
@@ -203,7 +203,7 @@ GEM
     rb-fsevent (0.9.3)
     rb-inotify (0.9.0)
       ffi (>= 0.5.0)
-    rdoc (3.12)
+    rdoc (3.12.1)
       json (~> 1.4)
     ref (1.0.2)
     rest-client (1.6.7)
@@ -257,7 +257,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.1)
       rack (>= 1.0)
-    yard (0.8.4)
+    yard (0.8.4.1)
 
 PLATFORMS
   ruby
