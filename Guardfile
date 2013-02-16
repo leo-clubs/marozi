@@ -10,8 +10,9 @@ guard :rspec do
   watch('app/controllers/application_controller.rb')  { "spec/controllers" }
 end
 
-guard :jasmine do
-  watch(%r{spec/javascripts/spec\.js$}) { 'spec/javascripts' }
-  watch(%r{spec/javascripts/.+_spec\.js$})
-  watch(%r{app/assets/javascripts/(.+?)\.(js)(?:\.\w+)*$}) { |m| "spec/javascripts/#{ m[1] }_spec.#{ m[2] }" }
-end
+# guard 'jasmine-headless-webkit' do
+#   watch(%r{^app/views/.*\.jst$})
+#   watch(%r{^public/javascripts/(.*)\.js$}) { |m| newest_js_file(spec_location % m[1]) }
+#   watch(%r{^.*/assets/javascripts/(.*)\.(js|coffee)$}) { |m| newest_js_file(spec_location % m[1]) }
+#   watch(%r{^spec/javascripts/(.*)_spec\..*}) { |m| newest_js_file(spec_location % m[1]) }
+# end
