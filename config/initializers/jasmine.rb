@@ -1,0 +1,1 @@
+# TODO add necessary initilization for jasmine-rails or jasminerice
