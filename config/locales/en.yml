@@ -13,12 +13,14 @@ en:
       add_member: Add Member
       accept_to_club: Accept Guest into Club
       add_guest: Add Guest
+      add_lions_office: Add Lions Office
     district:
       title: District
       overview: Overview
       edit_district: Edit
       add_club: Add Club
       close_club: Close Club
+      add_lions_office: Add Lions Office
     multiple_district:
       title: Multiple District
       overview: Overview
