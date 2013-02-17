@@ -28,6 +28,8 @@ en:
       split_district: Split District
     report:
       title: Report
+    search:
+      title: Search
     logout: Logout
   members:
     name: '%{last_name}, %{first_name}'

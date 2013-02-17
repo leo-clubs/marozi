@@ -7,3 +7,26 @@ body { padding-top: 30px; }
   background: url(image-path("leo_logo_small.png")) no-repeat center;
   height: 20px;
 }
+
+.navbar-search {
+    position: relative;
+}
+
+.navbar-search .search-query {
+    padding-left: 29px !important;
+}
+
+.navbar-search .icon-search {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    background-image: url(image-path("glyphicons-halflings-white.png"));
+}
+
+.navbar-search .search-query:focus, .navbar-search .search-query.focused {
+    padding-left: 30px;
+}
+
+.search-query:focus + .icon-search {
+    background-image: url(image-path("glyphicons-halflings.png"));
+}
