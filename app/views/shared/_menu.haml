@@ -2,77 +2,81 @@
   .container
     .row.navbar-row
       .span9.offset1
-        .navbar.navbar-inverse.top-offset
+        .navbar.navbar-inverse.navbar-fixed-top
           .navbar-inner
-            %a.btb.btn-navbar.collapsed{:'data-toggle' => 'collapse', :'data-target' => '.nav-collapse'}
-              %span.icon-bar
-              %span.icon-bar
-              %span.icon-bar
-            %a.brand{href: '#'}
-            .nav-collapse.collapse{style: 'height:auto;'}
-              %ul.nav
-                %li.dropdown
-                  %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
-                    = t(:'navbar.profile.title')
-                    %b.caret
-                  %ul.dropdown-menu
-                    %li
-                      %a{href: my_membership_path}= t(:'navbar.profile.membership')
-                    %li
-                      %a{href: my_club_path}= t(:'navbar.profile.my_club')
-                    %li
-                      %a{href: my_district_path}= t(:'navbar.profile.my_district')
-                    %li
-                      %a{href: my_multiple_district_path}= t(:'navbar.profile.my_multiple_district')
-                %li.dropdown
-                  %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
-                    = t(:'navbar.club.title')
-                    %b.caret
-                  %ul.dropdown-menu
-                    %li
-                      %a{href: my_club_path}= t(:'navbar.club.overview')
-                    %li
-                      %a{href: '#'}= t(:'navbar.club.edit_club')
-                    %li
-                      %a{href: new_member_path}= t(:'navbar.club.add_member')
-                    %li
-                      %a{href: '#'}= t(:'navbar.club.add_guest')
-                    %li
-                      %a{href: '#'}= t(:'navbar.club.accept_to_club')
-                    %li
-                      %a{href: '#'}= t(:'navbar.club.add_lions_office')
-                %li.dropdown
-                  %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
-                    = t(:'navbar.district.title')
-                    %b.caret
-                  %ul.dropdown-menu
-                    %li
-                      %a{href: my_district_path}= t(:'navbar.district.overview')
-                    %li
-                      %a{href: '#'}= t(:'navbar.district.edit_district')
-                    %li
-                      %a{href: '#'}= t(:'navbar.district.add_club')
-                    %li
-                      %a{href: '#'}= t(:'navbar.district.close_club')
-                    %li
-                      %a{href: '#'}= t(:'navbar.club.add_lions_office')
-                %li.dropdown
-                  %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
-                    = t(:'navbar.multiple_district.title')
-                    %b.caret
-                  %ul.dropdown-menu
-                    %li
-                      %a{href: my_multiple_district_path}= t(:'navbar.multiple_district.overview')
-                    %li
-                      %a{href: '#'}= t(:'navbar.multiple_district.edit_multiple_district')
-                    %li
-                      %a{href: '#'}= t(:'navbar.multiple_district.split_district')
-                %li.dropdown
-                  %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
-                    = t(:'navbar.report.title')
-              %ul.nav.pull-right
-                %li
-                  %a{href: logout_path}= t(:'navbar.logout')
-
+            .container
+              %a.btb.btn-navbar.collapsed{:'data-toggle' => 'collapse', :'data-target' => '.nav-collapse'}
+                %span.icon-bar
+                %span.icon-bar
+                %span.icon-bar
+              %a.brand{href: '/'}
+              .nav-collapse.collapse{style: 'height:auto;'}
+                %ul.nav
+                  %li.dropdown
+                    %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                      = t(:'navbar.profile.title')
+                      %b.caret
+                    %ul.dropdown-menu
+                      %li
+                        %a{href: my_membership_path}= t(:'navbar.profile.membership')
+                      %li
+                        %a{href: my_club_path}= t(:'navbar.profile.my_club')
+                      %li
+                        %a{href: my_district_path}= t(:'navbar.profile.my_district')
+                      %li
+                        %a{href: my_multiple_district_path}= t(:'navbar.profile.my_multiple_district')
+                  %li.dropdown
+                    %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                      = t(:'navbar.club.title')
+                      %b.caret
+                    %ul.dropdown-menu
+                      %li
+                        %a{href: my_club_path}= t(:'navbar.club.overview')
+                      %li
+                        %a{href: '#'}= t(:'navbar.club.edit_club')
+                      %li
+                        %a{href: new_member_path}= t(:'navbar.club.add_member')
+                      %li
+                        %a{href: '#'}= t(:'navbar.club.add_guest')
+                      %li
+                        %a{href: '#'}= t(:'navbar.club.accept_to_club')
+                      %li
+                        %a{href: '#'}= t(:'navbar.club.add_lions_office')
+                  %li.dropdown
+                    %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                      = t(:'navbar.district.title')
+                      %b.caret
+                    %ul.dropdown-menu
+                      %li
+                        %a{href: my_district_path}= t(:'navbar.district.overview')
+                      %li
+                        %a{href: '#'}= t(:'navbar.district.edit_district')
+                      %li
+                        %a{href: '#'}= t(:'navbar.district.add_club')
+                      %li
+                        %a{href: '#'}= t(:'navbar.district.close_club')
+                      %li
+                        %a{href: '#'}= t(:'navbar.club.add_lions_office')
+                  %li.dropdown
+                    %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                      = t(:'navbar.multiple_district.title')
+                      %b.caret
+                    %ul.dropdown-menu
+                      %li
+                        %a{href: my_multiple_district_path}= t(:'navbar.multiple_district.overview')
+                      %li
+                        %a{href: '#'}= t(:'navbar.multiple_district.edit_multiple_district')
+                      %li
+                        %a{href: '#'}= t(:'navbar.multiple_district.split_district')
+                  %li.dropdown
+                    %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
+                      = t(:'navbar.report.title')
+                %ul.nav.pull-right
+                  %li
+                    %a{href: logout_path}= t(:'navbar.logout')
+                %ul.nav.pull-right
+                  %form.navbar-search
+                    %input.search-query{type: 'text', placeholder: t(:'navbar.search.title')}
+                    .icon-search
 :javascript
   MyApp.initFunction(MyApp.disable_menu_item);
