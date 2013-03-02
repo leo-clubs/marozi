@@ -6,6 +6,14 @@ GIT
       coffee-rails
 
 GIT
+  remote: git://github.com/haml/haml.git
+  revision: eb209299d631023d3aaaa695dea39e3198067ead
+  branch: stable
+  specs:
+    haml (4.0.1.rc.1)
+      tilt
+
+GIT
   remote: git://github.com/mongoid/mongoid.git
   revision: 6ce2f43bb94ee67b5755e12afd5a240bf8ee4201
   specs:
@@ -158,11 +166,10 @@ GEM
     guard-rspec (2.4.1)
       guard (>= 1.1)
       rspec (~> 2.11)
-    haml (3.1.8)
-    haml-rails (0.3.5)
+    haml-rails (0.4)
       actionpack (>= 3.1, < 4.1)
       activesupport (>= 3.1, < 4.1)
-      haml (~> 3.1)
+      haml (>= 3.1, < 4.1)
       railties (>= 3.1, < 4.1)
     hike (1.2.1)
     i18n (0.6.4)
@@ -275,7 +282,8 @@ DEPENDENCIES
   guard
   guard-jasmine
   guard-rspec
-  haml-rails (< 0.4)
+  haml!
+  haml-rails
   jasminerice!
   jquery-rails
   mongoid!

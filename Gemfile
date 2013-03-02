@@ -18,7 +18,8 @@ end
 gem 'turbolinks', github: 'rails/turbolinks'
 gem 'jquery-rails'
 gem 'sass-rails', github: 'rails/sass-rails'
-gem 'haml-rails', '< 0.4'
+gem 'haml-rails'
+gem 'haml', :github => 'haml/haml', :branch => 'stable'
 
 gem 'mongoid', github: 'mongoid/mongoid'
 
