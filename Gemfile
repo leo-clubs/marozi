@@ -15,9 +15,9 @@ group :assets do
   gem 'coffee-rails', github: 'rails/coffee-rails'
 end
 
-gem 'turbolinks'
+gem 'turbolinks', github: 'rails/turbolinks'
 gem 'jquery-rails'
-gem 'sass-rails',   github: 'rails/sass-rails'
+gem 'sass-rails', github: 'rails/sass-rails'
 gem 'haml-rails', '< 0.4'
 
 gem 'mongoid', github: 'mongoid/mongoid'
