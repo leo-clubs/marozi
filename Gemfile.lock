@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bradphelan/jasminerice.git
-  revision: 2924a18c02e9c86a3d571dd57a2857a82d341d3d
+  revision: 4a8f2a1c1aae5c9587528a4e3c884f92d7201242
   specs:
     jasminerice (0.1.0)
       coffee-rails
