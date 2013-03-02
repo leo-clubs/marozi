@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe MembersController do
-
   context 'protected methods' do
     include_context 'protected controller'
 
