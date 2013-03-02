@@ -5,18 +5,7 @@ describe MembersController do
     include_context 'protected controller'
 
     include_examples 'variable assignment for members controller', 'show'
-
-    describe '#me' do
-      let(:existing_id) { 87294 }
-
-      it '/members/me redirects to logged in member' do
-        member = create(:simple_member, leo_id: existing_id)
-        session[:current_user] = existing_id
-        get :me
-        expect(assigns(:member)).to eq member
-        expect(assigns(:club)).to eq member.club
-      end
-    end
+    include_examples 'variable assignment for members controller', 'me', 87294
 
     describe '#update' do
       let(:simple_member) {create(:simple_member)}
