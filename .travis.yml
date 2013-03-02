@@ -1,7 +1,9 @@
 language: ruby
+before_install:
+  - gem install bundler
 bundler_args: --without documentation production
 rvm:
-  - 2.0.0-p0
+  - 2.0.0
 before_script:
   - ./config/setup_config.sh
 script:
