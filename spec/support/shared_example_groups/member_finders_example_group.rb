@@ -1,4 +1,4 @@
-shared_examples_for 'variable assignment for members controller' do | method, login_id = nil |
+shared_examples_for 'member finders' do | method, login_id = nil |
   describe "##{method}" do
 
     let(:existing_id) { login_id }

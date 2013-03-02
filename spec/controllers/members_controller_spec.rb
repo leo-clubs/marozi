@@ -4,8 +4,8 @@ describe MembersController do
   context 'protected methods' do
     include_context 'protected controller'
 
-    include_examples 'variable assignment for members controller', 'show'
-    include_examples 'variable assignment for members controller', 'me', 87294
+    include_examples 'member finders', 'show'
+    include_examples 'member finders', 'me', 87294
 
     describe '#update' do
       let(:simple_member) {create(:simple_member)}
