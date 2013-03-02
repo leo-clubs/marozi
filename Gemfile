@@ -36,10 +36,10 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
-  #gem 'guard-jasmine-headless-webkit'
+  gem 'guard-jasmine'
   gem 'factory_girl_rails'
   gem 'thin'
-  #gem 'jasmine-rails'
+  gem 'jasminerice', github: 'bradphelan/jasminerice'
   gem 'coveralls', require: false
   gem 'rb-inotify', require: false
   gem 'rb-fsevent', require: false
