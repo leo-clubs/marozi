@@ -8,7 +8,6 @@ rvm:
 before_script:
   - ./config/setup_config.sh
 script:
-  - 'RAILS_ENV=test rake spec'
-  - 'RAILS_ENV=test guard-jasmine
+  - 'RAILS_ENV=test rake spec && guard-jasmine'
 services: 
   - mongodb
