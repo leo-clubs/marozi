@@ -1,6 +1,6 @@
 language: ruby
 before_install: 
-  - gem install bundler --pre
+  - gem install bundler
   - gem update --system
 bundler_args: --without documentation production
 rvm:
