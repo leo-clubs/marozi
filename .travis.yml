@@ -1,11 +1,13 @@
 language: ruby
+before_install: 
+  - gem install bundler
+  - gem update --system
 bundler_args: --without documentation production
 rvm:
   - 2.0.0
 before_script:
   - ./config/setup_config.sh
 script:
-  - 'RAILS_ENV=test rake spec'
-  - 'RAILS_ENV=test guard-jasmine
+  - 'RAILS_ENV=test rake spec && guard-jasmine'
 services: 
   - mongodb
