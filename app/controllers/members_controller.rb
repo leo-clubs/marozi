@@ -3,6 +3,8 @@ require "#{Rails.root}/lib/refinements/xeditbable_converter"
 using XEditableConverter
 
 class MembersController < ApplicationController
+  include MemberFinders
+
   def show
     @member, @club = member_and_club(params[:id])
   end
@@ -22,13 +24,6 @@ class MembersController < ApplicationController
     c = Club.where(leo_id: session[:current_user_club]).first
     m = Member.create(member_params(true).merge(year: '2012-2013', club: c))
     render json: m
-  end
-
-  private
-
-  def member_and_club member_id
-    m = Member.where(leo_id: member_id).first
-    [m, m.club]
   end
 
   private
