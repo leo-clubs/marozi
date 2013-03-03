@@ -15,10 +15,11 @@ group :assets do
   gem 'coffee-rails', github: 'rails/coffee-rails'
 end
 
-gem 'turbolinks'
+gem 'turbolinks', github: 'rails/turbolinks'
 gem 'jquery-rails'
-gem 'sass-rails',   github: 'rails/sass-rails'
-gem 'haml-rails', '< 0.4'
+gem 'sass-rails', github: 'rails/sass-rails'
+gem 'haml-rails'
+gem 'haml', :github => 'haml/haml', :branch => 'stable'
 
 gem 'mongoid', github: 'mongoid/mongoid'
 
@@ -36,10 +37,10 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'guard'
   gem 'guard-rspec'
-  #gem 'guard-jasmine-headless-webkit'
+  gem 'guard-jasmine'
   gem 'factory_girl_rails'
   gem 'thin'
-  #gem 'jasmine-rails'
+  gem 'jasminerice', github: 'bradphelan/jasminerice'
   gem 'coveralls', require: false
   gem 'rb-inotify', require: false
   gem 'rb-fsevent', require: false
