@@ -31,7 +31,7 @@ body { padding-top: 30px; }
     background-image: url(image-path("glyphicons-halflings.png"));
 }
 
-.news-item {
+.info-box {
   position: relative;
   margin: 15px 0;
   padding: 39px 19px 14px;
@@ -42,7 +42,11 @@ body { padding-top: 30px; }
   border-radius: 4px;
 }
 
-.news-item-date {
+.table-no-border th, .table-no-border td {
+  border: none;
+}
+
+.info-box-caption {
   position: absolute;
   top: -1px;
   left: -1px;
