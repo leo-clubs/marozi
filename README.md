@@ -20,10 +20,20 @@ The version control is essential for getting the latest code
 
 ### Ruby
 
-For running the app, system ruby is sufficient:
+As the system bundled ruby is too old. A ruby-version switcher must be used.
+
+If you know what you are doing, use either [RVM](https://rvm.io/) or [rbenv](https://github.com/sstephenson/rbenv/).
+
+For everyone else, follow the instructions to install rbenv:
+
 
     ~~~ sh
-    $ brew install ruby
+    $ brew install rbenv                                                    # install rbenv
+    $ brew install ruby-build                                               # install ruby version installer
+    $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile        # modify PATH to load rbenv before system ruby
+    $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile                      # add sugar to rbenv usage
+    $ source ~/.bash_profile                                                # reload configuration
+    $ rbenv install 2.0.0-p0                                                # install latest ruby version
     ~~~
 
 ### MongoDB
@@ -40,6 +50,7 @@ The datastore needs to be installed on the machine
 
     ~~~ sh
     $ gem install bundler
+    $ rebenv rehash
     ~~~
 
 ## Setup environment
@@ -56,6 +67,7 @@ Afterwards change into the directory and install all needed libraries (gems)
     ~~~ sh
     $ cd <projects_dir>/marozi
     $ bundle install --path vendor/local
+    $ rbenv rehash
     ~~~
 
 Now setup the default config
