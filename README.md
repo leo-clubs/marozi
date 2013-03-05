@@ -92,8 +92,8 @@ $ bundle exec rake db:purge && bundle exec rake 'db:import_from_xml[tmp/LeoExpor
 
 Now just start the application (Port 3000 must be available)
 
-å~~~ sh
-å$ bundle exec rails s
-å~~~
+~~~ sh
+$ bundle exec rails s
+~~~
 
 Now the application is available under [http://localhost:3000](http://localhost:3000)
