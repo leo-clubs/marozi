@@ -71,6 +71,13 @@ en:
       news: 'News for Leo-Club %{club_name}'
       clubs_in_md: 'All Leo-Clubs in MD-%{md}'
       member_list: 'Member List'
+      general_information: 'General Information'
+      founded: 'Founded:'
+      chartered: 'Chartered:'
+      godfather: 'Godfather:'
+      bank: 'Bank information:'
+      homepage: 'Homepage:'
+      meet_description: 'Meeting Description: '
   districts:
     district_title: 'District %{multiple_district}-%{district}'
     tablehead:
