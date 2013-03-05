@@ -14,56 +14,74 @@ All installation steps are based on [homebrew](http://mxcl.github.com/homebrew/)
 
 The version control is essential for getting the latest code
 
-    brew install git
+    ~~~ sh
+    $ brew install git
+    ~~~~
 
 ### Ruby
 
 For running the app, system ruby is sufficient:
 
-    brew install ruby
+    ~~~ sh
+    $ brew install ruby
+    ~~~
 
 ### MongoDB
 
 The datastore needs to be installed on the machine
 
-    brew install mongo
+    ~~~ sh
+    $ brew install mongo
+    ~~~
 
 ### Bundler
 
 [Bundler](http://gembundler.com/) handles the installation of 3rd party libraries (needs to be installed after Ruby):
 
-    gem install bundler
+    ~~~ sh
+    $ gem install bundler
+    ~~~
 
 ## Setup environment
 
 First clone the source code from github:
 
-    cd <projects_dir>
-    git clone git://github.com/leo-clubs/marozi.git
+    ~~~ sh
+    $ cd <projects_dir>
+    $ git clone git://github.com/leo-clubs/marozi.git
+    ~~~
 
 Afterwards change into the directory and install all needed libraries (gems)
 
-    cd <projects_dir>/marozi
-    bundle install --path vendor/local
+    ~~~ sh
+    $ cd <projects_dir>/marozi
+    $ bundle install --path vendor/local
+    ~~~
 
 Now setup the default config
 
-    cd <projects_dir>/marozi
-    bin/setup.sh
+    ~~~ sh
+    $ cd <projects_dir>/marozi
+    $ bin/setup.sh
+    ~~~
 
 ## Import XML
 
 For a fully functional system, you'll need a Full Leo Export xml. Afterwards import it into your database (all previously edited data will be gone):
 
-    cd <projects_dir>/marozi
-    mkdir tmp
-    cp <XML_FILE> tmp/
-    bundle exec rake db:purge && bundle exec rake 'db:import_from_xml[tmp/LeoExport-FULL.xml]'
+    ~~~ sh
+    $ cd <projects_dir>/marozi
+    $ mkdir tmp
+    $ cp <XML_FILE> tmp/
+    $ bundle exec rake db:purge && bundle exec rake 'db:import_from_xml[tmp/LeoExport-FULL.xml]'
+    ~~~
 
 ## Start application
 
 Now just start the application (Port 3000 must be available)
 
-    bundle exec rails s
+    ~~~ sh
+    $ bundle exec rails s
+    ~~~
 
 Now the application is available under [http://localhost:3000](http://localhost:3000)
