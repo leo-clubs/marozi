@@ -46,6 +46,11 @@ Afterwards change into the directory and install all needed libraries (gems)
     cd <projects_dir>/marozi
     bundle install --path vendor/local
 
+Now setup the default config
+
+    cd <projects_dir>/marozi
+    bin/setup.sh
+
 ## Import XML
 
 For a fully functional system, you'll need a Full Leo Export xml. Afterwards import it into your database (all previously edited data will be gone):
