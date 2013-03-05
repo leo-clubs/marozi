@@ -40,6 +40,7 @@ en:
       contact_info: Contact Info
       member_since: Member since
     caption:
+      greeting: 'Hello %{first_name} %{last_name}'
       general: General
       new_member: Add Member To Club
       name: '%{first_name} %{last_name}'
@@ -67,6 +68,7 @@ en:
       member_count: Members
       age: Age
     caption:
+      news: 'News for Leo-Club %{club_name}'
       clubs_in_md: 'All Leo-Clubs in MD-%{md}'
       member_list: 'Member List'
   districts:
