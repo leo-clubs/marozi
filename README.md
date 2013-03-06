@@ -44,6 +44,13 @@ The datastore needs to be installed on the machine
 $ brew install mongo
 ~~~
 
+Read the instruction on the terminal output. It should instruct you to do something like:
+
+~~~ sh
+$ ln -sfv /usr/local/opt/mongodb/*.plist ~/Library/LaunchAgents
+$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
+~~~
+
 ### Bundler
 
 [Bundler](http://gembundler.com/) handles the installation of 3rd party libraries (needs to be installed after Ruby):
