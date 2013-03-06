@@ -112,7 +112,7 @@ GIT
       coffee-rails
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     atomic (1.0.1)
     bcrypt-ruby (3.0.1)
