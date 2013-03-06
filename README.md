@@ -104,3 +104,34 @@ $ bundle exec rails s
 ~~~
 
 Now the application is available under [http://localhost:3000](http://localhost:3000)
+
+## Upgrade
+
+After code changes it is necessary to update the local code bases in order to see the changes take effect. Therefore several steps are necessary.
+
+### Update Code
+
+Pull the latest changes to your local code base
+
+~~~ sh
+$ cd <projects_dir>/marozi
+$ git pull origin master
+~~~
+
+### Install new dependencies
+
+Dependent Libraries may also change
+
+~~~ sh
+$ cd <projects_dir>/marozi
+$ bundle install
+~~~
+
+### Restart server
+
+Most of the time this step is not necessary. However after larger changes the server needs to be restarted. go to window where the server is running and kill it (via Ctrl + C). Afterwards start it again:
+
+~~~ sh
+$ cd <projects_dir>/marozi
+$ bundle exec rails s
+~~~
