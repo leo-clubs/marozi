@@ -6,7 +6,6 @@ shared_examples_for 'max_ids' do | klass, count |
   let(:factory_name){klass.collection.name.singularize}
 
   before(:each) do
-    create(:setting, key: :max_ids)
     count.times{create(factory_name)}
     expect(max_id_setting.count).to be 1
   end
