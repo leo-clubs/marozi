@@ -77,7 +77,12 @@ en:
       godfather: 'Godfather:'
       bank: 'Bank information:'
       homepage: 'Homepage:'
-      meet_description: 'Meeting Description: '
+      meet_description: 'Meeting Description:'
+      offices_p: 'President'
+      offices_1.vp: 'Vice President'
+      offices_s: 'Secretary'
+      offices_sch: 'Treasurer'
+      offices_it: 'IT-Manager'
   districts:
     district_title: 'District %{multiple_district}-%{district}'
     tablehead:

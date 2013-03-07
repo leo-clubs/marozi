@@ -3,11 +3,11 @@ FactoryGirl.define do
     sequence(:leo_id) {|n| 1400 + n}
     year '2012-2013'
 
-    factory :president, class: Office do
+    factory :president_office, class: Office do
       name :p
     end
 
-    factory :secretary, class: Office do
+    factory :secretary_office, class: Office do
       name :s
     end
   end

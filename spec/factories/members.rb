@@ -17,6 +17,7 @@ FactoryGirl.define do
       last_name             'von Orliwitzki'
       gender                :female
       profession            'Jurastudentin'
+      before(:create) {|member| create(:president_office, member_id: member.leo_id, parent_id: member.club.leo_id)}
       club
     end
   end

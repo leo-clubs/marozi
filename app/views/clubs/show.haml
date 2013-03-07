@@ -4,32 +4,36 @@
       =t(:'clubs.club_title', name: @club.name)
       %small= t(:'clubs.member_count', count: @club.members.size)
 
-    .info-box
-      .info-box-caption
-        = t(:'clubs.caption.general_information')
-      .row
-        .span5
+    .row
+      .info-box.span3
+        .info-box-caption
+          = t(:'clubs.captio.offices')
+        %p
           %table.table.table-no-border
-            %tr
-              %th= t(:'clubs.caption.founded')
-              %td= @club.founded_at
-            %tr
-              %th= t(:'clubs.caption.chartered')
-              %td= @club.chartered_at
-            %tr
-              %th= t(:'clubs.caption.godfather')
-              %td= @club.godfather
-        .span5
-          %table.table.table-no-border
-            %tr
-              %th= t(:'clubs.caption.bank')
-              %td= @club.bank
-            %tr
-              %th= t(:'clubs.caption.homepage')
-              %td= @club.homepage
-            %tr
-              %th= t(:'clubs.caption.meet_description')
-              %td= @club.meet_description
+            = render partial: 'office', collection: @club.offices, as: :office
+
+      .info-box.span8
+        .info-box-caption
+          = t(:'clubs.caption.general_information')
+        %table.table.table-no-border
+          %tr
+            %th= t(:'clubs.caption.founded')
+            %td= @club.founded_at
+          %tr
+            %th= t(:'clubs.caption.chartered')
+            %td= @club.chartered_at
+          %tr
+            %th= t(:'clubs.caption.godfather')
+            %td= @club.godfather
+          %tr
+            %th= t(:'clubs.caption.bank')
+            %td= @club.bank
+          %tr
+            %th= t(:'clubs.caption.homepage')
+            %td= @club.homepage
+          %tr
+            %th= t(:'clubs.caption.meet_description')
+            %td= @club.meet_description
 
 
   = render 'member_list_table', members: @club.members_sorted

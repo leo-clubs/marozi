@@ -5,10 +5,11 @@ describe Club do
   include_examples 'max_ids', Club, 5
 
   describe '#offices' do
-    it 'should return correct hash for simple offices' do
+    it 'should return correct offices for president member' do
       president_member = create(:president_member)
       club = president_member.club
-      office = create(:president, parent_id: club.leo_id, member_id: president_member.leo_id)
+      office = Office.where(member_id: president_member.leo_id).where(parent_id: club.leo_id).first
+      expect(club.offices.size).to eq 1
       expect(club.offices).to eq [office]
     end
   end
