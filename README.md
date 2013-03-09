@@ -100,6 +100,7 @@ $ bundle exec rake db:purge && bundle exec rake 'db:import_from_xml[tmp/LeoExpor
 Now just start the application (Port 3000 must be available)
 
 ~~~ sh
+$ cd <projects_dir>/marozi
 $ bundle exec rails s
 ~~~
 
