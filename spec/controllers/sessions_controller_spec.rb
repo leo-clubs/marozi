@@ -9,7 +9,6 @@ describe SessionsController do
     m = create(:member, leo_id: existing_member_id)
     m.club = create(:club, leo_id: existing_club_id)
     m.save!
-
   end
 
   describe '#create' do
