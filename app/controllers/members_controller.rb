@@ -1,9 +1,6 @@
-require "#{Rails.root}/lib/refinements/xeditbable_converter"
-
-using XEditableConverter
-
 class MembersController < ApplicationController
   include Finders
+  include Converters
 
   def show
     @member, @club = member_and_club_by_member_id(params[:id])
@@ -55,7 +52,7 @@ class MembersController < ApplicationController
           :homepage
         ]
       }
-      params_to_process = create ? params : params.to_rails_params
+      params_to_process = create ? params : xeditable_to_rails_params(params)
       params_to_process.permit(*permitted, contact_infos).to_hash
     end
 end

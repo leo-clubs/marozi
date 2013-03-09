@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
-  include MemberFinders
+  include Finders
 
   def index
-    @member, @club = member_and_club(session[:current_user])
+    @member, @club = member_and_club_by_member_id(session[:current_user])
   end
 end

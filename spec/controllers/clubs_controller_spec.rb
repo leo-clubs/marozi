@@ -20,7 +20,7 @@ describe ClubsController do
     describe '#me' do
       let(:existing_id) { 87294 }
 
-      it '/clubs/my_club redirects to club of logged in member' do
+      it 'should redirects to club of logged in member' do
         member = create(:simple_member, leo_id: existing_id)
         session[:current_user] = existing_id
         get :my_club

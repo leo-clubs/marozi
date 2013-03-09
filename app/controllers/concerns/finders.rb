@@ -1,6 +1,4 @@
 module Finders
-  extend ActiveSupport::Concern
-
   def member_and_club_by_member_id member_id
     m = club_by_member_id(member_id)
     [m, m.club]
