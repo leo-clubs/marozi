@@ -40,7 +40,6 @@ module MembersHelper
 
   def value_cell(opts)
     opts[:value] ||= ''
-    puts "here are the opts: #{opts.inspect}"
     content_tag(:td) { edit_link(opts) }
   end
 
