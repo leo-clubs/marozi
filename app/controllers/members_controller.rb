@@ -3,14 +3,14 @@ require "#{Rails.root}/lib/refinements/xeditbable_converter"
 using XEditableConverter
 
 class MembersController < ApplicationController
-  include MemberFinders
+  include Finders
 
   def show
-    @member, @club = member_and_club(params[:id])
+    @member, @club = member_and_club_by_member_id(params[:id])
   end
 
   def me
-    @member, @club = member_and_club(session[:current_user])
+    @member, @club = member_and_club_by_member_id(session[:current_user])
     render action: 'show'
   end
 
