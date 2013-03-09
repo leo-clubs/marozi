@@ -1,4 +1,6 @@
 class ClubsController < ApplicationController
+  include Finders
+  include Converters
 
   def index
     h = Club.order_by(name: :asc).inject({}) do |hash, club|
@@ -8,8 +10,19 @@ class ClubsController < ApplicationController
     @districts = @clubs.keys
   end
 
+  def members
+    @club = club_by_club_id(params[:id])
+    result = nil
+    if params[:type] == 'xeditable_names_only'
+      result = person_array_to_xeditable(
+        @club.members,
+        lambda{|p| I18n.translate(:'members.name', first_name: p.first_name, last_name: p.last_name)})
+    end
+    render json: result
+  end
+
   def show
-    @club = Club.where(leo_id: params['id']).first
+    @club = club(params['id'])
   end
 
   def my_club

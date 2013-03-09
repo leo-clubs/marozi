@@ -27,5 +27,17 @@ describe ClubsController do
         expect(assigns(:club)).to eq member.club
       end
     end
+
+    describe '#members' do
+      let(:club) { create :club_with_members }
+      let(:members) { club.members }
+
+      it 'should correctly converted JSON array' do
+        get :members, id: club.leo_id, type: :xeditable_names_only
+        expect(response.content_type).to eq 'application/json'
+        ids = JSON.parse(response.body).map{|p| p['value']}
+        expect(ids).to eq(members.map{|p| p.leo_id})
+      end
+    end
   end
 end

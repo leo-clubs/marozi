@@ -10,5 +10,11 @@ FactoryGirl.define do
     founded_at Date.new(1983, 3, 19)
     chartered_at Date.new(1984, 2, 29)
     district
+
+    factory :club_with_members do
+      after(:create) do | club |
+        FactoryGirl.create_list(:member, 5, club: club)
+      end
+    end
   end
 end

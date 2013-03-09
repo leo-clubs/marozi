@@ -4,4 +4,13 @@ module Converters
       return_hash[hash['name'].to_sym] = hash['value']
     end
   end
+
+  def person_array_to_xeditable person_array, operation = nil
+    person_array.map do | person |
+      {
+        value: person.leo_id,
+        text: operation ? operation.call(person) : person
+      }
+    end
+  end
 end
