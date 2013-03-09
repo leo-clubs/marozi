@@ -1,36 +1,6 @@
 require 'spec_helper'
 
 describe MembersHelper do
-
-  describe '#name_cell' do
-    it 'should print table cell correct for default values' do
-      html = helper.name_cell(name: 'Column')
-      expect(html).to eq '<td width="15%">Column</td>'
-    end
-  end
-
-  describe '#value_cell' do
-    it 'should print table cell for text field without options' do
-      html = helper.value_cell(field: 'field', value: 'value', type: 'text', caption: 'An awesome Field', editable_class: 'editable')
-      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field">value</a></td>'
-    end
-
-    it 'should print table cell for text field with options' do
-      html = helper.value_cell(field: 'field', value: 'value', type: 'text', caption: 'An awesome Field', editable_class: 'editable', my_awesome_key: 'my_awesome_value')
-      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value">value</a></td>'
-    end
-
-    it 'should print empty link for nil value' do
-      html = helper.value_cell(field: 'field', value: nil, type: 'text', caption: 'An awesome Field', editable_class: 'editable', my_awesome_key: 'my_awesome_value')
-      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value"></a></td>'
-    end
-
-    it 'should print empty link for no value' do
-      html = helper.value_cell(field: 'field', type: 'text', caption: 'An awesome Field', editable_class: 'editable', my_awesome_key: 'my_awesome_value')
-      expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value"></a></td>'
-    end
-  end
-
   describe '#member_simple_attribute_tablerow' do
     opts = {field: :first_name, value: 'Susanne', name: 'Susanne', caption: 'Enter First Name', type: 'text', editable_class: 'editable'}
     include_context 'members helper', opts
@@ -52,13 +22,22 @@ describe MembersHelper do
   end
 
   describe '#member_select_attribute_tablerow' do
-    gender_array = [{value: 'female', text: 'Female'}, {value: 'male', text: 'Male'}]
-    opts = {field: :gender, value: :female, name: 'Gender', caption: 'Select Gender', type: 'select', editable_class: 'editable', :'data-field-source' => gender_array.to_json}
-    include_context 'members helper', opts
+    context 'gender select' do
+      gender_array = [{value: 'female', text: 'Female'}, {value: 'male', text: 'Male'}]
+      opts = {field: :gender, value: :female, name: 'Gender', caption: 'Select Gender', type: 'select', selected: :female, editable_class: 'editable', :'data-field-source' => gender_array.to_json}
+      include_context 'members helper', opts
 
-    it 'should print table row correct for gender select' do
-      html = helper.member_select_attribute_tablerow(opts.slice(:field, :name, :caption).merge({select_options: [[:female, 'Female'],[:male, 'Male']]}))
-      expect(html).to eq '<tr><td></td><td></td></tr>'
+      it 'should print table row correct for gender select' do
+        html = helper.member_select_attribute_tablerow(opts.slice(:field, :name, :caption).merge({select_options: [[:female, 'Female'],[:male, 'Male']]}))
+        expect(html).to eq '<tr><td></td><td></td></tr>'
+      end
+    end
+  end
+
+  describe '#member_gender_select_attribute_tablerow' do
+    it 'should corectly pass attributes to underlying select helper' do
+      helper.should_receive(:member_select_attribute_tablerow).with(hash_including(field: :gender))
+      helper.member_gender_select_attribute_tablerow
     end
   end
 end

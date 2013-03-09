@@ -7,6 +7,8 @@ Marozi::Application.routes.draw do
   get '/districts/my_district' => 'districts#my_district', as: :my_district
   get '/multiple_district/my_multiple_district' => 'multiple_districts#my_multiple_district', as: :my_multiple_district
 
+  patch '/offices/:id' => 'offices#update', as: :office
+
   get '/login' => 'sessions#index', as: :login_screen
   post '/sessions/new' => 'sessions#create', as: :login
   get '/logout' => 'sessions#destroy', as: :logout

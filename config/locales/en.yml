@@ -43,7 +43,6 @@ en:
       greeting: 'Hello %{first_name} %{last_name}'
       general: General
       new_member: Add Member To Club
-      name: '%{first_name} %{last_name}'
       history: 'History'
       profession: 'Profession'
       contact: 'Contact'
@@ -78,6 +77,7 @@ en:
       bank: 'Bank information:'
       homepage: 'Homepage:'
       meet_description: 'Meeting Description:'
+      offices: 'Offices'
       offices_p: 'President'
       offices_1.vp: 'Vice President'
       offices_s: 'Secretary'
