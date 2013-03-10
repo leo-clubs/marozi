@@ -4,8 +4,8 @@ module XeditableCellHelper
     content_tag(:td) { edit_link(opts) }
   end
 
-  def name_cell(name: nil)
-    content_tag(:td, {width: '15%'}) { name }
+  def name_cell(name: nil, width: '15%')
+    content_tag(:td, {width: width}) { name }
   end
 
   def edit_link(opts)
