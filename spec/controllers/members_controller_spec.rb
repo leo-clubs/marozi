@@ -29,5 +29,11 @@ describe MembersController do
         expect(Member.find(simple_member.id).leo_id).to eq unchanged_id
       end
     end
+
+    describe '#create' do
+      it 'creates member correctly' do
+        expect{post(:create, first_name: 'Hans', last_name: 'Peter')}.to change{Member.count}.by(1)
+      end
+    end
   end
 end

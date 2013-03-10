@@ -7,6 +7,8 @@ module Versioning
 
     before_create :create_new_id
 
+    index({ leo_id: 1, year: -1 }, { unique: true })
+
     default_scope where(year: '2012-2013')
   end
 

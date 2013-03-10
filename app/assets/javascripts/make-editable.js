@@ -53,3 +53,13 @@ MyApp.initNewMember = function(){
   MyApp.makeEditable(null, $('.new-member'), $('#member').data('memberUpdateUrl'), null);
   $('#new-member-btn').on('click.default', clickHandler);
 };
+
+MyApp.initEditOffices = function(){
+  $.each($('.office_row'), function(){
+    MyApp.makeEditable(
+      $(this).data('leoId'),
+      $('.edit-office'),
+      $(this).data('updateUrl'),
+      $('meta[name="csrf-token"]').attr('content'));
+  });
+};

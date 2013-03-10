@@ -16,10 +16,6 @@ module Import
       lambda {|v| v.text}
     end
 
-    def office_name_lambda
-      lambda {|v| v.text.downcase rescue nil}
-    end
-
     def integer_lambda
       lambda {|v| v.to_i}
     end
@@ -72,7 +68,10 @@ module Import
     end
 
     def mapping_lambda mapping, default
-      lambda {|v| mapping[v] || default}
+      lambda do |v|
+        lookup_key = v.class == String ? v : v.text
+        mapping.fetch(lookup_key) { |el| puts("not found: #{el.inspect}"); default}
+      end
     end
 
     def gender_lambda

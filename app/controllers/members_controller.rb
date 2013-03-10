@@ -1,16 +1,13 @@
-require "#{Rails.root}/lib/refinements/xeditbable_converter"
-
-using XEditableConverter
-
 class MembersController < ApplicationController
-  include MemberFinders
+  include Finders
+  include Converters
 
   def show
-    @member, @club = member_and_club(params[:id])
+    @member, @club = member_and_club_by_member_id(params[:id])
   end
 
   def me
-    @member, @club = member_and_club(session[:current_user])
+    @member, @club = member_and_club_by_member_id(session[:current_user])
     render action: 'show'
   end
 
@@ -21,7 +18,7 @@ class MembersController < ApplicationController
   end
 
   def create
-    c = Club.where(leo_id: session[:current_user_club]).first
+    c = club_by_club_id(session[:current_user_club])
     m = Member.create(member_params(true).merge(year: '2012-2013', club: c))
     render json: m
   end
@@ -55,7 +52,7 @@ class MembersController < ApplicationController
           :homepage
         ]
       }
-      params_to_process = create ? params : params.to_rails_params
+      params_to_process = create ? params : xeditable_to_rails_params(params)
       params_to_process.permit(*permitted, contact_infos).to_hash
     end
 end

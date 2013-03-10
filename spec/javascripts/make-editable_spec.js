@@ -89,4 +89,19 @@ describe('make-editable', function(){
       expect($('#new-member-btn')).toHandle('click');
     });
   });
+
+  describe('initEditOffices', function(){
+    it('inits for new member correctly', function(){
+      loadFixtures('officeEditable');
+      $.each($('.office-row'), function(){
+        expect($(this).data('leoId')).toBeDefined();
+        expect($(this).data('updateUrl')).toBeDefined();
+      });
+      MyApp.initEditOffices();
+      $.each($('.edit-office'), function(){
+        expect($(this).data('editable').options).toBeDefined();
+        expect($(this)).toHandle('click');
+      });
+    });
+  });
 });

@@ -18,4 +18,4 @@
 //= require_tree .
 
 $.fn.editable.defaults.mode = 'inline';
-$.fn.editable.defaults.ajaxOptions = {type: "patch"};
+$.fn.editable.defaults.ajaxOptions = {type: 'patch'};

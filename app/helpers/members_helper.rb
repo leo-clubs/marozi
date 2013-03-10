@@ -1,4 +1,6 @@
 module MembersHelper
+  include XeditableCellHelper
+
   def member_simple_attribute_tablerow(field: nil, name: nil, caption: nil, editable_class: 'editable')
     content_tag :tr do
       name_cell(name: name).concat(
@@ -11,14 +13,24 @@ module MembersHelper
     end
   end
 
-  def member_select_attribute_tablerow(field: nil, name: nil, select_options: [], caption: nil, editable_class: 'editable')
+  def member_gender_select_attribute_tablerow(editable_class: 'editable')
+    name = I18n.translate(:'helpers.label.member.gender')
+    select_options = [:female, :male].map{|gender| [gender, I18n.translate(:"helpers.label.member.gender_#{gender}")]}
+    caption = I18n.translate(:'helpers.label.member.gender_caption')
+    operation_for_value = lambda{|gender| I18n.translate(:"helpers.label.member.gender_#{gender}")}
+    member_select_attribute_tablerow(field: :gender, name: name, select_options: select_options, operation_for_value: operation_for_value, editable_class: editable_class)
+  end
+
+  def member_select_attribute_tablerow(field: nil, name: nil, select_options: [], caption: nil, operation_for_value: nil, editable_class: 'editable')
     content_tag :tr do
       data_source = select_options.inject([]){|result, line| result << {value: line[0], text: line[1]}}
+      raw_value = value_from_member(field, nil)
       name_cell(name: name).concat(
         value_cell(
           field: field,
-          value: value_from_member(field),
+          value: value_from_member(field, operation_for_value),
           type: 'select',
+          selected: (data_source.select{|h| h[:value] == raw_value}.first[:value] rescue nil),
           caption: caption,
           editable_class: editable_class,
           :'data-field-source' => data_source.to_json))
@@ -38,24 +50,11 @@ module MembersHelper
     end
   end
 
-  def value_cell(opts)
-    opts[:value] ||= ''
-    puts "here are the opts: #{opts.inspect}"
-    content_tag(:td) { edit_link(opts) }
-  end
-
-  def name_cell(name: nil)
-    content_tag(:td, {width: '15%'}) { name }
-  end
-
-  def edit_link(opts)
-    safe_opts = opts.dup
-    link_to(safe_opts.delete(:value), '#', {id: safe_opts.delete(:field), :'data-field-type' => safe_opts.delete(:type), :'data-field-title' => safe_opts.delete(:caption), class: safe_opts.delete(:editable_class)}.merge(safe_opts))
-  end
-
   private
-  def value_from_member(field)
-    @member ? @member.send(field) : nil
+  def value_from_member(field, operation=nil)
+    if @member
+      operation ? operation.call(@member.send(field)) : @member.send(field)
+    end
   end
 
   def date_value_from_member(field)
