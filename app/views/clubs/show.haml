@@ -4,32 +4,38 @@
       =t(:'clubs.club_title', name: @club.name)
       %small= t(:'clubs.member_count', count: @club.members.size)
 
-    .info-box
-      .info-box-caption
-        = t(:'clubs.caption.general_information')
-      .row
-        .span5
-          %table.table.table-no-border
-            %tr
-              %th= t(:'clubs.caption.founded')
-              %td= @club.founded_at
-            %tr
-              %th= t(:'clubs.caption.chartered')
-              %td= @club.chartered_at
-            %tr
-              %th= t(:'clubs.caption.godfather')
-              %td= @club.godfather
-        .span5
-          %table.table.table-no-border
-            %tr
-              %th= t(:'clubs.caption.bank')
-              %td= @club.bank
-            %tr
-              %th= t(:'clubs.caption.homepage')
-              %td= @club.homepage
-            %tr
-              %th= t(:'clubs.caption.meet_description')
-              %td= @club.meet_description
+    .row
+      .info-box.span6
+        .info-box-caption
+          = t(:'clubs.caption.general_information')
+        %table.table.table-no-border
+          %tr
+            %th= t(:'clubs.caption.founded')
+            %td= @club.founded_at
+          %tr
+            %th= t(:'clubs.caption.chartered')
+            %td= @club.chartered_at
+          %tr
+            %th= t(:'clubs.caption.godfather')
+            %td= @club.godfather
+          %tr
+            %th= t(:'clubs.caption.bank')
+            %td= @club.bank
+          %tr
+            %th= t(:'clubs.caption.homepage')
+            %td= @club.homepage
+          %tr
+            %th= t(:'clubs.caption.meet_description')
+            %td= @club.meet_description
+      .info-box.span5
+        .info-box-caption
+          = t(:'clubs.caption.offices')
+        %p
+          %table.table.table-no-border#offices
+            = render partial: 'office', collection: @club.offices, as: :office
 
+  .row
+    = render 'member_list_table', members: @club.members_sorted
 
-  = render 'member_list_table', members: @club.members_sorted
+:javascript
+  MyApp.initFunction(MyApp.initEditOffices);

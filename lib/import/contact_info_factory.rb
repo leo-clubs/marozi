@@ -15,7 +15,11 @@ module Import
         'Adresse unbekannt' => 'Germany',
         'Frankreich' => 'France',
         'Republik Ungarn' => 'Hungary',
-        'Österreich' => 'Austria'
+        'Österreich' => 'Austria',
+        'Schweiz' => 'Switzerland',
+        'Dänemark' => 'Denmark',
+        'Tschechische Republik' => 'Czech Republik',
+        'Niederlande' => 'The Netherlands'
       }
     end
 

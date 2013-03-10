@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/bradphelan/jasminerice.git
-  revision: 4a8f2a1c1aae5c9587528a4e3c884f92d7201242
+  revision: 774e59326a98acc82dde4048df8854234fd56933
   specs:
     jasminerice (0.1.0)
       coffee-rails
@@ -45,7 +45,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: a8bc72effb4dbab5803f4872f61c9707bc02e22d
+  revision: c6839277a9262ea87329c719443cf19e33038f3f
   specs:
     actionmailer (4.0.0.beta1)
       actionpack (= 4.0.0.beta1)
