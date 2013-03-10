@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Import do
-  describe Import::ClubFactory do
-    subject {Import::ClubFactory.new(xml_fixture('club'), '2012-2013').build_model}
+  describe Import::ClubImporter do
+    subject {Import::ClubImporter.new(xml_fixture('club'), '2012-2013').build_model}
 
     it 'should load all simple club data correctly' do
       expect(subject).to be_a(Club)
@@ -18,7 +18,7 @@ describe Import do
     end
 
     it 'should create empyt club' do
-      empty_club = Import::ClubFactory.new(xml_fixture('empty_club'), '2012-2013').build_model
+      empty_club = Import::ClubImporter.new(xml_fixture('empty_club'), '2012-2013').build_model
       expect(empty_club).to_not be_nil
     end
 
@@ -33,7 +33,7 @@ describe Import do
     end
 
     it 'should not mix up members of multiple clubs' do
-      xml_fixture('clubs').xpath('//CLUB').each{|c| Import::ClubFactory.new(c, '2012-2013').build_model.save!}
+      xml_fixture('clubs').xpath('//CLUB').each{|c| Import::ClubImporter.new(c, '2012-2013').build_model.save!}
       expect(Club.count).to eq 2
       expect(Member.count).to eq 22
 

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Import do
-  describe Import::MemberFactory do
-    subject {Import::MemberFactory.new(xml_fixture('member'), '2012-2013').build_model}
+  describe Import::MemberImporter do
+    subject {Import::MemberImporter.new(xml_fixture('member'), '2012-2013').build_model}
     let(:home_contact_info) { build(:xml_home_contact_info) }
 
     it 'should load simple member data correctly' do
