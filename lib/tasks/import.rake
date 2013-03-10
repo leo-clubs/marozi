@@ -19,7 +19,7 @@ namespace :db do
     multiple_districts.each_with_index do |md, index|
       begin
         year = md['year'].gsub(/\//, '-')
-        obj = Import::MultipleDistrictFactory.new(md, year).build_model
+        obj = Import::MultipleDistrictImporter.new(md, year).build_model
         puts "file imported, now saving db entities"
         obj.save!
         puts "Imported #{index+1} of #{size} multiple districts"

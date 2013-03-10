@@ -1,7 +1,7 @@
 require_relative './helper/mapping_helper'
 
 module Import
-  class MemberFactory
+  class MemberImporter
     include MappingHelper
 
     def initialize node, year = nil
