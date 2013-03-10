@@ -36,7 +36,7 @@ describe ClubsController do
         get :members, id: club.leo_id, type: :xeditable_names_only
         expect(response.content_type).to eq 'application/json'
         ids = JSON.parse(response.body).map{|p| p['value']}
-        expect(ids).to eq(members.map{|p| p.leo_id})
+        expect(ids).to match_array(members.map{|p| p.leo_id})
       end
     end
   end

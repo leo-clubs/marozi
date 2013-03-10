@@ -13,9 +13,10 @@ class ClubsController < ApplicationController
   def members
     @club = club_by_club_id(params[:id])
     result = nil
+    members = @club.members.sort{|a, b| a.last_name <=> b.last_name}
     if params[:type] == 'xeditable_names_only'
       result = person_array_to_xeditable(
-        @club.members,
+        members,
         lambda{|p| I18n.translate(:'members.name', first_name: p.first_name, last_name: p.last_name)})
     end
     render json: result

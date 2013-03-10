@@ -10,6 +10,7 @@ RSpec.configure do |config|
 
   config.before(:each) do
     FactoryGirl.reload
+    Import::OfficeFactory.reset_counter
     Mongoid.purge!
     create(:max_ids_setting)
   end

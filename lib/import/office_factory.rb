@@ -4,6 +4,21 @@ module Import
   class OfficeFactory
     include MappingHelper
 
+    INITIAL_VALUE = 1000
+    @@counter = INITIAL_VALUE
+
+    def self.increase_counter
+      @@counter += 1
+    end
+
+    def self.counter
+      @@counter
+    end
+
+    def self.reset_counter
+      @@counter = INITIAL_VALUE
+    end
+
     def initialize node, year
       @node = node
       @year = year
@@ -26,6 +41,8 @@ module Import
       o = ::Office.new year: @year
       extract_from_attribute_list list: @node.attributes, mapping: simple_attribute_mappings, entity: o
       extract_from_element_list list: @node.element_children, mapping: simple_element_mappings, entity: o
+      o.leo_id = self.class.counter
+      self.class.increase_counter
       o
     end
   end
