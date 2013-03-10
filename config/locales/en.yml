@@ -43,6 +43,7 @@ en:
       greeting: 'Hello %{first_name} %{last_name}'
       general: General
       new_member: Add Member To Club
+      name: '%{first_name} %{last_name}'
       history: 'History'
       profession: 'Profession'
       contact: 'Contact'
