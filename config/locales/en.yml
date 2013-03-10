@@ -78,11 +78,11 @@ en:
       homepage: 'Homepage:'
       meet_description: 'Meeting Description:'
       offices: 'Offices'
-      offices_p: 'President'
-      offices_1.vp: 'Vice President'
-      offices_s: 'Secretary'
-      offices_sch: 'Treasurer'
-      offices_it: 'IT-Manager'
+      offices_president: 'President'
+      offices_vice_president: 'Vice President'
+      offices_secretary: 'Secretary'
+      offices_treasurer: 'Treasurer'
+      offices_it_appointee: 'IT Apointee'
   districts:
     district_title: 'District %{multiple_district}-%{district}'
     tablehead:

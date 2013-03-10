@@ -72,7 +72,10 @@ module Import
     end
 
     def mapping_lambda mapping, default
-      lambda {|v| mapping[v] || default}
+      lambda do |v|
+        lookup_key = v.class == String ? v : v.text
+        mapping.fetch(lookup_key) { |el| puts("not found: #{el.inspect}"); default}
+      end
     end
 
     def gender_lambda
