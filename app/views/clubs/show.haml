@@ -34,8 +34,8 @@
           %table.table.table-no-border#offices
             = render partial: 'office', collection: @club.offices, as: :office
 
-
-  = render 'member_list_table', members: @club.members_sorted
+  .row
+    = render 'member_list_table', members: @club.members_sorted
 
 :javascript
   MyApp.initFunction(MyApp.initEditOffices);
