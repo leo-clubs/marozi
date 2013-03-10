@@ -19,3 +19,4 @@
 
 $.fn.editable.defaults.mode = 'inline';
 $.fn.editable.defaults.ajaxOptions = {type: 'patch'};
+MyApp.initFunction(MyApp.convertDates);
