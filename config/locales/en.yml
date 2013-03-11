@@ -33,6 +33,7 @@ en:
     logout: Logout
   members:
     name: '%{last_name}, %{first_name}'
+    news: 'Your Newsfeed'
     tablehead:
       id: ID
       name: Name
@@ -68,7 +69,6 @@ en:
       member_count: Members
       age: Age
     caption:
-      news: 'News for Leo-Club %{club_name}'
       clubs_in_md: 'All Leo-Clubs in MD-%{md}'
       member_list: 'Member List'
       general_information: 'General Information'
