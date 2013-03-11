@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Import do
-  describe Import::MultipleDistrictFactory do
-    subject {Import::MultipleDistrictFactory.new(xml_fixture('multiple_district'), '2012-2013').build_model}
+  describe Import::MultipleDistrictImporter do
+    subject {Import::MultipleDistrictImporter.new(xml_fixture('multiple_district'), '2012-2013').build_model}
 
     it 'should load all simple multiple district data correctly' do
       expect(subject).to be_a(MultipleDistrict)

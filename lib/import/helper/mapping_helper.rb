@@ -44,7 +44,7 @@ module Import
       lambda do |v|
         contact_infos = []
         v.xpath('.//ADDRESS').each do |a|
-          contact_info = ContactInfoFactory.new(a).build_model
+          contact_info = ContactInfoImporter.new(a).build_model
           contact_infos << contact_info if contact_info
         end
         contact_infos.sort{|a,b| a.type <=> b.type}
@@ -52,19 +52,19 @@ module Import
     end
 
     def member_lambda(year)
-      simple_list_lambda 'MEMBER', MemberFactory, year
+      simple_list_lambda 'MEMBER', MemberImporter, year
     end
 
     def club_lambda(year)
-      simple_list_lambda 'CLUB', ClubFactory, year
+      simple_list_lambda 'CLUB', ClubImporter, year
     end
 
     def district_lambda(year)
-      simple_list_lambda 'DISTRICT', DistrictFactory, year
+      simple_list_lambda 'DISTRICT', DistrictImporter, year
     end
 
     def office_lambda(year)
-      simple_list_lambda 'OFFICER', OfficeFactory, year
+      simple_list_lambda 'OFFICER', OfficeImporter, year
     end
 
     def mapping_lambda mapping, default

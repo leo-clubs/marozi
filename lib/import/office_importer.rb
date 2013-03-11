@@ -1,7 +1,7 @@
 require_relative './helper/mapping_helper'
 
 module Import
-  class OfficeFactory
+  class OfficeImporter
     include MappingHelper
 
     INITIAL_VALUE = 1000

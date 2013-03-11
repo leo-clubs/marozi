@@ -2,7 +2,7 @@
 require_relative './helper/mapping_helper'
 
 module Import
-  class ContactInfoFactory
+  class ContactInfoImporter
     include MappingHelper
 
     def initialize node
