@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Import do
-  describe Import::DistrictFactory do
-    subject {Import::DistrictFactory.new(xml_fixture('district'), '2012-2013').build_model}
+  describe Import::DistrictImporter do
+    subject {Import::DistrictImporter.new(xml_fixture('district'), '2012-2013').build_model}
 
     it 'should load all simple district data correctly' do
       expect(subject).to be_a(District)

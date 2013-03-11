@@ -78,12 +78,12 @@ en:
       bank: 'Bank information:'
       homepage: 'Homepage:'
       meet_description: 'Meeting Description:'
-      offices: 'Offices'
-      offices_president: 'President'
-      offices_vice_president: 'Vice President'
-      offices_secretary: 'Secretary'
-      offices_treasurer: 'Treasurer'
-      offices_it_appointee: 'IT Apointee'
+      officers: 'Officers'
+      officers_president: 'President'
+      officers_vice_president: 'Vice President'
+      officers_secretary: 'Secretary'
+      officers_treasurer: 'Treasurer'
+      officers_it_appointee: 'IT Apointee'
   districts:
     district_title: 'District %{multiple_district}-%{district}'
     tablehead:

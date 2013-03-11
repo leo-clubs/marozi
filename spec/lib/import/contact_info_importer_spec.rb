@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Import  do
-  describe Import::ContactInfoFactory do
-    let(:german_address) {Import::ContactInfoFactory.new(xml_fixture('german_address')).build_model}
-    let(:non_german_address) {Import::ContactInfoFactory.new(xml_fixture('non_german_address')).build_model}
+  describe Import::ContactInfoImporter do
+    let(:german_address) {Import::ContactInfoImporter.new(xml_fixture('german_address')).build_model}
+    let(:non_german_address) {Import::ContactInfoImporter.new(xml_fixture('non_german_address')).build_model}
 
     it 'should load all contact_info data correctly' do
       expect(german_address).to be_a(ContactInfo)
