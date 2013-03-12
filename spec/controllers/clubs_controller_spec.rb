@@ -17,7 +17,7 @@ describe ClubsController do
       end
     end
 
-    describe '#me' do
+    describe '#my_club' do
       let(:existing_id) { 87294 }
 
       it 'should redirects to club of logged in member' do
@@ -37,6 +37,15 @@ describe ClubsController do
         expect(response.content_type).to eq 'application/json'
         ids = JSON.parse(response.body).map{|p| p['value']}
         expect(ids).to match_array(members.map{|p| p.leo_id})
+      end
+    end
+
+    describe '#show' do
+      let(:club) { create :club_with_members }
+
+      it 'should correctly converted JSON array' do
+        get :show, id: club.leo_id
+        expect(assigns(:club)).to eq club
       end
     end
   end
