@@ -17,7 +17,7 @@ describe ClubsController do
       end
     end
 
-    describe '#me' do
+    describe '#my_club' do
       let(:existing_id) { 87294 }
 
       it 'should redirects to club of logged in member' do
