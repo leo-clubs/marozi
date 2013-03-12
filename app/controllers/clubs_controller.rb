@@ -23,7 +23,7 @@ class ClubsController < ApplicationController
   end
 
   def show
-    @club = club(params['id'])
+    @club = club_by_club_id(params[:id])
   end
 
   def my_club

@@ -39,5 +39,14 @@ describe ClubsController do
         expect(ids).to match_array(members.map{|p| p.leo_id})
       end
     end
+
+    describe '#show' do
+      let(:club) { create :club_with_members }
+
+      it 'should correctly converted JSON array' do
+        get :show, id: club.leo_id
+        expect(assigns(:club)).to eq club
+      end
+    end
   end
 end
