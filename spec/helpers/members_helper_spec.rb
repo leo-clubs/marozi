@@ -12,7 +12,24 @@ describe MembersHelper do
   end
 
   describe '#member_date_attribute_tablerow' do
-    opts = {field: :date_of_birth, value: Date.new(1992, 11, 12), name: 'Birthday', caption: 'Please enter your Birthday', type: 'date', editable_class: 'editable', :'data-field-datepicker' => {language: I18n.locale}.to_json}
+    opts = {
+      field: :date_of_birth,
+      value: '1992-11-12',
+      type: 'date',
+      caption: 'Please enter your Birthday',
+      name: 'Birthday',
+      editable_class: 'editable',
+      :'data-value' => '1992-11-12',
+      :'data-format' => 'yyyy-mm-dd',
+      :'data-viewformat' => 'yyyy-mm-dd',
+      :'data-field-datepicker' => {language: I18n.locale}.to_json,
+    }
+
+    before(:each) do
+      helper.should_receive(:i18n_date_format_to_xeditable_date_format).any_number_of_times.and_return('yyyy-mm-dd')
+      helper.should_receive(:date_value_from_member).any_number_of_times.and_return('1992-11-12')
+    end
+
     include_context 'members helper', opts
 
     it 'should print table row correct for birth date' do

@@ -36,7 +36,7 @@ describe XeditableCellHelper do
     end
 
   it 'converts german short date format correctly' do
-      expect(helper.i18n_date_format_to_xeditable_date_format('%Y.%m.%d')).to eq 'yyyy.mm.dd'
+      expect(helper.i18n_date_format_to_xeditable_date_format('%d.%m.%Y')).to eq 'dd.mm.yyyy'
     end
   end
 end
