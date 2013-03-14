@@ -29,4 +29,14 @@ describe XeditableCellHelper do
       expect(html).to eq '<td><a class="editable" data-field-title="An awesome Field" data-field-type="text" href="#" id="field" my_awesome_key="my_awesome_value"></a></td>'
     end
   end
+
+  describe '#i18n_date_format_to_xeditable_date_format' do
+    it 'converts international short date format correctly' do
+      expect(helper.i18n_date_format_to_xeditable_date_format('%Y-%m-%d')).to eq 'yyyy-mm-dd'
+    end
+
+  it 'converts german short date format correctly' do
+      expect(helper.i18n_date_format_to_xeditable_date_format('%Y.%m.%d')).to eq 'yyyy.mm.dd'
+    end
+  end
 end
