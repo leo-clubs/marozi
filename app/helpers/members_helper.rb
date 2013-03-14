@@ -56,7 +56,6 @@ module MembersHelper
     end
   end
 
-  private
   def value_from_member(field, operation=nil)
     if @member
       operation ? operation.call(@member.send(field)) : @member.send(field)

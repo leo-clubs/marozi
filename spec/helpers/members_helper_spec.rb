@@ -57,4 +57,41 @@ describe MembersHelper do
       helper.member_gender_select_attribute_tablerow
     end
   end
+
+  describe '#date_value_from_member' do
+    it 'should return correct value for actual member' do
+      date = Date.new 1995, 1, 30
+      @member = build(:simple_member, date_of_birth: date)
+      expect(helper.date_value_from_member(:date_of_birth, '%Y-%m-%d')).to eq '1995-01-30'
+    end
+
+    it 'should return nil value for nil field on member' do
+      @member = @member = build(:simple_member, date_of_birth: nil)
+      expect(helper.date_value_from_member(:date_of_birth, '%Y-%m-%d')).to be_nil
+    end
+
+    it 'should return nil value for nil member' do
+      @member = nil
+      expect(helper.date_value_from_member(:date_of_birth, '%Y-%m-%d')).to be_nil
+    end
+  end
+
+  describe '#value_from_member' do
+    it 'should return correct value for actual member' do
+      first_name = 'Heinz'
+      @member = build(:simple_member, first_name: first_name)
+      expect(helper.value_from_member(:first_name)).to eq first_name
+    end
+
+    it 'should return nil value for actual member and operation' do
+      scream_operation = lambda{|v| v.upcase}
+      @member = build(:simple_member, first_name: 'hulk')
+      expect(helper.value_from_member(:first_name, scream_operation)).to eq 'HULK'
+    end
+
+    it 'should return nil value for nil member' do
+      @member = nil
+      expect(helper.date_value_from_member(:date_of_birth, '%Y-%m-%d')).to be_nil
+    end
+  end
 end
