@@ -1,9 +1,9 @@
 %table.table.table-striped.table-bordered.table-hover
   %tr
-    %th= t(:'clubstablehead.id')
-    %th= t(:'clubstablehead.name')
-    %th= t(:'clubstablehead.age')
-    %th= t(:'clubstablehead.member_count')
+    %th= t(:'clubs.tablehead.id')
+    %th= t(:'clubs.tablehead.name')
+    %th= t(:'clubs.tablehead.age')
+    %th= t(:'clubs.tablehead.member_count')
   - clubs.each do |club|
     %tr
       %td= link_to(club.leo_id, club_path(id: club.leo_id))
