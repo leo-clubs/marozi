@@ -207,6 +207,8 @@ GEM
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
+    rails-i18n (0.7.2)
+      i18n (~> 0.5)
     rake (10.0.3)
     rb-fchange (0.0.6)
       ffi
@@ -293,6 +295,7 @@ DEPENDENCIES
   pry-nav
   pry-rails
   rails!
+  rails-i18n
   rake
   rb-fchange
   rb-fsevent
