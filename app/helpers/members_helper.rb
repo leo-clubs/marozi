@@ -39,25 +39,30 @@ module MembersHelper
 
   def member_date_attribute_tablerow(field: nil, name: nil, caption: nil, editable_class: 'editable')
     content_tag :tr do
+      localized_format = i18n_date_format_to_xeditable_date_format(I18n.translate(:'date.formats.default'))
+      international_value = date_value_from_member(field)
+      localized_value = date_value_from_member(field, I18n.translate(:'date.formats.default'))
       name_cell(name: name).concat(
         value_cell(
           field: field,
-          value: date_value_from_member(field),
+          value: localized_value,
           type: 'date',
           caption: caption,
           editable_class: editable_class,
+          :'data-value' => international_value,
+          :'data-format' => i18n_date_format_to_xeditable_date_format('%Y-%m-%d'),
+          :'data-viewformat' => localized_format,
           :'data-field-datepicker' => {language: I18n.locale}.to_json))
     end
   end
 
-  private
   def value_from_member(field, operation=nil)
     if @member
       operation ? operation.call(@member.send(field)) : @member.send(field)
     end
   end
 
-  def date_value_from_member(field)
-    @member && @member.send(field) ? @member.send(field).strftime('%Y-%m-%d') : nil
+  def date_value_from_member(field, date_format = '%Y-%m-%d')
+    @member && @member.send(field) ? @member.send(field).strftime(date_format) : nil
   end
 end

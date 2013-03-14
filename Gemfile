@@ -21,6 +21,8 @@ gem 'sass-rails', github: 'rails/sass-rails'
 gem 'haml-rails'
 gem 'haml', :github => 'haml/haml', :branch => 'stable'
 
+gem 'rails-i18n'
+
 gem 'mongoid', github: 'mongoid/mongoid'
 
 gem 'bson_ext'
