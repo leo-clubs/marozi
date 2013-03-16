@@ -17,4 +17,12 @@ class MultipleDistrict
   def districts_sorted
     districts.sort{|a,b| a.name <=> b.name}
   end
+
+  def create_committees types
+    types = [types] unless types.is_a? Array
+    types.each do |type|
+      office = self.offices.where(name: :"#{type}_appointee").first
+      Committee.find_or_create_by(type: type, chairperson_id: office.member_id)
+    end
+  end
 end
