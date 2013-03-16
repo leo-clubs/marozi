@@ -23,10 +23,10 @@ namespace :db do
         puts "file imported, now saving db entities"
         obj.save!
         puts "Imported #{index+1} of #{size} multiple districts"
-        puts 'Now setting max id'
+        puts 'Setting max id'
         Setting.new(key: :max_ids).save!
         [MultipleDistrict, District, Club, Member].each{|e| e.set_max_id}
-        puts 'setting current year'
+        puts 'Setting current year'
         Setting.new(key: :"multiple_district_#{obj.leo_id}", current_year: year).save!
       rescue Exception => e
         puts "Error occured: (message: #{e.message})"
