@@ -3,7 +3,6 @@ class Committee
   include Mongoid::Timestamps
   include Versioning
 
-  field :name, type: String
   field :type, type: Symbol
   field :chairperson_id, type: Integer
 
