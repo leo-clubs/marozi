@@ -20,7 +20,8 @@ namespace :db do
       begin
         year = md['year'].gsub(/\//, '-')
         obj = Import::MultipleDistrictImporter.new(md, year).build_model
-        puts "file imported, now saving db entities"
+        puts "File imported"
+        puts "Now saving db entities"
         obj.save!
         puts "Imported #{index+1} of #{size} multiple districts"
         puts 'Setting max id'
