@@ -26,7 +26,9 @@ namespace :db do
         puts "Imported #{index+1} of #{size} multiple districts"
         puts 'Setting max id'
         Setting.new(key: :max_ids).save!
-        [MultipleDistrict, District, Club, Member].each{|e| e.set_max_id}
+        puts 'Creating MD Committees'
+        obj.create_committees %i{activity hdleo it leolife merlo pr}
+        [MultipleDistrict, Committee, District, Club, Member].each{|e| e.set_max_id}
         puts 'Setting current year'
         Setting.new(key: :"multiple_district_#{obj.leo_id}", current_year: year).save!
       rescue Exception => e
