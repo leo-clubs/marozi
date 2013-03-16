@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 4d60824665ade2fb37e8ebca3585d0b959db04bc
+  revision: 3166986b66a5f386c71ad4a13b019865ba872b2b
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0.beta)
@@ -31,9 +31,9 @@ GIT
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: 6c2e2ac6c77051c4e1d3e70f197f85df53935e76
+  revision: 933ea218116645eafaf3b7ea5695520db0f9d9ba
   specs:
-    arel (4.0.0.beta1.20130225132415)
+    arel (4.0.0.beta2.20130314230643)
 
 GIT
   remote: git://github.com/rails/coffee-rails.git
@@ -45,7 +45,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 36f7732e820ce4d3c4a46bd0a1b15fd8902467b3
+  revision: 34be80443c76dde393ae5e2b28805bd01605eadc
   specs:
     actionmailer (4.0.0.beta1)
       actionpack (= 4.0.0.beta1)
@@ -63,7 +63,7 @@ GIT
       activemodel (= 4.0.0.beta1)
       activerecord-deprecated_finders (~> 0.0.3)
       activesupport (= 4.0.0.beta1)
-      arel (~> 4.0.0.beta1)
+      arel (~> 4.0.0.beta2)
     activesupport (4.0.0.beta1)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
