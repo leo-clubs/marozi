@@ -1,6 +1,7 @@
 class Committee
   include Mongoid::Document
   include Mongoid::Timestamps
+  include Versioning
 
   field :name, type: String
   field :type, type: Symbol

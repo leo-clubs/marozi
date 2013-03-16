@@ -13,5 +13,12 @@ describe MultipleDistrict do
       committee = Committee.where(type: committee_type).first
       expect(committee.chairperson_id).to eq(md.offices.where(name: appointee_type).first.member_id)
     end
+
+    it 'should not create already existing committee' do
+      committee_type = :it
+      create(:committee, type: committee_type)
+      md = create(:multiple_districts_with_it_office)
+      expect{md.create_committees(committee_type)}.not_to change{Committee.count}
+    end
   end
 end
