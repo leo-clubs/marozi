@@ -17,4 +17,5 @@ Marozi::Application.routes.draw do
   resources :clubs
   resources :districts
   resources :multiple_districts
+  resources :committees
 end

@@ -14,6 +14,8 @@ en:
       accept_to_club: Accept Guest into Club
       add_guest: Add Guest
       add_lions_office: Add Lions Office
+    committees:
+      title: 'Committees'
     district:
       title: District
       overview: Overview
@@ -85,6 +87,19 @@ en:
       officers_secretary: 'Secretary'
       officers_treasurer: 'Treasurer'
       officers_it_appointee: 'IT Apointee'
+  committees:
+    district_title: 'Committees of Multiple District %{multiple_district}'
+    title_activity: 'Activity'
+    title_hdleo: 'HDLeo'
+    title_it: 'IT'
+    title_leolife: 'Leo-Life'
+    title_merlo: 'MERLO'
+    title_pr: 'PR'
+    tablehead:
+      id: id
+      name: Name
+      member_count: Members
+      chairperson: Chairperson
   districts:
     district_title: 'District %{multiple_district}-%{district}'
     tablehead:
