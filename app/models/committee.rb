@@ -5,10 +5,10 @@ class Committee
 
   field :type, type: Symbol
   field :chairperson_id, type: Integer
-  field :member_ids, type: Array
+  field :member_ids, type: Array, default: []
 
   def members
-    Member.where(leo_id: self.leo_id)
+    Member.where(:leo_id.in => (member_ids + [chairperson_id]))
   end
 
   def chairperson
