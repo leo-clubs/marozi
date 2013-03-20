@@ -1,6 +1,18 @@
 require 'spec_helper'
 
 describe MembersHelper do
+  describe '#member_link' do
+    it 'should access correct methods of member' do
+      member_id = 123
+      member = Object.new
+      member.should_receive(:last_name)
+      member.should_receive(:first_name)
+      member.should_receive(:leo_id).and_return(member_id)
+      helper.should_receive(:t).and_return('stub')
+      expect(helper.member_link(member)).to eq "<a href=\"/members/#{member_id}\">stub</a>"
+    end
+  end
+
   describe '#member_simple_attribute_tablerow' do
     opts = {field: :first_name, value: 'Susanne', name: 'Susanne', caption: 'Enter First Name', type: 'text', editable_class: 'editable'}
     include_context 'members helper', opts
