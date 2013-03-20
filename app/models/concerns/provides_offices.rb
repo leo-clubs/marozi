@@ -10,6 +10,6 @@ module ProvidesOffices
   end
 
   def offices
-    Office.where(parent_id: self.leo_id).entries
+    Office.where(parent_id: self.leo_id)
   end
 end

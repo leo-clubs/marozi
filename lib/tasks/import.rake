@@ -20,13 +20,16 @@ namespace :db do
       begin
         year = md['year'].gsub(/\//, '-')
         obj = Import::MultipleDistrictImporter.new(md, year).build_model
-        puts "file imported, now saving db entities"
+        puts "File imported"
+        puts "Now saving db entities"
         obj.save!
         puts "Imported #{index+1} of #{size} multiple districts"
-        puts 'Now setting max id'
+        puts 'Setting max id'
         Setting.new(key: :max_ids).save!
-        [MultipleDistrict, District, Club, Member].each{|e| e.set_max_id}
-        puts 'setting current year'
+        puts 'Creating MD Committees'
+        obj.create_committees %i{activity hdleo it leolife merlo pr}
+        [MultipleDistrict, Committee, District, Club, Member].each{|e| e.set_max_id}
+        puts 'Setting current year'
         Setting.new(key: :"multiple_district_#{obj.leo_id}", current_year: year).save!
       rescue Exception => e
         puts "Error occured: (message: #{e.message})"

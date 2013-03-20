@@ -68,6 +68,9 @@
                         %a{href: '#'}= t(:'navbar.multiple_district.edit_multiple_district')
                       %li
                         %a{href: '#'}= t(:'navbar.multiple_district.split_district')
+                  %li
+                    %a{href: committees_path}
+                      = t(:'navbar.committees.title')
                   %li.dropdown
                     %a{href: '#', class: 'dropdown-toggle', :'data-toggle' => 'dropdown'}
                       = t(:'navbar.report.title')
