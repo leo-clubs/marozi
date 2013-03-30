@@ -16,10 +16,10 @@ group :assets do
 end
 
 gem 'turbolinks', github: 'rails/turbolinks'
-gem 'jquery-rails'
+gem 'jquery-rails', github: 'rails/jquery-rails' # use rubygems version for >2.2.1 (see https://github.com/rails/jquery-rails/pull/117)
 gem 'sass-rails', github: 'rails/sass-rails'
-gem 'haml-rails'
-gem 'haml', :github => 'haml/haml', :branch => 'stable'
+gem 'haml-rails', github:  'indirect/haml-rails' # use rubygems version for >0.4 (see https://github.com/indirect/haml-rails/issues/42)
+gem 'haml'
 
 gem 'rails-i18n'
 
