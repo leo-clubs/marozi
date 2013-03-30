@@ -26,7 +26,6 @@ gem 'rails-i18n'
 gem 'mongoid', github: 'mongoid/mongoid'
 
 gem 'bson_ext'
-gem 'devise'
 gem 'nokogiri', require: false
 
 gem 'pry'
