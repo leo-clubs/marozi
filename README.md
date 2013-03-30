@@ -57,7 +57,7 @@ $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.mongodb.plist
 
 ~~~ sh
 $ gem install bundler
-$ rebenv rehash
+$ rbenv rehash
 ~~~
 
 ## Setup environment
