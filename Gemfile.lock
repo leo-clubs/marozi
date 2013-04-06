@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: db84c0972bf4f01019cdfc2e9ab647fb814d3224
+  revision: 93284ce6e1f658c3f57076af9a8e5dce96082dbb
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0.beta)
@@ -27,7 +27,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
-  revision: c00788c2b7e01170f63bd9651f7efd8deb4bd4b0
+  revision: 46aa99efc9c3c1db1d4f2e55373481212e6b2e26
   specs:
     activerecord-deprecated_finders (0.0.3)
 
@@ -47,7 +47,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/jquery-rails.git
-  revision: e51fc324e635efb4d2418acb5aabe3101c8bfb59
+  revision: 28ee0ef4c8486c1e331bbc7f7d0ccbf1b0631af5
   specs:
     jquery-rails (2.2.1)
       railties (>= 3.0, < 5.0)
@@ -55,7 +55,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 92d6dacc348a4e42d314c813a650ac578976d4c4
+  revision: dfdc1e31a2d86a54b9aceac1869318cc921150ef
   specs:
     actionmailer (4.0.0.beta1)
       actionpack (= 4.0.0.beta1)
@@ -92,7 +92,7 @@ GIT
       actionpack (= 4.0.0.beta1)
       activesupport (= 4.0.0.beta1)
       rake (>= 0.8.7)
-      thor (>= 0.17.0, < 2.0)
+      thor (>= 0.18.1, < 2.0)
 
 GIT
   remote: git://github.com/rails/sass-rails.git
@@ -106,7 +106,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/sprockets-rails.git
-  revision: 59922ecd19a81bf504be8e10ed624ae011a8360d
+  revision: 8105eb9ee2d4889f9d3d7c327899b63493f4b061
   specs:
     sprockets-rails (2.0.0.rc3)
       actionpack (>= 3.0)
@@ -115,15 +115,15 @@ GIT
 
 GIT
   remote: git://github.com/rails/turbolinks.git
-  revision: cd60b0d4ac2948de5e170e762d0f938132cbd73b
+  revision: ca2656d75d93824423c0aec81c74bc1392b3b63d
   specs:
-    turbolinks (1.1.0)
+    turbolinks (1.1.1)
       coffee-rails
 
 GEM
   remote: http://rubygems.org/
   specs:
-    atomic (1.0.2)
+    atomic (1.1.4)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
     bson (1.8.4)
@@ -138,14 +138,14 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colorize (0.5.8)
-    coveralls (0.6.3)
+    coveralls (0.6.4)
       colorize
       multi_json (~> 1.3)
       rest-client
       simplecov (>= 0.7)
       thor
     daemons (1.1.9)
-    diff-lcs (1.2.1)
+    diff-lcs (1.2.2)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -163,15 +163,15 @@ GEM
       lumberjack (>= 1.0.2)
       pry (>= 0.9.10)
       thor (>= 0.14.6)
-    guard-jasmine (1.13.2)
+    guard-jasmine (1.14.0)
       childprocess
       guard (>= 1.1.0)
       multi_json
       thor
-    guard-rspec (2.5.1)
+    guard-rspec (2.5.2)
       guard (>= 1.1)
       rspec (~> 2.11)
-    haml (4.0.1)
+    haml (4.0.2)
       tilt
     hike (1.2.1)
     i18n (0.6.4)
@@ -183,7 +183,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     method_source (0.8.1)
-    mime-types (1.21)
+    mime-types (1.22)
     minitest (4.7.0)
     moped (1.4.5)
     multi_json (1.7.2)
@@ -248,7 +248,7 @@ GEM
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
-    thor (0.18.0)
+    thor (0.18.1)
     thread_safe (0.1.0)
       atomic
     tilt (1.3.6)

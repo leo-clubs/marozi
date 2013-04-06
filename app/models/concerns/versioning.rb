@@ -13,7 +13,7 @@ module Versioning
   end
 
   def create_new_id
-    self.leo_id ||= self.class.settings.first.inc(self.class.field_name, 1)
+    self.leo_id ||= self.class.settings.first.inc self.class.field_name => 1
   end
 
   def current_multiple_district_id
