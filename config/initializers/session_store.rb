@@ -1,3 +1,3 @@
 # Be sure to restart your server when you modify this file.
 
-Marozi::Application.config.session_store :cookie_store
+Marozi::Application.config.session_store :cookie_store, key: '_marozi_session'
