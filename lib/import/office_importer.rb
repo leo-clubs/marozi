@@ -1,8 +1,8 @@
-require_relative './helper/mapping_helper'
+require_relative './helper/helper'
 
 module Import
   class OfficeImporter
-    include MappingHelper
+    include Helper
 
     INITIAL_VALUE = 1000
     @@counter = INITIAL_VALUE

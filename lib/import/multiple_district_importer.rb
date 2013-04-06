@@ -1,8 +1,8 @@
-require_relative './helper/mapping_helper'
+require_relative './helper/helper'
 
 module Import
   class MultipleDistrictImporter
-    include MappingHelper
+    include Helper
 
     def initialize node, year = nil
       @node = node

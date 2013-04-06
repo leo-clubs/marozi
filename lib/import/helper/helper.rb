@@ -1,5 +1,5 @@
 module Import
-  module MappingHelper
+  module Helper
 
     def date_lambda
       lambda do |v|
