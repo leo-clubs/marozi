@@ -26,7 +26,7 @@ module Versioning
 
   module ClassMethods
     def set_max_id
-      settings.set(field_name, self.max(:leo_id).to_i)
+      settings.set field_name => self.max(:leo_id).to_i
     end
 
     def settings
