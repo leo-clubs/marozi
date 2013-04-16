@@ -1,9 +1,9 @@
 # encoding: utf-8
-require_relative './helper/mapping_helper'
+require_relative './helper/helper'
 
 module Import
   class ContactInfoImporter
-    include MappingHelper
+    include Helper
 
     def initialize node
       @node = node

@@ -1,5 +1,5 @@
 module Import
-  module MappingHelper
+  module Helper
 
     def date_lambda
       lambda do |v|
@@ -90,13 +90,9 @@ module Import
 
     def extract_from_element_list opts, already_found = []
       opts[:list].each do |n|
-        according_value = opts[:mapping][n.name]
-        if according_value
-          value = according_value[1].class == Proc ? according_value[1].call(n) : n.text
-          if !already_found.include?(n.name)
-            opts[:entity].send("#{according_value[0]}=", value) unless already_found.include?(value)
-            already_found << n.name
-          end
+        if opts[:mapping][n.name] && !already_found.include?(n.name)
+          write_value opts[:entity], n, opts[:mapping][n.name], already_found
+          already_found << n.name
         elsif n.element_children
           extract_from_element_list(opts.merge({list: n.element_children}), already_found)
         end
@@ -113,6 +109,11 @@ module Import
         end
         members
       end
+    end
+
+    def write_value entity, node, raw_value, already_found
+      value = raw_value[1].class == Proc ? raw_value[1].call(node) : node.text
+      entity.send("#{raw_value[0]}=", value) unless already_found.include?(value)
     end
   end
 end
