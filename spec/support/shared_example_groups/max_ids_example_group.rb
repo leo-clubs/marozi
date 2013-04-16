@@ -25,7 +25,7 @@ shared_examples_for 'max_ids' do | klass, count |
   end
 
   it 'should change max_ids for creating models' do
-    max_id_setting.set(klass.collection_name, 1)
+    max_id_setting.set klass.collection_name => 1
     expect{create(factory_name, leo_id: nil)}.to change{max_id_setting.first.read_attribute(klass.collection_name)}.by(1)
   end
 end
