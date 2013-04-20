@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: 4a931ca105fddf59cc2f8619e973233376cf4b67
+  revision: 477d5d878fc4e0b3b012952c54c2eac8386bc9bf
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0.beta)
@@ -27,21 +27,21 @@ GIT
 
 GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
-  revision: 46aa99efc9c3c1db1d4f2e55373481212e6b2e26
+  revision: 5ed930cfb6bbfa71284d3e81b3bde8dbf78d8093
   specs:
-    activerecord-deprecated_finders (0.0.3)
+    activerecord-deprecated_finders (1.0.1)
 
 GIT
   remote: git://github.com/rails/arel.git
-  revision: 8c21663f655b9a67069c03094e5da2dc8a674eb3
+  revision: 3ef63ac5366000b232ca5fe0848de9db9a3c1f9a
   specs:
-    arel (4.0.0.beta2.20130314230643)
+    arel (4.0.0.20130418133826)
 
 GIT
   remote: git://github.com/rails/coffee-rails.git
-  revision: 948fef30464235e7588e34faa513b448a00c0e6b
+  revision: 78d4d7ac5baf4e76a6717f303f51b505c40b9770
   specs:
-    coffee-rails (4.0.0.beta1)
+    coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0.beta, < 5.0)
 
@@ -55,7 +55,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 0513f6ca9c43f475ddad97037ea8f42705147bd8
+  revision: 0400a7ff574f83f2f5d5c3f7d7569bfb37963dda
   specs:
     actionmailer (4.0.0.beta1)
       actionpack (= 4.0.0.beta1)
@@ -71,9 +71,9 @@ GIT
       builder (~> 3.1.0)
     activerecord (4.0.0.beta1)
       activemodel (= 4.0.0.beta1)
-      activerecord-deprecated_finders (~> 0.0.3)
+      activerecord-deprecated_finders (~> 1.0.1)
       activesupport (= 4.0.0.beta1)
-      arel (~> 4.0.0.beta2)
+      arel (~> 4.0.0)
     activesupport (4.0.0.beta1)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
@@ -87,7 +87,7 @@ GIT
       activesupport (= 4.0.0.beta1)
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.0.beta1)
-      sprockets-rails (~> 2.0.0.rc3)
+      sprockets-rails (~> 2.0.0.rc4)
     railties (4.0.0.beta1)
       actionpack (= 4.0.0.beta1)
       activesupport (= 4.0.0.beta1)
@@ -96,19 +96,18 @@ GIT
 
 GIT
   remote: git://github.com/rails/sass-rails.git
-  revision: d435679b0fe528b954a9abd0059f975d94707574
+  revision: 2d812b5f87929d62dde1748ebf531eea0cd77959
   specs:
-    sass-rails (4.0.0.beta1)
+    sass-rails (4.0.0.rc1)
       railties (>= 4.0.0.beta, < 5.0)
       sass (>= 3.1.10)
-      sprockets-rails (~> 2.0.0.rc0)
-      tilt (~> 1.3)
+      sprockets-rails (~> 2.0.0.rc4)
 
 GIT
   remote: git://github.com/rails/sprockets-rails.git
-  revision: 16082178a15ce50270ec2250ad202379fa882079
+  revision: bbf755e8b3aaea4105d05a01d2e115ef30ccc6c7
   specs:
-    sprockets-rails (2.0.0.rc3)
+    sprockets-rails (2.0.0.rc4)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (~> 2.8)
@@ -138,7 +137,7 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     colorize (0.5.8)
-    coveralls (0.6.5)
+    coveralls (0.6.6)
       colorize
       multi_json (~> 1.3)
       rest-client
@@ -184,7 +183,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.1)
     mime-types (1.22)
-    minitest (4.7.1)
+    minitest (4.7.2)
     moped (1.4.5)
     multi_json (1.7.2)
     nokogiri (1.5.9)
