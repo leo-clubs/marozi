@@ -73,7 +73,7 @@ Afterwards change into the directory and install all needed libraries (gems)
 
 ~~~ sh
 $ cd <projects_dir>/marozi
-$ bundle install --path vendor/local
+$ bundle install --path vendor/bundle
 $ rbenv rehash
 ~~~
 
@@ -81,7 +81,7 @@ Now setup the default config
 
 ~~~ sh
 $ cd <projects_dir>/marozi
-$ bin/setup.sh
+$ bin/setup
 ~~~
 
 ## Import XML
@@ -101,7 +101,7 @@ Now just start the application (Port 3000 must be available)
 
 ~~~ sh
 $ cd <projects_dir>/marozi
-$ bundle exec rails s
+$ bundle exec rails server
 ~~~
 
 Now the application is available under [http://localhost:3000](http://localhost:3000)
@@ -130,9 +130,9 @@ $ bundle install
 
 ### Restart server
 
-Most of the time this step is not necessary. However after larger changes the server needs to be restarted. go to window where the server is running and kill it (via Ctrl + C). Afterwards start it again:
+Most of the time this step is not necessary. However after larger changes the server needs to be restarted. go to window where the server is running and kill it (via `Ctrl + c`). Afterwards start it again:
 
 ~~~ sh
 $ cd <projects_dir>/marozi
-$ bundle exec rails s
+$ bundle exec rails server
 ~~~
