@@ -6,7 +6,7 @@ bundler_args: --without documentation production
 rvm:
   - 2.0.0
 before_script:
-  - bin/setup.sh
+  - bin/setup
 script:
   - RAILS_ENV=test rake spec
   - RAILS_ENV=test guard-jasmine
