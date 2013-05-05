@@ -94,7 +94,7 @@ module Import
 
     def simple_attribute_mappings
       {
-        'id' => [:leo_id, integer_lambda],
+        'id' => [:oid, integer_lambda],
       }
     end
 
@@ -109,7 +109,7 @@ module Import
       o = ::Office.new year: @year
       extract_from_attribute_list list: @node.attributes, mapping: simple_attribute_mappings, entity: o
       extract_from_element_list list: @node.element_children, mapping: simple_element_mappings, entity: o
-      o.leo_id = self.class.counter
+      o.oid = self.class.counter
       self.class.increase_counter
       o
     end

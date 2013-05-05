@@ -10,7 +10,7 @@ describe Member do
     let(:non_existing_id) {987294}
 
     before(:each) do
-      create(:simple_member, leo_id: existing_id)
+      create(:simple_member, oid: existing_id)
     end
 
     it 'should find member for id' do

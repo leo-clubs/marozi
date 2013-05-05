@@ -13,8 +13,8 @@ class District
   alias_method :parent, :multiple_district
   alias_method :children, :clubs
 
-  def self.find_by_member_id leo_id
-    c = Club.find_by_member_id leo_id
+  def self.find_by_member_id oid
+    c = Club.find_by_member_id oid
     c.district if c
   end
 

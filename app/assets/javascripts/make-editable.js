@@ -44,7 +44,7 @@ MyApp.initNewMember = function(){
         type: 'post'
       },
       success: function(data, config) {
-        var updateUrl = unescape($('#member').data('memberUpdateUrl')).interpolate({id: data.leo_id});
+        var updateUrl = unescape($('#member').data('memberUpdateUrl')).interpolate({id: data.oid});
         Turbolinks.visit(updateUrl);
       }
     });

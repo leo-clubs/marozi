@@ -6,7 +6,7 @@ describe Import do
 
     it 'should load all simple club data correctly' do
       expect(subject).to be_a(Club)
-      expect(subject.leo_id).to eq 200079
+      expect(subject.oid).to eq 200079
       expect(subject.year).to eq '2012-2013'
       expect(subject.name).to eq 'Emiliaburg-Gloria'
       expect(subject.founded_at).to eq Date.new(1972, 7, 01)
@@ -40,7 +40,7 @@ describe Import do
       Club.each do |c|
         expect(c.members).to_not be_empty
         arr = []
-        c.members.map{|m| m.leo_id}.each do |m|
+        c.members.map{|m| m.oid}.each do |m|
           expect(arr).to_not include m
           arr << m
         end

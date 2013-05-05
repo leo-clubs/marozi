@@ -1,7 +1,7 @@
 class MultipleDistrictsController < ApplicationController
 
   def show
-    @multiple_district = MultipleDistrict.where(leo_id: params['id'])
+    @multiple_district = MultipleDistrict.where(oid: params['id'])
   end
 
   def my_multiple_district

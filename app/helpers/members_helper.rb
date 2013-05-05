@@ -2,7 +2,7 @@ module MembersHelper
   include XeditableCellHelper
 
   def member_link member
-    link_to(t(:'members.name', first_name: member.first_name, last_name: member.last_name), member_path(id: member.leo_id))
+    link_to(t(:'members.name', first_name: member.first_name, last_name: member.last_name), member_path(id: member.oid))
   end
 
   def member_simple_attribute_tablerow(field: nil, name: nil, caption: nil, editable_class: 'editable')

@@ -12,7 +12,7 @@ class MembersController < ApplicationController
   end
 
   def update
-    member = Member.where(leo_id: params[:id]).first
+    member = Member.where(oid: params[:id]).first
     member.update_attributes member_params
     render json: nil
   end
