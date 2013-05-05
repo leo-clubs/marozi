@@ -8,7 +8,7 @@ module Converters
   def person_array_to_xeditable person_array, operation = nil
     person_array.map do | person |
       {
-        value: person.leo_id,
+        value: person.oid,
         text: operation ? operation.call(person) : person
       }
     end

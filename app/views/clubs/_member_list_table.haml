@@ -8,7 +8,7 @@
     %th= t(:'members.tablehead.member_since')
   - members.each do |member|
     %tr
-      %td= link_to(member.leo_id, member_path(id: member.leo_id))
+      %td= link_to(member.oid, member_path(id: member.oid))
       %td= member_link member
       %td= l(member.date_of_birth)
       - if member.contact_infos.first

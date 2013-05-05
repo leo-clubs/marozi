@@ -9,8 +9,8 @@ class MultipleDistrict
 
   alias_method :children, :districts
 
-  def self.find_by_member_id leo_id
-    d = District.find_by_member_id leo_id
+  def self.find_by_member_id oid
+    d = District.find_by_member_id oid
     d.multiple_district if d
   end
 

@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
   def create
     session[:current_user] = params[:email_or_id]
-    session[:current_user_club] = Club.find_by_member_id(session[:current_user]).leo_id
+    session[:current_user_club] = Club.find_by_member_id(session[:current_user]).oid
     redirect_to root_path
   end
 

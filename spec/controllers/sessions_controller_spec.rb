@@ -6,8 +6,8 @@ describe SessionsController do
 
   before(:each) do
     session.clear
-    m = create(:member, leo_id: existing_member_id)
-    m.club = create(:club, leo_id: existing_club_id)
+    m = create(:member, oid: existing_member_id)
+    m.club = create(:club, oid: existing_club_id)
     m.save!
   end
 

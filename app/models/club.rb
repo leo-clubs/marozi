@@ -19,8 +19,8 @@ class Club
   alias_method :parent, :district
   alias_method :children, :members
 
-  def self.find_by_member_id leo_id
-    m = Member.find_by_member_id leo_id
+  def self.find_by_member_id oid
+    m = Member.find_by_member_id oid
     m.club if m
   end
 

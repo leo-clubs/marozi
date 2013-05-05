@@ -4,7 +4,7 @@
       =t(:'members.caption.name', first_name: @member.first_name, last_name: @member.last_name)
       %small= t(:'clubs.club_title', name: @club.name)
 
-  = render 'attributes', editable_class: 'edit-member', table_head_attributes: {id: 'member', :'data-leo-id' => @member.leo_id, :'data-member-update-url' => member_path(id: @member.leo_id)}
+  = render 'attributes', editable_class: 'edit-member', table_head_attributes: {id: 'member', :'data-leo-id' => @member.oid, :'data-member-update-url' => member_path(id: @member.oid)}
 
 :javascript
   MyApp.initFunction(MyApp.initEditMember);

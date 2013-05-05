@@ -6,7 +6,7 @@
     %th= t(:'clubs.tablehead.member_count')
   - clubs.each do |club|
     %tr
-      %td= link_to(club.leo_id, club_path(id: club.leo_id))
-      %td= link_to(club.name, club_path(id: club.leo_id))
+      %td= link_to(club.oid, club_path(id: club.oid))
+      %td= link_to(club.name, club_path(id: club.oid))
       %td= t(:'clubs.age', count: club.age)
       %td= club.members.size

@@ -12,7 +12,7 @@
       %th= t(:'committees.tablehead.member_count')
     - @committees.each do |committee|
       %tr
-        %td= committee.leo_id
+        %td= committee.oid
         %td= t(:"committees.title_#{committee.type}")
         %td= member_link committee.chairperson
         %td= committee.members.size

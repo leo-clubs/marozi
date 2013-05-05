@@ -20,7 +20,7 @@ module Import
     def simple_attribute_mappings
       {
         'membershipStart' => [:member_since, date_lambda],
-        'id' => [:leo_id, integer_lambda],
+        'id' => [:oid, integer_lambda],
         'status' => [:type, mapping_lambda(type_mapping, :active)]
       }
     end

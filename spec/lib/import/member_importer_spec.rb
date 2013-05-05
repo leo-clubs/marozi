@@ -7,7 +7,7 @@ describe Import do
 
     it 'should load simple member data correctly' do
       expect(subject).to be_a(Member)
-      expect(subject.leo_id).to eq 27146
+      expect(subject.oid).to eq 27146
       expect(subject.year).to eq '2012-2013'
       expect(subject.first_name).to eq 'Angela'
       expect(subject.last_name).to eq 'vom Mrugalla'

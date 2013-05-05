@@ -4,12 +4,12 @@ module ProvidesOffices
 
   def offices= arr
     arr.each do |office|
-      office.parent_id = self.leo_id
+      office.parent_id = self.oid
       office.save!
     end
   end
 
   def offices
-    Office.where(parent_id: self.leo_id)
+    Office.where(parent_id: self.oid)
   end
 end

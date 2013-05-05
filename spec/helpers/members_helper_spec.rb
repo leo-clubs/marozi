@@ -7,7 +7,7 @@ describe MembersHelper do
       member = Object.new
       member.should_receive(:last_name)
       member.should_receive(:first_name)
-      member.should_receive(:leo_id).and_return(member_id)
+      member.should_receive(:oid).and_return(member_id)
       helper.should_receive(:t).and_return('stub')
       expect(helper.member_link(member)).to eq "<a href=\"/members/#{member_id}\">stub</a>"
     end
