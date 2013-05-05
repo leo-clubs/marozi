@@ -1,11 +1,11 @@
 shared_examples_for 'a hierarchy' do
   let(:existing_id) { 87294 }
   let(:non_existing_id) { 987294 }
-  let(:md_id) {@member.club.district.multiple_district.leo_id}
+  let(:md_id) {@member.club.district.multiple_district.oid}
   let(:subject) {(rec = lambda{|m| m.class == described_class ? m : rec.call(m.parent)}).call(@member)}
 
   before(:each) do
-    @member = create(:simple_member, leo_id: existing_id)
+    @member = create(:simple_member, oid: existing_id)
   end
 
   describe '#find_by_member_id' do

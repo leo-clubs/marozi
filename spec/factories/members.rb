@@ -3,7 +3,7 @@ last_names = %{Müller Jansen Otto Schmidt Schmid Jacobs Maier}
 
 FactoryGirl.define do
   factory :member, class: Member do
-    sequence(:leo_id) {|n| 87200 + n}
+    sequence(:oid) {|n| 87200 + n}
     year '2012-2013'
     sequence(:first_name) {|n| first_names[n]}
     sequence(:last_name) {|n| last_names[n]}
@@ -22,7 +22,7 @@ FactoryGirl.define do
       last_name             'Heddinghausen'
       gender                :female
       profession            'Jurastudentin'
-      before(:create) {|member| create(:president_office, member_id: member.leo_id, parent_id: member.club.leo_id)}
+      before(:create) {|member| create(:president_office, member_id: member.oid, parent_id: member.club.oid)}
       club
     end
   end

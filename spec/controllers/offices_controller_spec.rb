@@ -8,7 +8,7 @@ describe OfficesController do
       it 'should change office correctly' do
         office = create(:president_office)
         new_member_id = office.member_id + 10
-        patch :update, id: office.leo_id, value: new_member_id
+        patch :update, id: office.oid, value: new_member_id
         expect(office.reload.member_id).to eq new_member_id
       end
     end

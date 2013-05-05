@@ -30,7 +30,7 @@ namespace :db do
         obj.create_committees %i{activity hdleo it leolife merlo pr}
         [MultipleDistrict, Committee, District, Club, Member].each{|e| e.set_max_id}
         puts 'Setting current year'
-        Setting.new(key: :"multiple_district_#{obj.leo_id}", current_year: year).save!
+        Setting.new(key: :"multiple_district_#{obj.oid}", current_year: year).save!
       rescue Exception => e
         puts "Error occured: (message: #{e.message})"
         puts "Backtrace:"

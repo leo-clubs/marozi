@@ -21,7 +21,7 @@ describe ClubsController do
       let(:existing_id) { 87294 }
 
       it 'should redirects to club of logged in member' do
-        member = create(:simple_member, leo_id: existing_id)
+        member = create(:simple_member, oid: existing_id)
         session[:current_user] = existing_id
         get :my_club
         expect(assigns(:club)).to eq member.club
@@ -33,10 +33,10 @@ describe ClubsController do
       let(:members) { club.members }
 
       it 'should correctly converted JSON array' do
-        get :members, id: club.leo_id, type: :xeditable_names_only
+        get :members, id: club.oid, type: :xeditable_names_only
         expect(response.content_type).to eq 'application/json'
         ids = JSON.parse(response.body).map{|p| p['value']}
-        expect(ids).to match_array(members.map{|p| p.leo_id})
+        expect(ids).to match_array(members.map{|p| p.oid})
       end
     end
 
@@ -44,7 +44,7 @@ describe ClubsController do
       let(:club) { create :club_with_members }
 
       it 'should correctly converted JSON array' do
-        get :show, id: club.leo_id
+        get :show, id: club.oid
         expect(assigns(:club)).to eq club
       end
     end

@@ -5,10 +5,10 @@ module Finders
   end
 
   def club_by_member_id member_id
-    Member.where(leo_id: member_id).first
+    Member.where(oid: member_id).first
   end
 
   def club_by_club_id club_id
-    Club.where(leo_id: club_id).first
+    Club.where(oid: club_id).first
   end
 end

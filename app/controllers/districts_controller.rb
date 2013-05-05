@@ -5,7 +5,7 @@ class DistrictsController < ApplicationController
   end
 
   def show
-    @district = District.where(leo_id: params['id']).first
+    @district = District.where(oid: params['id']).first
   end
 
   def my_district

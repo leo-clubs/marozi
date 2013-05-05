@@ -1,7 +1,7 @@
 shared_examples_for 'max_ids' do | klass, count |
 
   let(:max_id_setting){Setting.where(key: :max_ids)}
-  let(:max_id_from_model){klass.max(:leo_id).to_i}
+  let(:max_id_from_model){klass.max(:oid).to_i}
   let(:max_id_from_setting){max_id_setting.first.read_attribute(klass.collection_name)}
   let(:factory_name){klass.collection.name.singularize}
 
@@ -26,6 +26,6 @@ shared_examples_for 'max_ids' do | klass, count |
 
   it 'should change max_ids for creating models' do
     max_id_setting.set klass.collection_name => 1
-    expect{create(factory_name, leo_id: nil)}.to change{max_id_setting.first.read_attribute(klass.collection_name)}.by(1)
+    expect{create(factory_name, oid: nil)}.to change{max_id_setting.first.read_attribute(klass.collection_name)}.by(1)
   end
 end

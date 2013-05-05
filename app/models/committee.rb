@@ -8,10 +8,10 @@ class Committee
   field :member_ids, type: Array, default: []
 
   def members
-    Member.where(:leo_id.in => (member_ids + [chairperson_id]))
+    Member.where(:oid.in => (member_ids + [chairperson_id]))
   end
 
   def chairperson
-    Member.where(leo_id: self.chairperson_id).first
+    Member.where(oid: self.chairperson_id).first
   end
 end

@@ -2,23 +2,23 @@ module Versioning
   extend ActiveSupport::Concern
 
   included do
-    field :leo_id, type: Integer
+    field :oid, type: Integer
     field :year, type: String
 
     before_create :create_new_id
 
-    index({ leo_id: 1, year: -1 }, { unique: true })
+    index({ oid: 1, year: -1 }, { unique: true })
 
     default_scope where(year: '2012-2013')
   end
 
   def create_new_id
-    self.leo_id ||= self.class.settings.first.inc self.class.field_name => 1
+    self.oid ||= self.class.settings.first.inc self.class.field_name => 1
   end
 
   def current_multiple_district_id
     if self.class == MultipleDistrict
-      self.leo_id
+      self.oid
     else
       parent.current_multiple_district_id
     end
@@ -26,7 +26,7 @@ module Versioning
 
   module ClassMethods
     def set_max_id
-      settings.set field_name => self.max(:leo_id).to_i
+      settings.set field_name => self.max(:oid).to_i
     end
 
     def settings

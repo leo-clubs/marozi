@@ -6,7 +6,7 @@ describe Import do
 
     it 'should load all simple multiple district data correctly' do
       expect(subject).to be_a(MultipleDistrict)
-      expect(subject.leo_id).to eq 42
+      expect(subject.oid).to eq 42
       expect(subject.year).to eq '2012-2013'
       expect(subject.name).to eq '111'
     end
