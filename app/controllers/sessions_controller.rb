@@ -20,6 +20,4 @@ class SessionsController < ApplicationController
   def logged_in?
     session[:current_user]
   end
-
-
 end
