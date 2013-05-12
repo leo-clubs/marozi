@@ -18,4 +18,6 @@ Marozi::Application.routes.draw do
   resources :districts
   resources :multiple_districts
   resources :committees
+
+  get '/statistics/clubs/age_distribution/:id' => 'clubs#age_distribution', as: :age_distribution
 end
