@@ -17,7 +17,7 @@ GIT
 
 GIT
   remote: git://github.com/mongoid/mongoid.git
-  revision: fe7f43430580860db6d1d89cea27eda24ab60ab1
+  revision: 94e1536463e08d751923af79d07211d550a90786
   specs:
     mongoid (4.0.0)
       activemodel (~> 4.0.0.rc1)
@@ -123,7 +123,7 @@ GIT
 GEM
   remote: http://rubygems.org/
   specs:
-    angularjs-rails (1.0.6)
+    angularjs-rails (1.0.6.1)
     atomic (1.1.9)
     bootstrap-sass (2.3.1.0)
       sass (~> 3.2)
@@ -177,7 +177,7 @@ GEM
     hike (1.2.2)
     i18n (0.6.4)
     libv8 (3.11.8.17)
-    listen (1.0.3)
+    listen (1.1.0)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
@@ -194,7 +194,7 @@ GEM
     nokogiri (1.5.9)
     origin (1.1.0)
     polyglot (0.3.3)
-    pry (0.9.12.1)
+    pry (0.9.12.2)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
@@ -236,7 +236,7 @@ GEM
       rspec-core (~> 2.13.0)
       rspec-expectations (~> 2.13.0)
       rspec-mocks (~> 2.13.0)
-    sass (3.2.8)
+    sass (3.2.9)
     simplecov (0.7.1)
       multi_json (~> 1.0)
       simplecov-html (~> 0.7.1)
