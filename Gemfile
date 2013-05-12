@@ -13,6 +13,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass'
   gem 'coffee-rails', github: 'rails/coffee-rails'
+  gem 'angularjs-rails'
 end
 
 gem 'turbolinks', github: 'rails/turbolinks'

@@ -1,4 +1,4 @@
-.container
+.container{id: 'club-overview', data: {club_id: @club.oid }}
   .page-header
     %h1
       =t(:'clubs.club_title', name: @club.name)
@@ -34,8 +34,13 @@
           %table.table.table-no-border#offices
             = render partial: 'office', collection: @club.offices, as: :office
 
+  .row{'ng-controller' => 'StatisticsCtrl', 'ng-init' => "clubId=#{@club.oid}"}
+    .info-box.span12{id: 'age-distribution-chart'}
+      %svg{style: "width:1000px;height:200px"}
+
   .row
-    = render 'member_list_table', members: @club.members_sorted
+    .span12
+      = render 'member_list_table', members: @club.members_sorted
 
 :javascript
   MyApp.initFunction(MyApp.initEditOffices);

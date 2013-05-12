@@ -2,6 +2,8 @@ class ClubsController < ApplicationController
   include Finders
   include Converters
 
+  respond_to :json, :only => :age_distribution
+
   def index
     h = Club.order_by(name: :asc).inject({}) do |hash, club|
       hash.merge({club.district.name => [club]}){|key, oldval, newval| oldval + newval}
@@ -29,5 +31,10 @@ class ClubsController < ApplicationController
   def my_club
     @club = Club.find_by_member_id session[:current_user]
     render action: 'show'
+  end
+
+  def age_distribution
+    @club = club_by_club_id(params[:id])
+    render json: @club.age_distribution
   end
 end

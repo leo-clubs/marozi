@@ -8,7 +8,7 @@ String.prototype.interpolate = function (o) {
 
 var MyApp = {};
 
-MyApp.initFunction = function(functionReference){
+MyApp.initFunction = function(functionReference) {
   $(document).ready(functionReference);
   $(window).bind('page:change', functionReference);
 };
