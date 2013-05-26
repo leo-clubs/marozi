@@ -25,6 +25,7 @@ describe SessionsController do
       post :create, email_or_id: existing_member_id
       expect(session).not_to be_empty
       get :destroy
+      session.delete('_turbolinks_redirect_to')
       expect(session).to be_empty
     end
   end
