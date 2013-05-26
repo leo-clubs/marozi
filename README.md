@@ -33,7 +33,7 @@ $ brew install ruby-build                                               # instal
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile        # modify PATH to load rbenv before system ruby
 $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile                      # add sugar to rbenv usage
 $ source ~/.bash_profile                                                # reload configuration
-$ rbenv install 2.0.0-p0                                                # install latest ruby version
+$ rbenv install 2.0.0-p195                                              # install latest ruby version
 ~~~
 
 ### MongoDB
