@@ -9,5 +9,14 @@ FactoryGirl.define do
         FactoryGirl.create(:office, name: :it_appointee, parent_id: md.oid)
       end
     end
+
+    factory :multiple_district_with_setting do
+      after(:create) do | md |
+        FactoryGirl.create(
+          :setting,
+          multiple_district: md.oid,
+        )
+      end
+    end
   end
 end

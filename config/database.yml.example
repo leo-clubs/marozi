@@ -1,0 +1,18 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: marozi
+  password:
+
+development:
+  <<: *common
+  database: marozi_development
+
+test:
+  <<: *common
+  database: marozi_test
+
+production:
+  <<: *common
+  database: marozi_production

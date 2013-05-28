@@ -1,11 +1,9 @@
-class MultipleDistrict
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  include ProvidesOffices
+class MultipleDistrict < ActiveRecord::Base
+  include Versioning
 
-  field :name, type: String
-
-  has_many :districts, autosave: true
+  has_many :districts
+  has_many :offices, as: :provides_offices
+  has_many :committees
 
   alias_method :children, :districts
 
@@ -15,7 +13,17 @@ class MultipleDistrict
   end
 
   def districts_sorted
+    # TODO let the database take care of it
     districts.sort{|a,b| a.name <=> b.name}
+  end
+
+  def settings
+    Setting.where(multiple_district: self.oid)
+  end
+
+  def add_setting(s)
+    s.multiple_district = self.oid
+    s.save!
   end
 
   def create_committees types

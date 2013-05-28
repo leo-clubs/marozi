@@ -1,20 +1,7 @@
-class Member
-  include Mongoid::Document
-  include Mongoid::Timestamps
+class Member < ActiveRecord::Base
   include Versioning
 
-  field :first_name, type: String
-  field :last_name, type: String
-  field :member_since, type: Date
-  field :date_of_birth, type: Date
-  field :gender, type: Symbol
-  field :languages, type: Array
-  field :profession, type: String
-  field :type, type: Symbol
-
-  embeds_many :contact_infos
-  accepts_nested_attributes_for :contact_infos, allow_destroy: true
-
+  has_many :contact_infos, as: :contactable
   belongs_to :club
 
   alias_method :parent, :club

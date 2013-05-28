@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe MultipleDistrict do
   it_behaves_like 'a hierarchy', 3
-  include_examples 'max_ids', MultipleDistrict, 1
 
   describe '#create_committees' do
     it 'should create an IT committee' do
@@ -19,6 +18,21 @@ describe MultipleDistrict do
       create(:committee, type: committee_type)
       md = create(:multiple_districts_with_it_office)
       expect{md.create_committees(committee_type)}.not_to change{Committee.count}
+    end
+  end
+
+  describe '#setting' do
+    it 'should query the correct setting' do
+      md = create(:multiple_district_with_setting)
+      expect(md.settings).not_to be_nil
+    end
+
+    it 'should set the correct setting' do
+      md = create(:multiple_district)
+      s = create(:setting)
+      md.add_setting s
+      s.reload
+      expect(s.multiple_district).to eq(md.oid)
     end
   end
 end

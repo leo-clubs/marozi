@@ -1,9 +1,7 @@
 require 'spec_helper'
 
 describe Member do
-
   it_behaves_like 'a hierarchy'
-  include_examples 'max_ids', Member, 10
 
   context 'finders' do
     let(:existing_id) {87294}

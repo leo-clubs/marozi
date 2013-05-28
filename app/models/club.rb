@@ -1,17 +1,5 @@
-class Club
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  include ProvidesOffices
-
-  field :name, type: String
-  field :founded_at, type: Date
-  field :chartered_at, type: Date
-  field :godfather, type: String
-  field :meet_description, type: String
-  field :bank, type: String
-  field :homepage, type: String
-
-  embeds_one :contact_infos
+class Club < ActiveRecord::Base
+  include Versioning
 
   has_many :members, autosave: true
   belongs_to :district

@@ -16,16 +16,6 @@ GIT
       railties (>= 3.1, < 4.1)
 
 GIT
-  remote: git://github.com/mongoid/mongoid.git
-  revision: e1fa17295bfbc048f613a070e67bd433ccec256f
-  specs:
-    mongoid (4.0.0)
-      activemodel (~> 4.0.0.rc1)
-      moped (~> 1.4)
-      origin (~> 1.0)
-      tzinfo (~> 0.3.22)
-
-GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
   revision: 55ce812cbce7d482eb66bff5ca17b8816314f0b2
   specs:
@@ -146,6 +136,7 @@ GEM
       simplecov (>= 0.7)
       thor
     daemons (1.1.9)
+    database_cleaner (1.0.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     eventmachine (1.0.3)
@@ -188,10 +179,9 @@ GEM
     method_source (0.8.1)
     mime-types (1.23)
     minitest (4.7.4)
-    moped (1.5.0)
     multi_json (1.7.3)
     nokogiri (1.5.9)
-    origin (1.1.0)
+    pg (0.15.1)
     polyglot (0.3.3)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -277,6 +267,7 @@ DEPENDENCIES
   bson_ext
   coffee-rails!
   coveralls
+  database_cleaner
   factory_girl_rails
   guard
   guard-jasmine
@@ -285,8 +276,8 @@ DEPENDENCIES
   haml-rails!
   jasminerice!
   jquery-rails!
-  mongoid!
   nokogiri
+  pg
   pry
   pry-doc
   pry-nav

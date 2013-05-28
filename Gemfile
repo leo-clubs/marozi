@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rake'
 gem 'rails',     github: 'rails/rails', tag: 'v4.0.0.rc1'
+gem 'pg'
 gem 'arel',      github: 'rails/arel'
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 
@@ -24,8 +25,6 @@ gem 'haml'
 
 gem 'rails-i18n'
 
-gem 'mongoid', github: 'mongoid/mongoid'
-
 gem 'bson_ext'
 gem 'nokogiri', require: false
 
@@ -42,6 +41,7 @@ group :test, :development do
   gem 'guard-jasmine'
   gem 'factory_girl_rails'
   gem 'thin'
+  gem 'database_cleaner'
   gem 'jasminerice', github: 'bradphelan/jasminerice'
   gem 'coveralls', require: false
   gem 'rb-inotify', require: false
