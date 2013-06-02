@@ -2,7 +2,6 @@ FactoryGirl.define do
   factory :office, class: Office do
     sequence(:oid) {|n| 1400 + n}
     sequence(:member_id) {|n| 27000 + n}
-    sequence(:parent_id) {|n| 5000 + n}
     year '2012-2013'
 
     factory :president_office, class: Office do

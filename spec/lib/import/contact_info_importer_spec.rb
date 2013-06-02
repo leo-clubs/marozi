@@ -7,7 +7,7 @@ describe Import  do
 
     it 'should load all contact_info data correctly' do
       expect(german_address).to be_a(ContactInfo)
-      expect(german_address.type).to eq :home
+      expect(german_address.kind).to eq :home
       expect(german_address.street).to eq 'Karl-Jaspers-Str. 86'
       expect(german_address.zip).to eq '71182'
       expect(german_address.city).to eq 'Klemensland'
@@ -16,7 +16,7 @@ describe Import  do
 
     it 'should load all contact_info data correctly for address outside of Germany' do
       expect(non_german_address).to be_a(ContactInfo)
-      expect(non_german_address.type).to eq :home
+      expect(non_german_address.kind).to eq :home
       expect(non_german_address.street).to eq '19 Rue Beaubourg'
       expect(non_german_address.zip).to eq '75004'
       expect(non_german_address.city).to eq 'Paris'

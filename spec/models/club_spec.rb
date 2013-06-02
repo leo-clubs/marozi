@@ -7,7 +7,7 @@ describe Club do
     it 'should return correct offices for president member' do
       president_member = create(:president_member)
       club = president_member.club
-      office = Office.where(member_id: president_member.oid).where(parent_id: club.oid).first
+      office = Office.where(member_id: president_member.oid).where(provides_offices: club).first
       expect(club.offices.size).to eq 1
       expect(club.offices).to eq [office]
     end

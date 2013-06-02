@@ -2,6 +2,7 @@ class Club < ActiveRecord::Base
   include Versioning
 
   has_many :members, autosave: true
+  has_many :offices, as: :provides_offices
   belongs_to :district
 
   alias_method :parent, :district
@@ -21,11 +22,11 @@ class Club < ActiveRecord::Base
   end
 
   def age_distribution
-    males, females = members.select{|m| m.type == :active}.partition{|m| m.gender == :male}
+    males, females = members.select{|m| m.kind == :active}.partition{|m| m.gender == :male}
 
     h = {
-      male: males.map{|m| member_age(m.date_of_birth)},
-      female: females.map{|m| member_age(m.date_of_birth)},
+      male: males.map{|m| m.age},
+      female: females.map{|m| m.age},
     }
 
     male_distribution = []
@@ -54,11 +55,4 @@ class Club < ActiveRecord::Base
       },
     ]
   end
-
-  private
-  def member_age(dob)
-    now = Time.now.utc.to_date
-    now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
-  end
-
 end

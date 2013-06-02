@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.integer  "oid"
     t.string   "year"
     t.boolean  "current"
-    t.string   "type"
+    t.string   "kind"
     t.integer  "chairperson_id"
     t.integer  "member_ids",           array: true
     t.integer  "multiple_district_id"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20130528215153) do
   end
 
   create_table "contact_infos", force: true do |t|
-    t.string   "type"
+    t.string   "kind"
     t.string   "street"
     t.string   "zip"
     t.string   "city"
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.string   "gender"
     t.string   "languages",     array: true
     t.string   "profession"
-    t.string   "type"
+    t.string   "kind"
     t.integer  "club_id"
     t.datetime "created_at"
     t.datetime "updated_at"

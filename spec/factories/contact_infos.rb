@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :contact_info do
-    type                  :home
+    kind                  :home
     street                'Obere Lindenstr. 98'
     zip                   '38447'
     city                  'Emiliaburg'
@@ -9,7 +9,7 @@ FactoryGirl.define do
     mobile_phone_number   '+49-7256-68076986'
 
     factory :xml_home_contact_info, class: ContactInfo do
-      type                  :home
+      kind                  :home
       street                'Karl-Jaspers-Str. 86'
       zip                   '71182'
       city                  'Klemensland'

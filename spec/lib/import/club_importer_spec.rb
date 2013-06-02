@@ -37,7 +37,7 @@ describe Import do
       expect(Club.count).to eq 2
       expect(Member.count).to eq 22
 
-      Club.each do |c|
+      Club.all.each do |c|
         expect(c.members).to_not be_empty
         arr = []
         c.members.map{|m| m.oid}.each do |m|

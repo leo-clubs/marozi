@@ -1,11 +1,6 @@
 class Committee < ActiveRecord::Base
   include Versioning
-
-  def members
-    Member.where(:oid.in => (member_ids + [chairperson_id]))
-  end
-
-  def chairperson
-    Member.where(oid: self.chairperson_id).first
-  end
+  belongs_to :multiple_district
+  has_many :members
+  has_one :member, as: :chairperson
 end

@@ -6,7 +6,7 @@ FactoryGirl.define do
 
     factory :multiple_districts_with_it_office do
       after(:create) do | md |
-        FactoryGirl.create(:office, name: :it_appointee, parent_id: md.oid)
+        FactoryGirl.create(:office, name: :it_appointee, provides_offices: md)
       end
     end
 

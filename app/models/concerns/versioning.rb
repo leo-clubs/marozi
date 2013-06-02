@@ -6,8 +6,9 @@ module Versioning
     before_create :assign_new_id
   end
 
+  # TODO create hook that sets current year, if current == true
   def assign_new_id
-    self.oid = (self.class.unscoped.maximum(:oid) || 0 ) + 1
+    self.oid ||= (self.class.unscoped.maximum(:oid) || 0 ) + 1
   end
 
   def current_multiple_district_id

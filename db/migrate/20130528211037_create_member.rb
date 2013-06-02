@@ -13,7 +13,7 @@ class CreateMember < ActiveRecord::Migration
       t.string :gender
       t.string :languages, array: true
       t.string :profession
-      t.string :type
+      t.string :kind
 
       t.integer :club_id
       t.timestamps
