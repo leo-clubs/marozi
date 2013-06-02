@@ -21,7 +21,7 @@ module Import
       {
         'membershipStart' => [:member_since, date_lambda],
         'id' => [:oid, integer_lambda],
-        'status' => [:kind, mapping_lambda(type_mapping, :active)]
+        'status' => [:status, mapping_lambda(type_mapping, :active)]
       }
     end
 

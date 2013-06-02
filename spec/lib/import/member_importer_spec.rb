@@ -12,7 +12,7 @@ describe Import do
       expect(subject.first_name).to eq 'Angela'
       expect(subject.last_name).to eq 'vom Mrugalla'
       expect(subject.gender).to eq :female
-      expect(subject.kind).to eq :active
+      expect(subject.status).to eq :active
       expect(subject.profession).to eq 'Stud. Jur.'
       expect(subject.date_of_birth).to eq Date.new(1988, 11, 12)
       expect(subject.member_since).to eq Date.new(2008, 7, 1)

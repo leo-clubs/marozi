@@ -5,7 +5,8 @@ FactoryGirl.define do
 
     sequence(:oid) {|n| 87200 + n}
     year '2012-2013'
-    kind :active
+    status :active
+    sequence(:gender) {|n| n % 2 == 0 ? :male : :female}
     sequence(:first_name) {|n| first_names[n]}
     sequence(:last_name) {|n| last_names[n]}
 

@@ -33,7 +33,7 @@ class MembersController < ApplicationController
         :gender,
         :languages,
         :profession,
-        :kind,
+        :status,
       ]
 
       contact_infos = {

@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.integer  "oid"
     t.string   "year"
     t.boolean  "current"
-    t.string   "name"
     t.string   "first_name"
     t.string   "last_name"
     t.date     "member_since"
@@ -81,7 +80,7 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.string   "gender"
     t.string   "languages",     array: true
     t.string   "profession"
-    t.string   "kind"
+    t.string   "status"
     t.integer  "club_id"
     t.datetime "created_at"
     t.datetime "updated_at"

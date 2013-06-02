@@ -4,7 +4,8 @@ class Member < ActiveRecord::Base
   has_many :contact_infos, as: :contactable
   belongs_to :club
 
-  symbolize :kind, in: [:active, :passive, :honorary]
+  symbolize :status, in: [:active, :passive, :honorary]
+  symbolize :gender, in: [:male, :female]
 
   alias_method :parent, :club
 

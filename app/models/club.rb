@@ -22,7 +22,7 @@ class Club < ActiveRecord::Base
   end
 
   def age_distribution
-    males, females = members.select{|m| m.kind == :active}.partition{|m| m.gender == :male}
+    males, females = members.select{|m| m.status == :active}.partition{|m| m.gender == :male}
 
     h = {
       male: males.map{|m| m.age},
