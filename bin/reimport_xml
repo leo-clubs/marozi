@@ -1,0 +1,9 @@
+#!/bin/sh
+
+import_file='tmp/LeoExport-FULL.xml'
+
+echo 'resetting database information'
+bundle exec rake db:reset
+
+echo "importing from $import_file"
+bundle exec rake "db:import_from_xml[$import_file]"

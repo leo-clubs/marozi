@@ -31,7 +31,12 @@ class MultipleDistrict < ActiveRecord::Base
     types.each do |type|
       office = self.offices.where(name: :"#{type}_appointee").first
       c = Committee.find_or_create_by(kind: type)
-      c.update_attributes chairperson_id: office.member_id
+      c.update_attributes(
+        year: self.year,
+        chairperson_id: office.member_id
+        )
+      self.committees << c
     end
+    self.save!
   end
 end

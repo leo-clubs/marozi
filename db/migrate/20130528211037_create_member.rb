@@ -4,7 +4,6 @@ class CreateMember < ActiveRecord::Migration
       t.integer :oid
       t.string :year
       t.boolean :current
-      t.string :name
 
       t.string :first_name
       t.string :last_name
