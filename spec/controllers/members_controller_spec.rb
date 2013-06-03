@@ -31,8 +31,12 @@ describe MembersController do
     end
 
     describe '#create' do
+      let(:existing_club) {create(:club)}
+
       it 'creates member correctly' do
-        expect{post(:create, first_name: 'Hans', last_name: 'Peter')}.to change{Member.count}.by(1)
+        session[:current_user_club] = existing_club.oid
+        member_attributes = build(:simple_member).attributes
+        expect{post(:create, member_attributes)}.to change{Member.count}.by(1)
       end
     end
   end

@@ -1,13 +1,18 @@
 FactoryGirl.define do
-  factory :max_ids_setting, class: Setting do
-    key :max_ids
-    after(:build) do |setting|
-      setting.write_attribute(:members, 0)
-      setting.write_attribute(:clubs, 0)
-      setting.write_attribute(:districts, 0)
-      setting.write_attribute(:multiple_districts, 0)
-      setting.write_attribute(:offices, 0)
-      setting.write_attribute(:members, 0)
+  [
+    :max_id_member,
+    :max_id_club,
+    :max_id_district,
+    :max_id_office,
+  ].each do |name|
+      factory name, class: Setting do
+      key name.to_s
+      value '0'
     end
+  end
+
+  factory :setting do
+    key 'key'
+    value 'value'
   end
 end

@@ -1,8 +1,6 @@
 require 'spec_helper'
 
 describe Office do
-  include_examples 'max_ids', Office, 20
-
   describe '#member' do
     it 'should return correct member for office' do
       member = create(:president_member)

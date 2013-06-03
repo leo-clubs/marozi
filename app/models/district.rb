@@ -1,11 +1,8 @@
-class District
-  include Mongoid::Document
-  include Mongoid::Timestamps
-  include ProvidesOffices
+class District < ActiveRecord::Base
+  include Versioning
 
-  field :name, type: String
-
-  embeds_one :contact_infos
+  has_many :offices, as: :provides_offices
+  has_one :contact_infos, as: :contactable
 
   belongs_to :multiple_district
   has_many :clubs, autosave: true

@@ -33,14 +33,14 @@ class MembersController < ApplicationController
         :gender,
         :languages,
         :profession,
-        :type,
+        :status,
       ]
 
       contact_infos = {
         contact_infos_attributes: [
           :_destroy,
           :id,
-          :type,
+          :kind,
           :street,
           :zip,
           :city,

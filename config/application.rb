@@ -1,8 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
-require 'action_controller/railtie'
-require 'action_mailer/railtie'
-require 'sprockets/railtie'
+require 'rails/all'
 
 # Assets should be precompiled for production (so we don't need the gems loaded then)
 Bundler.require(*Rails.groups(assets: %w(development test)))

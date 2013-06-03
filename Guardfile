@@ -19,8 +19,8 @@ guard :rspec, all_on_start: true do
 end
 
 
-guard :jasmine do
-  watch(%r{spec/javascripts/spec\.js$}) { 'spec/javascripts' }
-  watch(%r{spec/javascripts/.+_spec\.js$})
-  watch(%r{app/assets/javascripts/(.+?)\.(js)(?:\.\w+)*$}) { |m| "spec/javascripts/#{ m[1] }_spec.#{ m[2] }" }
-end
+#guard :jasmine do
+#  watch(%r{spec/javascripts/spec\.js$}) { 'spec/javascripts' }
+#  watch(%r{spec/javascripts/.+_spec\.js$})
+#  watch(%r{app/assets/javascripts/(.+?)\.(js)(?:\.\w+)*$}) { |m| "spec/javascripts/#{ m[1] }_spec.#{ m[2] }" }
+#end

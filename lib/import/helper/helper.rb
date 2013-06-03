@@ -47,7 +47,7 @@ module Import
           contact_info = ContactInfoImporter.new(a).build_model
           contact_infos << contact_info if contact_info
         end
-        contact_infos.sort{|a,b| a.type <=> b.type}
+        contact_infos.sort{|a,b| a.kind <=> b.kind}
       end
     end
 
