@@ -5,7 +5,7 @@ class ClubsController < ApplicationController
   respond_to :json, :only => :age_distribution
 
   def index
-    h = Club.order_by(name: :asc).inject({}) do |hash, club|
+    h = Club.order(:name).inject({}) do |hash, club|
       hash.merge({club.district.name => [club]}){|key, oldval, newval| oldval + newval}
     end
     @clubs = Hash[h.sort]

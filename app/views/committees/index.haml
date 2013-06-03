@@ -13,6 +13,6 @@
     - @committees.each do |committee|
       %tr
         %td= committee.oid
-        %td= t(:"committees.title_#{committee.type}")
+        %td= t(:"committees.title_#{committee.kind}")
         %td= member_link committee.chairperson
         %td= committee.members.size

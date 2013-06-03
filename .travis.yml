@@ -7,8 +7,11 @@ rvm:
   - 2.0.0
 before_script:
   - bin/setup
+  - RAILS_ENV=test rake db:drop
+  - RAILS_ENV=test rake db:create
+  - RAILS_ENV=test rake db:migrate
 script:
   - RAILS_ENV=test rake spec
   - RAILS_ENV=test guard-jasmine
 services: 
-  - mongodb
+  - postgresql

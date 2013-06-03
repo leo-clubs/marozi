@@ -12,7 +12,7 @@ describe Import do
       expect(subject.first_name).to eq 'Angela'
       expect(subject.last_name).to eq 'vom Mrugalla'
       expect(subject.gender).to eq :female
-      expect(subject.type).to eq :active
+      expect(subject.status).to eq :active
       expect(subject.profession).to eq 'Stud. Jur.'
       expect(subject.date_of_birth).to eq Date.new(1988, 11, 12)
       expect(subject.member_since).to eq Date.new(2008, 7, 1)
@@ -21,7 +21,9 @@ describe Import do
 
     it 'should load embedded member data correctly' do
       expect(subject.contact_infos).to_not be_empty
-      expect(subject.contact_infos).to have_same_attributes_as([home_contact_info])
+      expected_attributes = [home_contact_info.attributes]
+      actual_attributes = subject.contact_infos.map{|c| c.attributes}
+      expect(actual_attributes).to eq(expected_attributes)
     end
   end
 end

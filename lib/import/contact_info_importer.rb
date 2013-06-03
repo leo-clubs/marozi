@@ -39,7 +39,7 @@ module Import
 
     def simple_attribute_mappings
       {
-       'type' => [:type],
+       'type' => [:kind],
       }
     end
 
@@ -49,8 +49,8 @@ module Import
       extract_from_attribute_list list: @node.attributes, mapping: simple_attribute_mappings, entity: a
       extract_from_element_list list: @node.element_children.select{|c| c.children.size == 1}, mapping: simple_element_mappings, entity: a
 
-      ignored = ['_id', 'country', 'type']
-      a.attributes.except(*ignored).empty? ? nil : a
+      ignored = ['id', 'country', 'kind']
+      a.attributes.except(*ignored).reject{|k,v| v == nil}.empty? ? nil : a
     end
   end
 end

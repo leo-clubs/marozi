@@ -9,6 +9,6 @@
 /vendor/bundle
 /.jhw-cache
 
-config/mongoid.yml
 config/config.yml
+config/database.yml
 .DS_Store
