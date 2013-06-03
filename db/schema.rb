@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130528215153) do
+ActiveRecord::Schema.define(version: 20130603204308) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,8 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.datetime "updated_at"
   end
 
+  add_index "clubs", ["year", "oid"], name: "index_clubs_on_year_and_oid", where: "current", using: :btree
+
   create_table "committees", force: true do |t|
     t.integer  "oid"
     t.string   "year"
@@ -43,6 +45,8 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "committees", ["year", "oid"], name: "index_committees_on_year_and_oid", where: "current", using: :btree
 
   create_table "contact_infos", force: true do |t|
     t.string   "kind"
@@ -69,6 +73,8 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.integer "multiple_district_id"
   end
 
+  add_index "districts", ["year", "oid"], name: "index_districts_on_year_and_oid", where: "current", using: :btree
+
   create_table "members", force: true do |t|
     t.integer  "oid"
     t.string   "year"
@@ -86,6 +92,8 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.datetime "updated_at"
   end
 
+  add_index "members", ["year", "oid"], name: "index_members_on_year_and_oid", where: "current", using: :btree
+
   create_table "multiple_districts", force: true do |t|
     t.integer  "oid"
     t.string   "year"
@@ -94,6 +102,8 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "multiple_districts", ["year", "oid"], name: "index_multiple_districts_on_year_and_oid", where: "current", using: :btree
 
   create_table "offices", force: true do |t|
     t.integer "oid"
@@ -104,6 +114,8 @@ ActiveRecord::Schema.define(version: 20130528215153) do
     t.string  "provides_offices_type"
     t.integer "member_id"
   end
+
+  add_index "offices", ["year", "oid"], name: "index_offices_on_year_and_oid", where: "current", using: :btree
 
   create_table "settings", force: true do |t|
     t.string   "key"
