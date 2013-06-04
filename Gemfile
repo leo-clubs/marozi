@@ -1,27 +1,21 @@
 source 'http://rubygems.org'
 
 gem 'rake'
-gem 'rails',     github: 'rails/rails', tag: 'v4.0.0.rc1'
+gem 'rails', '4.0.0.rc1'
 gem 'pg'
-gem 'arel',      github: 'rails/arel'
+gem 'sass-rails', '~> 4.0.0.rc1'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+gem 'jquery-rails'
+gem 'haml-rails', github:  'indirect/haml-rails' # use rubygems version for >0.4 (see https://github.com/indirect/haml-rails/issues/42)
+gem 'turbolinks'
+
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 gem 'symbolize'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sprockets-rails', github: 'rails/sprockets-rails'
+gem 'bootstrap-sass'
+gem 'angularjs-rails'
 
-  gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass'
-  gem 'coffee-rails', github: 'rails/coffee-rails'
-  gem 'angularjs-rails'
-end
-
-gem 'turbolinks', github: 'rails/turbolinks'
-gem 'jquery-rails', github: 'rails/jquery-rails' # use rubygems version for >2.2.1 (see https://github.com/rails/jquery-rails/pull/117)
-gem 'sass-rails', github: 'rails/sass-rails'
-gem 'haml-rails', github:  'indirect/haml-rails' # use rubygems version for >0.4 (see https://github.com/indirect/haml-rails/issues/42)
 gem 'haml'
 
 gem 'rails-i18n'
@@ -31,6 +25,10 @@ gem 'nokogiri', require: false
 
 gem 'pry'
 gem 'pry-rails'
+
+group :doc do
+  gem 'sdoc', require: false
+end
 
 group :test, :development do
   gem 'pry-doc'
