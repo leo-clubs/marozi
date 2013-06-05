@@ -30,12 +30,16 @@ class MultipleDistrict < ActiveRecord::Base
     types = [types] unless types.is_a? Array
     types.each do |type|
       office = self.offices.where(name: :"#{type}_appointee").first
-      c = Committee.find_or_create_by(kind: type)
-      c.update_attributes(
-        year: self.year,
-        chairperson_id: office.member_id
-        )
-      self.committees << c
+      if office.nil?
+        puts "WARN: no MD-officer of type #{type.inspect} found"
+      else
+        c = Committee.find_or_create_by(kind: type)
+        c.update_attributes(
+          year: self.year,
+          chairperson_id: office.member_id
+          )
+        self.committees << c
+      end
     end
     self.save!
   end
