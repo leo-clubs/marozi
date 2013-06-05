@@ -9,4 +9,4 @@ done
 
 echo 'creating database'
 initdb /usr/local/var/postgres
-createuser -w -d -l -l -R -S marozi -h localhost
+createuser -w -d -l -R -S marozi -h localhost
