@@ -4,11 +4,9 @@ gem 'rake'
 gem 'rails', '4.0.0.rc1'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.0.rc1'
-gem 'coffee-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'haml-rails', github:  'indirect/haml-rails' # use rubygems version for >0.4 (see https://github.com/indirect/haml-rails/issues/42)
-gem 'turbolinks'
 
 gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 gem 'symbolize'
@@ -25,6 +23,8 @@ gem 'nokogiri', require: false
 
 gem 'pry'
 gem 'pry-rails'
+
+gem 'turbolinks-js'
 
 group :doc do
   gem 'sdoc', require: false
@@ -46,8 +46,4 @@ group :test, :development do
   gem 'rb-inotify', require: false
   gem 'rb-fsevent', require: false
   gem 'rb-fchange', require: false
-end
-
-group :production do
-  gem 'therubyracer', require: 'v8'
 end
