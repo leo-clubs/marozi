@@ -8,7 +8,6 @@ gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
 gem 'haml-rails', github:  'indirect/haml-rails' # use rubygems version for >0.4 (see https://github.com/indirect/haml-rails/issues/42)
 
-gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_finders'
 gem 'symbolize'
 
 gem 'bootstrap-sass'
