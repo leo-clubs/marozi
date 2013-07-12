@@ -38,8 +38,8 @@ describe MembersHelper do
     }
 
     before(:each) do
-      expect(helper).to receive(:i18n_date_format_to_xeditable_date_format).any_number_of_times.and_return('yyyy-mm-dd')
-      expect(helper).to receive(:date_value_from_member).any_number_of_times.and_return('1992-11-12')
+      allow(helper).to receive(:i18n_date_format_to_xeditable_date_format).and_return('yyyy-mm-dd')
+      allow(helper).to receive(:date_value_from_member).and_return('1992-11-12')
     end
 
     include_context 'members helper', opts
