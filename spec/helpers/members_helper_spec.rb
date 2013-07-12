@@ -5,10 +5,10 @@ describe MembersHelper do
     it 'should access correct methods of member' do
       member_id = 123
       member = Object.new
-      member.should_receive(:last_name)
-      member.should_receive(:first_name)
-      member.should_receive(:oid).and_return(member_id)
-      helper.should_receive(:t).and_return('stub')
+      expect(member).to receive(:last_name)
+      expect(member).to receive(:first_name)
+      expect(member).to receive(:oid).and_return(member_id)
+      expect(helper).to receive(:t).and_return('stub')
       expect(helper.member_link(member)).to eq "<a href=\"/members/#{member_id}\">stub</a>"
     end
   end
@@ -38,8 +38,8 @@ describe MembersHelper do
     }
 
     before(:each) do
-      helper.should_receive(:i18n_date_format_to_xeditable_date_format).any_number_of_times.and_return('yyyy-mm-dd')
-      helper.should_receive(:date_value_from_member).any_number_of_times.and_return('1992-11-12')
+      allow(helper).to receive(:i18n_date_format_to_xeditable_date_format).and_return('yyyy-mm-dd')
+      allow(helper).to receive(:date_value_from_member).and_return('1992-11-12')
     end
 
     include_context 'members helper', opts
@@ -65,7 +65,7 @@ describe MembersHelper do
 
   describe '#member_gender_select_attribute_tablerow' do
     it 'should corectly pass attributes to underlying select helper' do
-      helper.should_receive(:member_select_attribute_tablerow).with(hash_including(field: :gender))
+      expect(helper).to receive(:member_select_attribute_tablerow).with(hash_including(field: :gender))
       helper.member_gender_select_attribute_tablerow
     end
   end
