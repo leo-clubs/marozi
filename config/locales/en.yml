@@ -140,12 +140,12 @@ en:
         gender_female: Female
         gender_male: Male
         gender_caption: Please select gender
-        type: State
-        type_caption: Type
-        type_active: Active
-        type_passive: Passive
-        type_honorary: Honorary
-        type_caption: Select type
+        state: State
+        status_caption: state
+        status_active: Active
+        status_passive: Passive
+        status_honorary: Honorary
+        status_caption: Select Status
       contact_info:
         type: Type
         street: Street
