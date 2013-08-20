@@ -1,6 +1,12 @@
 class Committee < ActiveRecord::Base
   include Versioning
   belongs_to :multiple_district
-  has_many :members
-  has_one :member, as: :chairperson
+
+  def members
+    []
+  end
+
+  def chairperson
+    Member.where(oid: self.chairperson_id).first
+  end
 end
