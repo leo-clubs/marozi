@@ -30,4 +30,8 @@ class ClubsController < ApplicationController
     @club = Club.find_by_member_id session[:current_user]
     render action: 'show'
   end
+
+  def my_club_statistics
+    redirect_to club_statistics_path(session[:current_user_club])
+  end
 end
