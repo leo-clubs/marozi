@@ -15,10 +15,6 @@
 //= require global
 //= require bootstrap
 //= require turbolinks
-//= require d3
-//= require nv.d3
-//= require angular
-//= require angular-resource
 //= require_tree .
 
 $.fn.editable.defaults.mode = 'inline';
