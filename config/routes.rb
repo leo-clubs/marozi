@@ -18,7 +18,9 @@ Marozi::Application.routes.draw do
   get '/clubs/:id/statistics/' => 'clubs#statistics', as: :club_statistics
 
   # statistics api
-  get '/api/statistics/:type/:id/gender_ratio' => 'statistics#gender_ratio'
+  scope :api do
+    get '/statistics/:type/:id/gender_ratio' => 'statistics#gender_ratio'
+  end
 
   resources :members
   resources :clubs
