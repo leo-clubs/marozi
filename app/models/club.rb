@@ -1,5 +1,6 @@
 class Club < ActiveRecord::Base
   include Versioning
+  include MemberStatistics
 
   has_many :members, autosave: true
   has_many :offices, as: :provides_offices
