@@ -20,39 +20,4 @@ class Club < ActiveRecord::Base
   def age
     Time.zone.now.year - founded_at.year rescue 0
   end
-
-  def age_distribution
-    males, females = members.select{|m| m.status == :active}.partition{|m| m.gender == :male}
-
-    h = {
-      male: males.map{|m| m.age},
-      female: females.map{|m| m.age},
-    }
-
-    male_distribution = []
-    female_distribution = []
-
-    (18..31).each do |age|
-      male_distribution << {
-        label: age,
-        value: h[:male].count(age),
-      }
-
-      female_distribution << {
-        label: age,
-        value: h[:female].count(age),
-      }
-    end
-
-    [
-      {
-        key: 'Male Members',
-        values: male_distribution,
-      },
-      {
-        key: 'Female Members',
-        values: female_distribution,
-      },
-    ]
-  end
 end

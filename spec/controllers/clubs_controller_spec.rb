@@ -48,14 +48,5 @@ describe ClubsController do
         expect(assigns(:club)).to eq club
       end
     end
-
-    describe '#age_distribution' do
-      let(:club) { create :club_with_members }
-
-      it 'should respond with json' do
-        get :age_distribution, id: club.oid
-        expect(response.content_type).to eq 'application/json'
-      end
-    end
   end
 end
