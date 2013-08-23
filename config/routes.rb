@@ -13,6 +13,15 @@ Marozi::Application.routes.draw do
   post '/sessions/new' => 'sessions#create', as: :login
   get '/logout' => 'sessions#destroy', as: :logout
 
+  # statistics
+  get '/clubs/my_club/statistics' => 'clubs#my_club_statistics', as: :my_club_statistics
+  get '/clubs/:id/statistics/' => 'clubs#statistics', as: :club_statistics
+
+  # statistics api
+  scope :api do
+    get '/statistics/:type/:id/gender_ratio' => 'statistics#gender_ratio'
+  end
+
   resources :members
   resources :clubs
   resources :districts

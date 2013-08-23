@@ -1,0 +1,7 @@
+.row{'ng-app' => 'Marozi'}
+  .span4
+    %p.lead
+      .info-box{'ng-controller' => 'MaleFemaleChartCtrl'}
+        .info-box-caption{'ng-controller' => 'MaleFemaleChartCtrl'}
+          =t(:'clubs.statistics.female_male')
+        %canvas{piechart: '', options: 'options', data: 'chart', id: 'male_female_ratio', width: '300', height: '300'}
