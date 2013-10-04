@@ -15,6 +15,9 @@
 //= require global
 //= require bootstrap
 //= require turbolinks
+//= require angular
+//= require chart
+//= require angles
 //= require_tree .
 
 $.fn.editable.defaults.mode = 'inline';
