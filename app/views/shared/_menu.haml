@@ -79,9 +79,6 @@
               %ul.nav.navbar-nav.navbar-right
                 %li
                   %a{href: logout_path}= t(:'navbar.logout')
-              %ul.nav.navbar-nav.navbar-right
-                %form.navbar-form.navbar-right.navbar-search
-                  %input.search-query{type: 'text', placeholder: t(:'navbar.search.title')}
-                  .icon-search
+
 :javascript
   MyApp.initFunction(MyApp.disable_menu_item);
