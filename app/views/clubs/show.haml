@@ -5,7 +5,7 @@
       %small= t(:'clubs.member_count', count: @club.members.size)
 
     .row
-      .info-box.span6
+      .info-box.col-md-6
         .info-box-caption
           = t(:'clubs.caption.general_information')
         %table.table.table-no-border
@@ -27,7 +27,7 @@
           %tr
             %th= t(:'clubs.caption.meet_description')
             %td= @club.meet_description
-      .info-box.span5
+      .info-box.col-md-5
         .info-box-caption
           = t(:'clubs.caption.officers')
         %p
@@ -35,7 +35,7 @@
             = render partial: 'office', collection: @club.offices, as: :office
 
   .row
-    .span12
+    .col-md-12
       = render 'member_list_table', members: @club.members_sorted
 
 :javascript

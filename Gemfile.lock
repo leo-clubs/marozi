@@ -44,8 +44,8 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.14)
-    bootstrap-sass (2.3.2.2)
-      sass (~> 3.2)
+    bootstrap3-rails (3.0.1)
+      rails (~> 4.0.0)
     bson (1.9.2)
     bson_ext (1.9.2)
       bson (~> 1.9.2)
@@ -225,7 +225,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass
+  bootstrap3-rails
   bson_ext
   coveralls
   database_cleaner

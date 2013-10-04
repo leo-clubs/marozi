@@ -1,11 +1,10 @@
 @import "bootstrap";
 body { padding-top: 30px; }
-@import "bootstrap-responsive";
 
-.brand
+.navbar-brand
 {
   background: url(image-path("leo_logo_small.png")) no-repeat center;
-  height: 20px;
+  height: 50px;
 }
 
 .navbar-search {
@@ -16,7 +15,7 @@ body { padding-top: 30px; }
     padding-left: 29px !important;
 }
 
-.navbar-search .icon-search {
+.navbar-search .glyphicon-search {
     position: absolute;
     top: 7px;
     left: 11px;
