@@ -10,7 +10,7 @@ gem 'haml-rails', github:  'indirect/haml-rails' # use rubygems version for >0.4
 
 gem 'symbolize'
 
-gem 'bootstrap-sass'
+gem 'bootstrap3-rails'
 
 gem 'haml'
 
