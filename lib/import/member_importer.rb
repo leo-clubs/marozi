@@ -31,7 +31,7 @@ module Import
         'LASTNAME' => [:last_name, text_value_lambda],
         'TITLE' => [:academic_title, text_value_lambda],
         'BIRTHDATE' => [:date_of_birth,  date_lambda],
-        'SEX' => [:gender, gender_lambda ],
+        'SEX' => [:gender, gender_lambda],
         'PROFESSION' => [:profession, profession_lambda]
       }
     end
