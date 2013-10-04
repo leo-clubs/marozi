@@ -25,8 +25,8 @@ module Import
     def simple_element_mappings
       {
         'NAME' => [:name],
-        'FOUNDDATE' => [:founded_at, date_lambda ],
-        'CHARTERDATE' => [:chartered_at, date_lambda ],
+        'FOUNDDATE' => [:founded_at, date_lambda],
+        'CHARTERDATE' => [:chartered_at, date_lambda],
         'GODFATHER' => [:godfather],
         'MEET' => [:meet_description],
         'BANK' => [:bank],

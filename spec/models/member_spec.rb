@@ -32,4 +32,12 @@ describe Member do
       expect(simple_member.reload.contact_infos.first.street).to eq changed_street
     end
   end
+
+  context 'dynamic attributes' do
+    let(:simple_member) { create(:simple_member, academic_title: 'Dr. jur.') }
+
+    it 'should calculate title correctly' do
+      expect(simple_member.title).to eq('Dr.')
+    end
+  end
 end

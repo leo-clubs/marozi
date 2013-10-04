@@ -47,7 +47,7 @@ en:
       greeting: 'Hello %{first_name} %{last_name}'
       general: General
       new_member: Add Member To Club
-      name: '%{first_name} %{last_name}'
+      name: '%{title} %{first_name} %{last_name}'
       history: 'History'
       profession: 'Profession'
       contact: 'Contact'
@@ -129,6 +129,8 @@ en:
   helpers:
     label:
       member:
+        academic_title: Title
+        academic_title_caption: Please enter an academic title
         first_name: First Name
         first_name_caption: Please enter your first name
         last_name: Last Name

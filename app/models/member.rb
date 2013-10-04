@@ -18,6 +18,10 @@ class Member < ActiveRecord::Base
     range == :current ? base_query.where(year: self.year) : base_query
   end
 
+  def title
+    academic_title && academic_title.split(' ').first
+  end
+
   def age
     now = Time.now.utc.to_date
     dob = self.date_of_birth
