@@ -1,8 +1,8 @@
 class MultipleDistrict < ActiveRecord::Base
   include Versioning
+  include ProvidesOffices
 
   has_many :districts
-  has_many :offices, as: :provides_offices
   has_many :committees
 
   alias_method :children, :districts

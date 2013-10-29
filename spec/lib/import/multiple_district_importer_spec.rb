@@ -15,10 +15,5 @@ describe Import do
        expect(subject.districts).to_not be_empty
        expect(subject.districts.size).to be 1
     end
-
-    it 'should load office data correctly' do
-      expect(subject.offices).to_not be_empty
-      expect(subject.offices.size).to be 5
-    end
   end
 end

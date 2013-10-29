@@ -1,7 +1,7 @@
 class District < ActiveRecord::Base
   include Versioning
+  include ProvidesOffices
 
-  has_many :offices, as: :provides_offices
   has_one :contact_infos, as: :contactable
 
   belongs_to :multiple_district

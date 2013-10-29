@@ -57,6 +57,7 @@ module Import
 
         'Lion' => :lions_appointee,
         'KLeo' => :lions_appointee,
+        'KLEO' => :lions_appointee,
 
         'A' => :activity_appointee,
         'DB-Activities' => :activity_appointee,
@@ -68,6 +69,7 @@ module Import
         'MD-Seminar-Sch' => :mds_treasurer,
 
         'MDB-LeoLife' => :leolife_appointee,
+        'MDB-LCIC' => :lcic_appointee,
 
         'DL LEF' => :delegation_leader_lef,
         'DL LCI-C' => :delegation_leader_lcic,

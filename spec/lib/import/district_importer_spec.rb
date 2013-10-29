@@ -15,10 +15,5 @@ describe Import do
        expect(subject.clubs).to_not be_empty
        expect(subject.clubs.size).to be 4
     end
-
-    it 'should load office data correctly' do
-      expect(subject.offices).to_not be_empty
-      expect(subject.offices.size).to be 7
-    end
   end
 end

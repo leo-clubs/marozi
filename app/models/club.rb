@@ -1,9 +1,9 @@
 class Club < ActiveRecord::Base
   include Versioning
   include MemberStatistics
+  include ProvidesOffices
 
   has_many :members, autosave: true
-  has_many :offices, as: :provides_offices
   belongs_to :district
 
   alias_method :parent, :district
