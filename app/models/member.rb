@@ -18,6 +18,10 @@ class Member < ActiveRecord::Base
     range == :current ? base_query.where(year: self.year) : base_query
   end
 
+  def memberships
+    Membership.where(member_id: self.oid)
+  end
+
   def title
     academic_title && academic_title.split(' ').first
   end

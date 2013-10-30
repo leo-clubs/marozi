@@ -1,13 +1,6 @@
 class Office < ActiveRecord::Base
   include Versioning
-
-  def member
-    Member.where(oid: self.member_id).first
-  end
-
-  def member= m
-    self.member_id = m.oid
-  end
+  include ProvidesMember
 
   def provides_offices
     # will always return the current club/district/multiple_district

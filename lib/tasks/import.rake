@@ -36,6 +36,9 @@ namespace :db do
       puts 'Creating Offices'
       OfficeCreator.create_offices_for_members doc, year
       OfficeCreator.create_offices_for_appointees doc, year
+      puts 'Creating Memberships'
+      MembershipCreator.create_current_memberships doc
+      MembershipCreator.create_past_membership doc
       obj.create_committees %i{activity hdleo it leolife merlo pr}
     end
   end
