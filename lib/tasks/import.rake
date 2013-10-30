@@ -25,8 +25,7 @@ namespace :db do
         puts "Now saving db entities"
         obj.save!
         puts "Imported #{index+1} of #{size} multiple districts"
-        puts 'Creating MD Committees'
-        puts 'Import finnished successfully'
+        puts 'Creation of base entities finnished successfully'
       rescue Exception => e
         puts "Error occured: (message: #{e.message})"
         puts "Backtrace:"
