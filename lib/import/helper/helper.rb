@@ -63,10 +63,6 @@ module Import
       simple_list_lambda 'DISTRICT', DistrictImporter, year
     end
 
-    def office_lambda(year)
-      simple_list_lambda 'OFFICER', OfficeImporter, year
-    end
-
     def mapping_lambda mapping, default
       lambda do |v|
         lookup_key = v.class == String ? v : v.text
