@@ -9,7 +9,7 @@ module MembershipCreator
 
       Membership.create!(
         {
-          start: in_club_since,
+          from: in_club_since,
           member_id: member_id,
           club_id: club_id,
         }
@@ -27,8 +27,8 @@ module MembershipCreator
 
       Membership.create!(
         {
-          start: start_date,
-          end: end_date,
+          from: start_date,
+          to: end_date,
           member_id: member_id,
           club_id: club_id,
         }

@@ -96,8 +96,8 @@ ActiveRecord::Schema.define(version: 20131030151952) do
   add_index "members", ["year", "oid"], name: "index_members_on_year_and_oid", where: "current", using: :btree
 
   create_table "memberships", force: true do |t|
-    t.date     "start"
-    t.date     "end"
+    t.date     "from"
+    t.date     "to"
     t.integer  "member_id"
     t.integer  "club_id"
     t.datetime "created_at"
