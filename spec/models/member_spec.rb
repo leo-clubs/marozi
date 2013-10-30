@@ -39,5 +39,9 @@ describe Member do
     it 'should calculate title correctly' do
       expect(simple_member.title).to eq('Dr.')
     end
+
+    it 'should at least have one membership' do
+      expect(simple_member.memberships.size).to be.>=(1)
+    end
   end
 end
