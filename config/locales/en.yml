@@ -37,6 +37,7 @@ en:
   members:
     name: '%{last_name}, %{first_name}'
     news: 'Your Newsfeed'
+    previous_membership: '%{club_name} from %{from} to %{to}'
     tablehead:
       id: ID
       name: Name
@@ -46,6 +47,7 @@ en:
     caption:
       greeting: 'Hello %{first_name} %{last_name}'
       general: General
+      history: History
       new_member: Add Member To Club
       name: '%{title} %{first_name} %{last_name}'
       history: 'History'
@@ -54,6 +56,8 @@ en:
       contact_home: 'Home'
       contact_work: 'Work'
       edit: 'Edit member %{id}'
+      prev_offices: 'Previous Offices'
+      prev_clubs: 'Previous Clubs'
     button:
       add_member: Add Member
   clubs:

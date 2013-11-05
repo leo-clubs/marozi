@@ -35,6 +35,7 @@ describe Member do
 
   context 'dynamic attributes' do
     let(:simple_member) { create(:simple_member, academic_title: 'Dr. jur.') }
+    let(:long_leo) { create(:member_with_previous_memberships) }
 
     it 'should calculate title correctly' do
       expect(simple_member.title).to eq('Dr.')
@@ -42,6 +43,11 @@ describe Member do
 
     it 'should at least have one membership' do
       expect(simple_member.memberships.size).to be.>=(1)
+    end
+
+    it 'should calculate previous memberships correctly' do
+      expect(long_leo.memberships.size).to be.>=(2)
+      expect(long_leo.previous_memberships.size).to eq 1
     end
   end
 end

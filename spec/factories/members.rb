@@ -31,5 +31,29 @@ FactoryGirl.define do
       end
       club
     end
+
+    factory :member_with_previous_memberships, class: Member do
+      first_name            'Paul'
+      last_name             'Promikus'
+      gender                'male'
+      profession            'BWL Student'
+      after(:create) do |member|
+        create(
+          :membership,
+          member: member,
+          club_id: member.club.oid - 10,
+          from: '2006-07-01'.to_date,
+          to: '2010-06-30'.to_date,
+        )
+        create(
+          :membership,
+          member: member,
+          club: member.club,
+          from: '2010-07-01'.to_date,
+          to: nil,
+        )
+      end
+      club
+    end
   end
 end

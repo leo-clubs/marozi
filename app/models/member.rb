@@ -22,6 +22,10 @@ class Member < ActiveRecord::Base
     Membership.where(member_id: self.oid)
   end
 
+  def previous_memberships
+    memberships.where.not(to: nil).order(to: :desc)
+  end
+
   def title
     academic_title && academic_title.split(' ').first
   end

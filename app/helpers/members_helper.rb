@@ -17,6 +17,21 @@ module MembersHelper
     end
   end
 
+  def membership_list
+    content_tag :ul, class: 'list-group' do
+      @member.previous_memberships.map do |membership|
+        content_tag :li, class: 'list-group-item' do
+          I18n.translate(
+            :'members.previous_membership',
+            club_name: membership.club.name,
+            from: I18n.l(membership.from, format: :long),
+            to: I18n.l(membership.to, format: :long),
+          )
+        end
+      end.inject(:concat)
+    end
+  end
+
   def member_gender_select_attribute_tablerow(editable_class: 'editable')
     name = I18n.translate(:'helpers.label.member.gender')
     select_options = [:female, :male].map{|gender| [gender, I18n.translate(:"helpers.label.member.gender_#{gender}")]}
