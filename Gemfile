@@ -9,6 +9,7 @@ gem 'jquery-rails'
 gem 'haml-rails', github:  'indirect/haml-rails' # use rubygems version for >0.4 (see https://github.com/indirect/haml-rails/issues/42)
 
 gem 'symbolize'
+gem 'language_list'
 
 gem 'bootstrap3-rails'
 
