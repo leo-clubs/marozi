@@ -26,6 +26,10 @@ class Member < ActiveRecord::Base
     memberships.first.from
   end
 
+  def in_club_since
+    memberships.last.from
+  end
+
   def previous_memberships
     memberships.where.not(to: nil).order(to: :desc)
   end

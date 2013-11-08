@@ -53,5 +53,9 @@ describe Member do
     it 'should calculate leo_since correctly' do
       expect(long_leo.leo_since).to eq('2006-07-01'.to_date)
     end
+
+    it 'should calculate in_club_since correctly' do
+      expect(long_leo.in_club_since).to eq('2010-07-01'.to_date)
+    end
   end
 end
