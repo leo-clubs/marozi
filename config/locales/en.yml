@@ -43,7 +43,7 @@ en:
       name: Name
       date_of_birth: Birthday
       contact_info: Contact Info
-      member_since: Member since
+      leo_since: Leo since
     caption:
       greeting: 'Hello %{first_name} %{last_name}'
       general: General
@@ -141,8 +141,7 @@ en:
         last_name_caption: Please enter your last name
         date_of_birth: Birthday
         date_of_birth_caption: Select your birthday
-        member_since: Member Since
-        member_since_caption: Select since when you are a member
+        leo_since: Leo Since
         profession: Profession
         profession_caption: Please enter your Profession
         gender: Gender

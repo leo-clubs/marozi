@@ -49,5 +49,9 @@ describe Member do
       expect(long_leo.memberships.size).to be.>=(2)
       expect(long_leo.previous_memberships.size).to eq 1
     end
+
+    it 'should calculate leo_since correctly' do
+      expect(long_leo.leo_since).to eq('2006-07-01'.to_date)
+    end
   end
 end

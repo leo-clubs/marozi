@@ -81,7 +81,6 @@ ActiveRecord::Schema.define(version: 20131030151952) do
     t.boolean  "current"
     t.string   "first_name"
     t.string   "last_name"
-    t.date     "member_since"
     t.date     "date_of_birth"
     t.string   "gender"
     t.string   "languages",      array: true

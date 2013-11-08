@@ -19,7 +19,6 @@ module Import
 
     def simple_attribute_mappings
       {
-        'membershipStart' => [:member_since, date_lambda],
         'id' => [:oid, integer_lambda],
         'status' => [:status, mapping_lambda(type_mapping, :active)]
       }

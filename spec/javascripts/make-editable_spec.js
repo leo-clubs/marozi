@@ -60,8 +60,8 @@ describe('make-editable', function(){
 
     it('inits date attribute field correctly', function(){
       loadFixtures('memberEditable');
-      MyApp.makeEditable(123, [$('#member_since')], '/new', 'superSecret');
-      var editableOptions = $('#member_since').data('editable').options;
+      MyApp.makeEditable(123, [$('#date_of_birth')], '/new', 'superSecret');
+      var editableOptions = $('#date_of_birth').data('editable').options;
       expect(editableOptions.pk).toEqual(123);
       expect(editableOptions.type).toEqual('date');
       expect(editableOptions.datepicker).toEqual({language: 'en'});
@@ -73,7 +73,7 @@ describe('make-editable', function(){
     it('inits multiple selector correctly', function(){
       loadFixtures('memberEditable');
       MyApp.makeEditable(123, $('.edit-member'), '/new', 'superSecret');
-      $.each([$('#first_name'), $('#gender'), $('#member_since')], function(){
+      $.each([$('#first_name'), $('#gender'), $('#date_of_birth')], function(){
         expect($(this).data('editable').options).toBeDefined();
       });
     });
@@ -83,7 +83,7 @@ describe('make-editable', function(){
     it('inits for new member correctly', function(){
       loadFixtures('newMember');
       MyApp.initNewMember();
-      $.each([$('#first_name'), $('#gender'), $('#member_since')], function(){
+      $.each([$('#first_name'), $('#gender'), $('#date_of_birth')], function(){
         expect($(this).data('editable').options).toBeDefined();
       });
       expect($('#new-member-btn')).toHandle('click');

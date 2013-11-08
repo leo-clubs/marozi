@@ -5,6 +5,12 @@ module MembersHelper
     link_to(t(:'members.name', first_name: member.first_name, last_name: member.last_name), member_path(id: member.oid))
   end
 
+  def member_readonly_tablerow(caption: nil, value: nil)
+    content_tag :tr do
+      name_cell(name: caption).concat(content_tag(:td){value})
+    end
+  end
+
   def member_simple_attribute_tablerow(field: nil, name: nil, caption: nil, editable_class: 'editable')
     content_tag :tr do
       name_cell(name: name).concat(

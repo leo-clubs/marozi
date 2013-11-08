@@ -19,7 +19,11 @@ class Member < ActiveRecord::Base
   end
 
   def memberships
-    Membership.where(member_id: self.oid)
+    Membership.where(member_id: self.oid).order(from: :asc)
+  end
+
+  def leo_since
+    memberships.first.from
   end
 
   def previous_memberships
