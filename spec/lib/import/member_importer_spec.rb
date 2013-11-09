@@ -15,7 +15,7 @@ describe Import do
       expect(subject.status).to eq :active
       expect(subject.profession).to eq 'Stud. Jur.'
       expect(subject.date_of_birth).to eq Date.new(1988, 11, 12)
-      expect(subject.languages.sort).to eq [:de, :en, :fr, :it]
+      expect(subject.languages.sort).to eq [:deu, :eng, :fra, :ita]
     end
 
     it 'should load embedded member data correctly' do
