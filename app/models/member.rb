@@ -23,4 +23,8 @@ class Member < ActiveRecord::Base
     dob = self.date_of_birth
     now.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1) rescue 0
   end
+
+  def offices
+    # read all offices from database
+  end
 end
