@@ -12,4 +12,12 @@ describe('global',function(){
       expect('/%{type}/%{id}'.interpolate({id: '12', type: 'clubs'})).toEqual('/clubs/12');
     });    
   });
+
+  describe('convertDates', function(){
+    it('should add class to all xeditable fields', function(){
+      loadFixtures('xeditableDate');
+      MyApp.convertDates();
+      expect($('.js-absolute-date').size()).toBeGreaterThan(0);
+    });
+  });
 });

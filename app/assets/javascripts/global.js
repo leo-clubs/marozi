@@ -12,3 +12,13 @@ MyApp.initFunction = function(functionReference) {
   $(document).ready(functionReference);
   $(window).bind('page:change', functionReference);
 };
+
+MyApp.convertDates = function(){
+  moment.lang($('html').attr('lang'));
+  $.each($("[data-field-type='date']"),function(){
+    $(this).addClass('js-absolute-date');
+  });
+  $.each($('.js-absolute-date'), function(){
+    $(this).html(moment($(this).html()).format('LL'));
+  });
+};
