@@ -1,8 +1,8 @@
 class MultipleDistrict < ActiveRecord::Base
   include Versioning
+  include ProvidesOffices
 
   has_many :districts
-  has_many :offices, as: :provides_offices
   has_many :committees
 
   alias_method :children, :districts
@@ -27,8 +27,7 @@ class MultipleDistrict < ActiveRecord::Base
   end
 
   def create_committees types
-    types = [types] unless types.is_a? Array
-    types.each do |type|
+    Array(types).each do |type|
       office = self.offices.where(name: :"#{type}_appointee").first
       if office.nil?
         puts "WARN: no MD-officer of type #{type.inspect} found"

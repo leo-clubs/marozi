@@ -17,6 +17,7 @@ namespace :db do
 
     puts 'Starting Import'
     multiple_districts.each_with_index do |md, index|
+      obj = nil
       begin
         year = md['year'].gsub(/\//, '-')
         obj = Import::MultipleDistrictImporter.new(md, year).build_model
@@ -24,15 +25,20 @@ namespace :db do
         puts "Now saving db entities"
         obj.save!
         puts "Imported #{index+1} of #{size} multiple districts"
-        puts 'Creating MD Committees'
-        obj.create_committees %i{activity hdleo it leolife merlo pr}
-        puts 'Import finnished successfully'
+        puts 'Creation of base entities finnished successfully'
       rescue Exception => e
         puts "Error occured: (message: #{e.message})"
         puts "Backtrace:"
         puts e.backtrace
         puts "Import did not finnish successfully"
       end
+      puts 'Creating Offices'
+      OfficeCreator.create_offices_for_members doc, year
+      OfficeCreator.create_offices_for_appointees doc, year
+      puts 'Creating Memberships'
+      MembershipCreator.create_current_memberships doc
+      MembershipCreator.create_past_membership doc
+      obj.create_committees %i{activity hdleo it leolife merlo pr}
     end
   end
 end

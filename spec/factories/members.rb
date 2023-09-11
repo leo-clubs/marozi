@@ -16,6 +16,7 @@ FactoryGirl.define do
       gender                'female'
       profession            'Jurastudentin'
       contact_infos         { [build(:contact_info)] }
+      after(:create) {|member| create(:membership, member: member, club: member.club)}
       club
     end
 
@@ -24,7 +25,34 @@ FactoryGirl.define do
       last_name             'Heddinghausen'
       gender                'female'
       profession            'Jurastudentin'
-      after(:create) {|member| create(:president_office, member: member, provides_offices: member.club)}
+      after(:create) do |member|
+        create(:president_office, member: member, provides_offices: member.club)
+        create(:membership, member: member, club: member.club)
+      end
+      club
+    end
+
+    factory :member_with_previous_memberships, class: Member do
+      first_name            'Paul'
+      last_name             'Promikus'
+      gender                'male'
+      profession            'BWL Student'
+      after(:create) do |member|
+        create(
+          :membership,
+          member: member,
+          club_id: member.club.oid - 10,
+          from: '2006-07-01'.to_date,
+          to: '2010-06-30'.to_date,
+        )
+        create(
+          :membership,
+          member: member,
+          club: member.club,
+          from: '2010-07-01'.to_date,
+          to: nil,
+        )
+      end
       club
     end
   end

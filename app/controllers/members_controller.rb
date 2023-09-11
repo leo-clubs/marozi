@@ -28,7 +28,6 @@ class MembersController < ApplicationController
       permitted = [
         :first_name,
         :last_name,
-        :member_since,
         :date_of_birth,
         :gender,
         :languages,

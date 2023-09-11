@@ -25,7 +25,6 @@ module Import
     def list_element_mappings
       {
         'DISTRICTS' => [:districts, district_lambda(@year)],
-        'OFFICERS' => [:offices, office_lambda(@year)]
       }
     end
 

@@ -18,6 +18,26 @@ class Member < ActiveRecord::Base
     range == :current ? base_query.where(year: self.year) : base_query
   end
 
+  def memberships
+    Membership.where(member_id: self.oid).order(from: :asc)
+  end
+
+  def leo_since
+    memberships.first.from
+  end
+
+  def in_club_since
+    memberships.last.from
+  end
+
+  def previous_memberships
+    memberships.where.not(to: nil).order(to: :desc)
+  end
+
+  def title
+    academic_title && academic_title.split(' ').first
+  end
+
   def age
     now = Time.now.utc.to_date
     dob = self.date_of_birth

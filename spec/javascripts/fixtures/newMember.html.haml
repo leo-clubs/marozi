@@ -4,6 +4,6 @@
   %tbody
     = member_simple_attribute_tablerow(field: :first_name, name: 'First Name', caption: 'First Name', editable_class: 'new-member')
     = member_select_attribute_tablerow(field: :gender, name: 'Gender', select_options: [:female, :male].map{|gender| [gender, gender]}, caption: 'Gender', editable_class: 'new-member')
-    = member_date_attribute_tablerow(field: :member_since, name: 'Member Since', caption: 'Member Since', editable_class: 'new-member')
+    = member_date_attribute_tablerow(field: :date_of_birth, name: 'Birthday', caption: 'Birthday', editable_class: 'new-member')
 
 %button.btn.btn-inverse#new-member-btn= "Add Member"

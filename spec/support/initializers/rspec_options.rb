@@ -18,8 +18,6 @@ RSpec.configure do |config|
     FactoryGirl.reload
     DatabaseCleaner.clean
     DatabaseCleaner.start
-
-    Import::OfficeImporter.reset_counter
     #create(:max_ids_setting)
   end
 end

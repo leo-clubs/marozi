@@ -19,7 +19,6 @@ module Import
 
     def simple_attribute_mappings
       {
-        'membershipStart' => [:member_since, date_lambda],
         'id' => [:oid, integer_lambda],
         'status' => [:status, mapping_lambda(type_mapping, :active)]
       }
@@ -27,10 +26,11 @@ module Import
 
     def simple_element_mappings
       {
-        'FIRSTNAME' => [:first_name, text_value_lambda ],
-        'LASTNAME' => [:last_name, text_value_lambda ],
+        'FIRSTNAME' => [:first_name, text_value_lambda],
+        'LASTNAME' => [:last_name, text_value_lambda],
+        'TITLE' => [:academic_title, text_value_lambda],
         'BIRTHDATE' => [:date_of_birth,  date_lambda],
-        'SEX' => [:gender, gender_lambda ],
+        'SEX' => [:gender, gender_lambda],
         'PROFESSION' => [:profession, profession_lambda]
       }
     end

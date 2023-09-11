@@ -27,11 +27,6 @@ describe Import do
        expect(subject.members.size).to be 22
     end
 
-    it 'should load office data correctly' do
-      expect(subject.offices).to_not be_empty
-      expect(subject.offices.size).to be 5
-    end
-
     it 'should not mix up members of multiple clubs' do
       xml_fixture('clubs').xpath('//CLUB').each{|c| Import::ClubImporter.new(c, '2012-2013').build_model.save!}
       expect(Club.count).to eq 2

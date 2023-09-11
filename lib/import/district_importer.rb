@@ -19,7 +19,6 @@ module Import
     def list_element_mappings
       {
         'CLUBS' => [:clubs, club_lambda(@year)],
-        'OFFICERS' => [:offices, office_lambda(@year)]
       }
     end
 

@@ -5,6 +5,12 @@ module MembersHelper
     link_to(t(:'members.name', first_name: member.first_name, last_name: member.last_name), member_path(id: member.oid))
   end
 
+  def member_readonly_tablerow(caption: nil, value: nil)
+    content_tag :tr do
+      name_cell(name: caption).concat(content_tag(:td){value})
+    end
+  end
+
   def member_simple_attribute_tablerow(field: nil, name: nil, caption: nil, editable_class: 'editable')
     content_tag :tr do
       name_cell(name: name).concat(
@@ -14,6 +20,21 @@ module MembersHelper
           type: 'text',
           editable_class: editable_class,
           caption: caption))
+    end
+  end
+
+  def membership_list
+    content_tag :ul, class: 'list-group' do
+      @member.previous_memberships.map do |membership|
+        content_tag :li, class: 'list-group-item' do
+          I18n.translate(
+            :'members.previous_membership',
+            club_name: membership.club.name,
+            from: I18n.l(membership.from, format: :long),
+            to: I18n.l(membership.to, format: :long),
+          )
+        end
+      end.inject(:concat)
     end
   end
 

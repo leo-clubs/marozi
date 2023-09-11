@@ -37,23 +37,28 @@ en:
   members:
     name: '%{last_name}, %{first_name}'
     news: 'Your Newsfeed'
+    previous_membership: '%{club_name} from %{from} to %{to}'
     tablehead:
       id: ID
       name: Name
       date_of_birth: Birthday
       contact_info: Contact Info
-      member_since: Member since
+      leo_since: Leo since
+      in_club_since: In Club since
     caption:
       greeting: 'Hello %{first_name} %{last_name}'
       general: General
+      history: History
       new_member: Add Member To Club
-      name: '%{first_name} %{last_name}'
+      name: '%{title} %{first_name} %{last_name}'
       history: 'History'
       profession: 'Profession'
       contact: 'Contact'
       contact_home: 'Home'
       contact_work: 'Work'
       edit: 'Edit member %{id}'
+      prev_offices: 'Previous Offices'
+      prev_clubs: 'Previous Clubs'
     button:
       add_member: Add Member
   clubs:
@@ -129,14 +134,16 @@ en:
   helpers:
     label:
       member:
+        academic_title: Title
+        academic_title_caption: Please enter an academic title
         first_name: First Name
         first_name_caption: Please enter your first name
         last_name: Last Name
         last_name_caption: Please enter your last name
         date_of_birth: Birthday
         date_of_birth_caption: Select your birthday
-        member_since: Member Since
-        member_since_caption: Select since when you are a member
+        leo_since: Leo Since
+        in_club_since: In Club Since
         profession: Profession
         profession_caption: Please enter your Profession
         gender: Gender

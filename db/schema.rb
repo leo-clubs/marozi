@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130603204308) do
+ActiveRecord::Schema.define(version: 20131030151952) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,18 +81,27 @@ ActiveRecord::Schema.define(version: 20130603204308) do
     t.boolean  "current"
     t.string   "first_name"
     t.string   "last_name"
-    t.date     "member_since"
     t.date     "date_of_birth"
     t.string   "gender"
-    t.string   "languages",     array: true
+    t.string   "languages",      array: true
     t.string   "profession"
     t.string   "status"
     t.integer  "club_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "academic_title"
   end
 
   add_index "members", ["year", "oid"], name: "index_members_on_year_and_oid", where: "current", using: :btree
+
+  create_table "memberships", force: true do |t|
+    t.date     "from"
+    t.date     "to"
+    t.integer  "member_id"
+    t.integer  "club_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "multiple_districts", force: true do |t|
     t.integer  "oid"

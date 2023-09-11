@@ -30,14 +30,36 @@ module Import
 
     def locale_lambda
       lambda do |v|
-        base_lang = [:de]
+        base_lang = [:deu]
         begin
-          additional_langs = v.xpath('.//NAME/text()').map{|e| e.text.to_sym}
-        rescue
+          additional_langs = v.xpath('.//NAME/text()').map do |lang|
+            lang_string = lang.to_s
+            premap_languages.fetch(lang_string) do |to_be_mapped_lang|
+              language_wrapper = LanguageList::LanguageInfo.find(to_be_mapped_lang)
+              if language_wrapper.nil?
+                puts "language #{to_be_mapped_lang.inspect} not found"
+              else
+                language_wrapper.iso_639_3.to_sym
+              end
+            end
+          end.compact
+        rescue Exception => e
+          puts "Language error: #{e.message }"
           additional_langs = []
         end
         (base_lang + additional_langs).uniq.sort
       end
+    end
+
+    def premap_languages
+      @premap ||= {
+        'per' => :fas,
+        'vietn' => :vie,
+        'sing' => :sin,
+        'srcr' => :hbs,
+        'gr' => :ell,
+        'mand' => :cmn,
+      }
     end
 
     def contact_info_lambda
@@ -61,10 +83,6 @@ module Import
 
     def district_lambda(year)
       simple_list_lambda 'DISTRICT', DistrictImporter, year
-    end
-
-    def office_lambda(year)
-      simple_list_lambda 'OFFICER', OfficeImporter, year
     end
 
     def mapping_lambda mapping, default

@@ -32,4 +32,30 @@ describe Member do
       expect(simple_member.reload.contact_infos.first.street).to eq changed_street
     end
   end
+
+  context 'dynamic attributes' do
+    let(:simple_member) { create(:simple_member, academic_title: 'Dr. jur.') }
+    let(:long_leo) { create(:member_with_previous_memberships) }
+
+    it 'should calculate title correctly' do
+      expect(simple_member.title).to eq('Dr.')
+    end
+
+    it 'should at least have one membership' do
+      expect(simple_member.memberships.size).to be.>=(1)
+    end
+
+    it 'should calculate previous memberships correctly' do
+      expect(long_leo.memberships.size).to be.>=(2)
+      expect(long_leo.previous_memberships.size).to eq 1
+    end
+
+    it 'should calculate leo_since correctly' do
+      expect(long_leo.leo_since).to eq('2006-07-01'.to_date)
+    end
+
+    it 'should calculate in_club_since correctly' do
+      expect(long_leo.in_club_since).to eq('2010-07-01'.to_date)
+    end
+  end
 end
